@@ -1,0 +1,16 @@
+# Guide
+
+This is a detailed guide covering various features of *Macroid*:
+
+* [UI actions](guide/UiActions.md)
+* [Contexts](guide/Contexts.md)
+* [Bricks](guide/Bricks.md)
+* [Tweaks](guide/Tweaks.md)
+* [Snails](guide/Snails.md)
+* [Transformers](guide/Transformers.md)
+* [Media queries](guide/MediaQueries.md)
+* [Searching](guide/Searching.md)
+* [Fragments](guide/Fragments.md)
+* [Toasts and dialogs](guide/ToastsDialogs.md)
+* [Logging](guide/Logging.md)
+* [Advanced techniques](guide/Advanced.md)

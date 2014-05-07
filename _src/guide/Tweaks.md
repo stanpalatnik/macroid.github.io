@@ -4,13 +4,8 @@ The idea behind tweaks is that widget styles and behaviors should be as composab
 
 ## What are they
 
-A tweak is something that changes a property of a widget, for example:
-
-```scala
-def text(str: String) = Tweak[TextView](_.setText(str))
-
-textView <~ text("Hi")
-```
+A tweak is something that changes a property of a widget. More precisely,
+it is defined by a function `WidgetClass ⇒ Unit`.
 
 ## Defining
 
@@ -59,8 +54,13 @@ val textView2: Ui[TextView] =
   textView <~ text("Hi") <~ show
 ```
 
+Note that tweaking does not require the widgets to be created with *Macroid* bricks.
+
 ## Standard tweaks
 
-A number of standard tweaks are included. Please refer to the [scaladoc](api/macroid/Tweaks$.html).
+A number of standard tweaks are included. Please refer to the [scaladoc](../api/macroid/Tweaks$.html).
+Note that all these tweaks can be imported with `import macroid.FullDsl._`.
 
 ## Extra tweaks
+
+Some extra tweaks are included in the `macroid.contrib` package. Please refer to the [scaladoc](../api/macroid/contrib/ExtraTweaks$.html).

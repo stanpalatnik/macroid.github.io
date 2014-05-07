@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
         
         <meta charset="UTF-8">
-        <title>Logging | Macroid</title>
+        <title>Searching | Macroid</title>
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="robots" content="index, follow">
@@ -13,13 +13,13 @@
         <meta name="generator" content="www.gitbook.io">
 
         
-        <link rel="next" href="../guide/Advanced.html" />
+        <link rel="next" href="../guide/Fragments.html" />
         
         
-        <link rel="prev" href="../guide/ToastsDialogs.html" />
+        <link rel="prev" href="../guide/MediaQueries.html" />
         
 
-        <meta property="og:title" content="Logging | Macroid">
+        <meta property="og:title" content="Searching | Macroid">
         <meta property="og:site_name" content="Macroid">
         <meta property="og:type" content="book">
         <meta property="og:locale" content="en_US">
@@ -42,7 +42,7 @@
 
 
         
-    <div class="book" data-github="macroid/macroid" data-level="3.11" data-basepath=".." data-revision="1399477210165">
+    <div class="book" data-github="macroid/macroid" data-level="3.8" data-basepath=".." data-revision="1399477210165">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -394,7 +394,7 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 41.37931034482759%;min-width: 37.93103448275862%;"></div>
+        <div class="inner" style="width: 68.96551724137932%;min-width: 65.51724137931035%;"></div>
     </div>
     <div class="chapters">
     
@@ -424,21 +424,21 @@
     
         <a href="../guide/Logging.html" title="Logging" class="chapter done " data-progress="3.11" style="left: 41.37931034482759%;"></a>
     
-        <a href="../guide/Advanced.html" title="Advanced techniques" class="chapter  " data-progress="3.12" style="left: 44.827586206896555%;"></a>
+        <a href="../guide/Advanced.html" title="Advanced techniques" class="chapter done " data-progress="3.12" style="left: 44.827586206896555%;"></a>
     
-        <a href="../guide/Contexts.html" title="Contexts" class="chapter  " data-progress="3.2" style="left: 48.275862068965516%;"></a>
+        <a href="../guide/Contexts.html" title="Contexts" class="chapter done " data-progress="3.2" style="left: 48.275862068965516%;"></a>
     
-        <a href="../guide/Bricks.html" title="Bricks" class="chapter  " data-progress="3.3" style="left: 51.724137931034484%;"></a>
+        <a href="../guide/Bricks.html" title="Bricks" class="chapter done " data-progress="3.3" style="left: 51.724137931034484%;"></a>
     
-        <a href="../guide/Tweaks.html" title="Tweaks" class="chapter  " data-progress="3.4" style="left: 55.172413793103445%;"></a>
+        <a href="../guide/Tweaks.html" title="Tweaks" class="chapter done " data-progress="3.4" style="left: 55.172413793103445%;"></a>
     
-        <a href="../guide/Snails.html" title="Snails" class="chapter  " data-progress="3.5" style="left: 58.62068965517241%;"></a>
+        <a href="../guide/Snails.html" title="Snails" class="chapter done " data-progress="3.5" style="left: 58.62068965517241%;"></a>
     
-        <a href="../guide/Transformers.html" title="Transformers" class="chapter  " data-progress="3.6" style="left: 62.06896551724138%;"></a>
+        <a href="../guide/Transformers.html" title="Transformers" class="chapter done " data-progress="3.6" style="left: 62.06896551724138%;"></a>
     
-        <a href="../guide/MediaQueries.html" title="Media queries" class="chapter  " data-progress="3.7" style="left: 65.51724137931035%;"></a>
+        <a href="../guide/MediaQueries.html" title="Media queries" class="chapter done " data-progress="3.7" style="left: 65.51724137931035%;"></a>
     
-        <a href="../guide/Searching.html" title="Searching" class="chapter  " data-progress="3.8" style="left: 68.96551724137932%;"></a>
+        <a href="../guide/Searching.html" title="Searching" class="chapter done " data-progress="3.8" style="left: 68.96551724137932%;"></a>
     
         <a href="../guide/Fragments.html" title="Fragments" class="chapter  " data-progress="3.9" style="left: 72.41379310344827%;"></a>
     
@@ -463,37 +463,15 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_1806">
-                    
-                        <h1 id="logging">Logging</h1>
-<p><em>Macroid</em> provides logging string interpolators, which can be imported either
-via <code>import macroid.FullDsl._</code> or via <code>import macorid.Logging._</code>. They are all of the form <code>logX</code>,
-where <code>X</code> can be <code>V</code>, <code>I</code>, <code>D</code>, <code>W</code>, <code>E</code> or <code>Wtf</code>. Here is an example:</p>
-<pre><code class="lang-scala"><span class="hljs-comment">// log with Verbose level</span>
-<span class="hljs-comment">// and empty log tag</span>
-<span class="hljs-keyword">val</span> message = <span class="hljs-string">"bar"</span>
-logV<span class="hljs-string">"foo, $message"</span>()
-</code></pre>
-<p>You can also provide a log tag explicitly:</p>
-<pre><code class="lang-scala">logV<span class="hljs-string">"foo, $message"</span>(<span class="hljs-string">"TAG"</span>)
-</code></pre>
-<p>Or implicitly:</p>
-<pre><code class="lang-scala">implicit <span class="hljs-keyword">val</span> logTag = LogTag(<span class="hljs-string">"TAG"</span>)
-logV<span class="hljs-string">"foo, $message"</span>()
-</code></pre>
-
-                    
-                    </section>
-                
                 </div>
             </div>
         </div>
 
         
-        <a href="../guide/ToastsDialogs.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        <a href="../guide/MediaQueries.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../guide/Advanced.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        <a href="../guide/Fragments.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

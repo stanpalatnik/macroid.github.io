@@ -6,7 +6,7 @@ It is well-known that
 
 In order to enforce correct thread usage, *Macroid* introduces UI actions.
 
-## What are they?
+## What are they
 
 UI actions are pieces of code that are supposed to be run on the UI thread.
 A simple UI action can be created like this:

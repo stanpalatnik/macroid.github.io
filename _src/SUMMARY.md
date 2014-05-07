@@ -16,6 +16,7 @@
     * [Snails](guide/Snails.md)
     * [Transformers](guide/Transformers.md)
     * [Media queries](guide/MediaQueries.md)
+    * [Searching](guide/Searching.md)
     * [Fragments](guide/Fragments.md)
     * [Toasts and dialogs](guide/ToastsDialogs.md)
     * [Logging](guide/Logging.md)
@@ -27,3 +28,4 @@
 * [Sample projects](Samples.md)
 * [Talks](Talks.md)
 * [Related libraries](Related.md)
+* [Scaladoc](api/macroid/package.html)

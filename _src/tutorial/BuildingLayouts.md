@@ -1,6 +1,6 @@
 # Building Layouts
 
-*Macroid* comes with concise and easy to use layout bricks:
+*Macroid* comes with concise and easy to use layout [bricks](../guide/Bricks.html):
 
 * Layouts: `l[LinearLayout](...)`
 * Widgets: `w[TextView](...)`

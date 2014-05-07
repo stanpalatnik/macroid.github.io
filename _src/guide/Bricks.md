@@ -14,7 +14,7 @@ Import:
 ```scala
 import macroid.FullDsl._
 // or just
-import macroid.LayoutBuilding._
+// import macroid.LayoutBuilding._
 ```
 
 Stack together:
