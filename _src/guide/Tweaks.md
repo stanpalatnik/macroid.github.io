@@ -61,4 +61,6 @@ val textView2: Ui[TextView] =
 
 ## Standard tweaks
 
+A number of standard tweaks are included. Please refer to the [scaladoc](api/macroid/Tweaks$.html).
+
 ## Extra tweaks
