@@ -1,0 +1,549 @@
+<!DOCTYPE HTML>
+<html lang="en-US" manifest="../manifest.appcache">
+    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+        
+        <meta charset="UTF-8">
+        <title>Contexts | Macroid</title>
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="macroid">
+        <meta name="description" content="Macroid documentation">
+        <meta name="keywords" content="gitbook,github" >
+        <meta name="generator" content="www.gitbook.io">
+
+        
+        <link rel="next" href="../guide/Bricks.html" />
+        
+        
+        <link rel="prev" href="../guide/UiActions.html" />
+        
+
+        <meta property="og:title" content="Contexts | Macroid">
+        <meta property="og:site_name" content="Macroid">
+        <meta property="og:type" content="book">
+        <meta property="og:locale" content="en_US">
+
+        <meta property="book:author" content="https://github.com/macroid">
+        <meta property="book:tag" content="GitBook">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="shortcut icon" href="..\gitbook/images/favicon.ico" type="image/x-icon">
+        
+    </head>
+    <body>
+        
+
+        <link rel="stylesheet" href="..\gitbook/style.css">
+        
+
+
+        
+    <div class="book" data-github="macroid/macroid" data-level="3.2" data-basepath=".." data-revision="1399463093629">
+    <div class="book-header">
+    <!-- Actions Left -->
+    
+    <a href="https://github.com/macroid/macroid" target="_blank" class="btn pull-left"><i class="fa fa-github-alt"></i></a>
+    
+    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+    <span id="font-settings-wrapper">
+        <a href="#" class="btn pull-left toggle-font-settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+	<div class="dropdown-caret">
+  <span class="caret-outer"></span>
+  <span class="caret-inner"></span>
+</div>
+
+	<div class="btn-group btn-block">
+		<button id="reduce-font-size" class="btn btn-default">A</button>
+		<button id="enlarge-font-size" class="btn btn-default">A</button>
+	</div>
+
+	<ul class="list-group font-family-list">
+		<li class="list-group-item" data-font="0">Serif</li>
+		<li class="list-group-item" data-font="1">Sans</li>
+	</ul>
+
+	<div class="btn-group btn-group-xs btn-block color-theme-list">
+	  <button type="button" class="btn btn-default" id="color-theme-preview-0" data-theme="0">White</button>
+	  <button type="button" class="btn btn-default" id="color-theme-preview-1" data-theme="1">Sepia</button>
+	  <button type="button" class="btn btn-default" id="color-theme-preview-2" data-theme="2">Night</button>
+	</div>
+</div>
+
+    </span>
+
+    <!-- Actions Right -->
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+
+    
+    <a href="https://github.com/macroid/macroid/stargazers" target="_blank" class="btn pull-right count-star"><i class="fa fa-star-o"></i> Star (<span>-</span>)</a>
+    <a href="https://github.com/macroid/macroid/watchers" target="_blank" class="btn pull-right count-watch"><i class="fa fa-eye"></i> Watch (<span>-</span>)</a>
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-spinner fa-spin"></i>
+        <a href="../" >Macroid</a>
+    </h1>
+</div>
+
+    <div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        <li>
+            <a href="https://github.com/stanch" target="blank">About the author</a>
+        </li>
+        
+
+        
+        <li>
+            <a href="https://github.com/macroid/macroid/issues" target="blank">Questions and Issues</a>
+        </li>
+        
+
+        
+
+        
+        <li class="divider"></li>
+        
+
+        <li data-level="0" data-path="index.html">
+            <a href="../"><i class="fa fa-check"></i> Introduction</a>
+        </li>
+        
+            <li  data-level="1" data-path="Installation.html">
+                
+                <a href="../Installation.html">
+                    <i class="fa fa-check"></i> <b>1.</b> Installation
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="1.1" data-path="ScalaOnAndroid.html">
+                            
+                            <a href="../ScalaOnAndroid.html">
+                                <i class="fa fa-check"></i> <b>1.1.</b> Scala on Android
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="2" data-path="Tutorial.html">
+                
+                <a href="../Tutorial.html">
+                    <i class="fa fa-check"></i> <b>2.</b> Tutorial
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="2.1" data-path="tutorial/BuildingLayouts.html">
+                            
+                            <a href="../tutorial/BuildingLayouts.html">
+                                <i class="fa fa-check"></i> <b>2.1.</b> Building layouts
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.2" data-path="tutorial/Tweaking.html">
+                            
+                            <a href="../tutorial/Tweaking.html">
+                                <i class="fa fa-check"></i> <b>2.2.</b> Tweaking widgets
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.3" data-path="tutorial/HandlingEvents.html">
+                            
+                            <a href="../tutorial/HandlingEvents.html">
+                                <i class="fa fa-check"></i> <b>2.3.</b> Handling events
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.4" data-path="tutorial/GettingAdaptive.html">
+                            
+                            <a href="../tutorial/GettingAdaptive.html">
+                                <i class="fa fa-check"></i> <b>2.4.</b> Getting adaptive
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="2.5" data-path="tutorial/CompleteCode.html">
+                            
+                            <a href="../tutorial/CompleteCode.html">
+                                <i class="fa fa-check"></i> <b>2.5.</b> Complete code
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="3" data-path="Guide.html">
+                
+                <a href="../Guide.html">
+                    <i class="fa fa-check"></i> <b>3.</b> Guide
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="3.1" data-path="guide/UiActions.html">
+                            
+                            <a href="../guide/UiActions.html">
+                                <i class="fa fa-check"></i> <b>3.1.</b> UI actions
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.2" data-path="guide/Contexts.html">
+                            
+                            <a href="../guide/Contexts.html">
+                                <i class="fa fa-check"></i> <b>3.2.</b> Contexts
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.3" data-path="guide/Bricks.html">
+                            
+                            <a href="../guide/Bricks.html">
+                                <i class="fa fa-check"></i> <b>3.3.</b> Bricks
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.4" data-path="guide/Tweaks.html">
+                            
+                            <a href="../guide/Tweaks.html">
+                                <i class="fa fa-check"></i> <b>3.4.</b> Tweaks
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.5" data-path="guide/Snails.html">
+                            
+                            <a href="../guide/Snails.html">
+                                <i class="fa fa-check"></i> <b>3.5.</b> Snails
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.6" data-path="guide/Transformers.html">
+                            
+                            <a href="../guide/Transformers.html">
+                                <i class="fa fa-check"></i> <b>3.6.</b> Transformers
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.7" data-path="guide/MediaQueries.html">
+                            
+                            <a href="../guide/MediaQueries.html">
+                                <i class="fa fa-check"></i> <b>3.7.</b> Media queries
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.8" data-path="guide/Fragments.html">
+                            
+                            <a href="../guide/Fragments.html">
+                                <i class="fa fa-check"></i> <b>3.8.</b> Fragments
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.9" data-path="guide/ToastsDialogs.html">
+                            
+                            <a href="../guide/ToastsDialogs.html">
+                                <i class="fa fa-check"></i> <b>3.9.</b> Toasts and dialogs
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.10" data-path="guide/Logging.html">
+                            
+                            <a href="../guide/Logging.html">
+                                <i class="fa fa-check"></i> <b>3.10.</b> Logging
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="3.11" data-path="guide/Advanced.html">
+                            
+                            <a href="../guide/Advanced.html">
+                                <i class="fa fa-check"></i> <b>3.11.</b> Advanced techniques
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="4" data-path="Differences.html">
+                
+                <a href="../Differences.html">
+                    <i class="fa fa-check"></i> <b>4.</b> Differences from...
+                </a>
+                
+                
+                <ul class="articles">
+                    
+                        <li  data-level="4.1" data-path="differences/Vanilla.html">
+                            
+                            <a href="../differences/Vanilla.html">
+                                <i class="fa fa-check"></i> <b>4.1.</b> Vanilla Android
+                            </a>
+                            
+                        </li>
+                    
+                        <li  data-level="4.2" data-path="differences/Scaloid.html">
+                            
+                            <a href="../differences/Scaloid.html">
+                                <i class="fa fa-check"></i> <b>4.2.</b> Scaloid
+                            </a>
+                            
+                        </li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li  data-level="5" data-path="Recipes.html">
+                
+                <a href="../Recipes.html">
+                    <i class="fa fa-check"></i> <b>5.</b> Recipes
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="6" data-path="Samples.html">
+                
+                <a href="../Samples.html">
+                    <i class="fa fa-check"></i> <b>6.</b> Sample projects
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="7" data-path="Talks.html">
+                
+                <a href="../Talks.html">
+                    <i class="fa fa-check"></i> <b>7.</b> Talks
+                </a>
+                
+                
+            </li>
+        
+            <li  data-level="8" data-path="Related.html">
+                
+                <a href="../Related.html">
+                    <i class="fa fa-check"></i> <b>8.</b> Related libraries
+                </a>
+                
+                
+            </li>
+        
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="http://www.gitbook.io/" target="blank">Generated using GitBook</a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="page-wrapper" tabindex="-1">
+                <div class="book-progress">
+    <div class="bar">
+        <div class="inner" style="width: 48.148148148148145%;min-width: 44.44444444444444%;"></div>
+    </div>
+    <div class="chapters">
+    
+        <a href="../index.html" title="Introduction" class="chapter done new-chapter" data-progress="0" style="left: 0%;"></a>
+    
+        <a href="../Installation.html" title="Installation" class="chapter done new-chapter" data-progress="1" style="left: 3.7037037037037037%;"></a>
+    
+        <a href="../ScalaOnAndroid.html" title="Scala on Android" class="chapter done " data-progress="1.1" style="left: 7.407407407407407%;"></a>
+    
+        <a href="../Tutorial.html" title="Tutorial" class="chapter done new-chapter" data-progress="2" style="left: 11.11111111111111%;"></a>
+    
+        <a href="../tutorial/BuildingLayouts.html" title="Building layouts" class="chapter done " data-progress="2.1" style="left: 14.814814814814815%;"></a>
+    
+        <a href="../tutorial/Tweaking.html" title="Tweaking widgets" class="chapter done " data-progress="2.2" style="left: 18.51851851851852%;"></a>
+    
+        <a href="../tutorial/HandlingEvents.html" title="Handling events" class="chapter done " data-progress="2.3" style="left: 22.22222222222222%;"></a>
+    
+        <a href="../tutorial/GettingAdaptive.html" title="Getting adaptive" class="chapter done " data-progress="2.4" style="left: 25.925925925925927%;"></a>
+    
+        <a href="../tutorial/CompleteCode.html" title="Complete code" class="chapter done " data-progress="2.5" style="left: 29.62962962962963%;"></a>
+    
+        <a href="../Guide.html" title="Guide" class="chapter done new-chapter" data-progress="3" style="left: 33.333333333333336%;"></a>
+    
+        <a href="../guide/UiActions.html" title="UI actions" class="chapter done " data-progress="3.1" style="left: 37.03703703703704%;"></a>
+    
+        <a href="../guide/Logging.html" title="Logging" class="chapter done " data-progress="3.10" style="left: 40.74074074074074%;"></a>
+    
+        <a href="../guide/Advanced.html" title="Advanced techniques" class="chapter done " data-progress="3.11" style="left: 44.44444444444444%;"></a>
+    
+        <a href="../guide/Contexts.html" title="Contexts" class="chapter done " data-progress="3.2" style="left: 48.148148148148145%;"></a>
+    
+        <a href="../guide/Bricks.html" title="Bricks" class="chapter  " data-progress="3.3" style="left: 51.851851851851855%;"></a>
+    
+        <a href="../guide/Tweaks.html" title="Tweaks" class="chapter  " data-progress="3.4" style="left: 55.55555555555556%;"></a>
+    
+        <a href="../guide/Snails.html" title="Snails" class="chapter  " data-progress="3.5" style="left: 59.25925925925926%;"></a>
+    
+        <a href="../guide/Transformers.html" title="Transformers" class="chapter  " data-progress="3.6" style="left: 62.96296296296296%;"></a>
+    
+        <a href="../guide/MediaQueries.html" title="Media queries" class="chapter  " data-progress="3.7" style="left: 66.66666666666667%;"></a>
+    
+        <a href="../guide/Fragments.html" title="Fragments" class="chapter  " data-progress="3.8" style="left: 70.37037037037037%;"></a>
+    
+        <a href="../guide/ToastsDialogs.html" title="Toasts and dialogs" class="chapter  " data-progress="3.9" style="left: 74.07407407407408%;"></a>
+    
+        <a href="../Differences.html" title="Differences from..." class="chapter  new-chapter" data-progress="4" style="left: 77.77777777777777%;"></a>
+    
+        <a href="../differences/Vanilla.html" title="Vanilla Android" class="chapter  " data-progress="4.1" style="left: 81.48148148148148%;"></a>
+    
+        <a href="../differences/Scaloid.html" title="Scaloid" class="chapter  " data-progress="4.2" style="left: 85.18518518518519%;"></a>
+    
+        <a href="../Recipes.html" title="Recipes" class="chapter  new-chapter" data-progress="5" style="left: 88.88888888888889%;"></a>
+    
+        <a href="../Samples.html" title="Sample projects" class="chapter  new-chapter" data-progress="6" style="left: 92.5925925925926%;"></a>
+    
+        <a href="../Talks.html" title="Talks" class="chapter  new-chapter" data-progress="7" style="left: 96.29629629629629%;"></a>
+    
+        <a href="../Related.html" title="Related libraries" class="chapter  new-chapter" data-progress="8" style="left: 100%;"></a>
+    
+    </div>
+</div>
+
+                <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_15">
+                    
+                        <h1 id="contexts">Contexts</h1>
+<p>Android Context is normally required to construct widgets, check screen orientation, etc.
+However, one has to <a href="http://stackoverflow.com/questions/987072/using-application-context-everywhere?rq=1" target="_blank">differentiate between</a>
+two types of context: one obtained from an activity
+and one obtained from the application. The reason is that holding on to the activity context
+may cause <a href="http://stackoverflow.com/questions/3346080/android-references-to-a-context-and-memory-leaks" target="_blank">memory leaks</a>.</p>
+<p><em>Macroid</em> distinguishes between these two types of Context and passes them implicitly to prevent code bloat.</p>
+<h2 id="what-are-they-">What are they?</h2>
+<ul>
+<li><code>macroid.AppContext</code> holds the application context;</li>
+<li><code>macroid.ActivityContext</code> holds a weak reference to the activity context, so that it’s safe to store it.</li>
+</ul>
+<h2 id="including">Including</h2>
+<p>To include the implicit contexts in your activity, inherit <code>Contexts</code>:</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> macroid.FullDsl._
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyActivity</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Activity</span> <span class="hljs-keyword">with</span> <span class="hljs-title">Contexts</span>[<span class="hljs-title">Activity</span>] {</span>
+  ...
+}
+</code></pre>
+<p>If you use fragments from the support library
+(see the <a href="Fragments.html">section on fragments</a>):</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> macroid.FullDsl._
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyActivity</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">FragmentActivity</span> <span class="hljs-keyword">with</span> <span class="hljs-title">Contexts</span>[<span class="hljs-title">FragmentActivity</span>] {</span>
+  ...
+}
+</code></pre>
+<p>Finally, in a fragment (either <code>android.app.Fragment</code> or <code>android.support.v4.app.Fragment</code>):</p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyFragment</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Fragment</span> <span class="hljs-keyword">with</span> <span class="hljs-title">Contexts</span>[<span class="hljs-title">Fragment</span>] {</span>
+  ...
+}
+</code></pre>
+<h2 id="usage">Usage</h2>
+<p>Most <em>Macroid</em> APIs require one or two of these contexts. If you use them inside an 
+activity or a fragment, you are golden. However sometimes you need to pass the contexts
+to other methods:</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> macroid.{ AppContext, ActivityContext }
+<span class="hljs-keyword">import</span> macroid.FullDsl._
+<span class="hljs-keyword">import</span> macroid.contrib.ExtraTweaks._
+
+<span class="hljs-keyword">def</span> customTweak(implicit appCtx: AppContext) =
+  <span class="hljs-comment">// this one requires AppContext</span>
+  TextSize.large +
+  text(<span class="hljs-string">"foo"</span>)
+
+<span class="hljs-keyword">def</span> customLayout(implicit ctx: ActivityContext) =
+  <span class="hljs-comment">// layout bricks require ActivityContext</span>
+  l[LinearLayout](
+    w[TextView],
+    w[Button]
+  )
+</code></pre>
+
+                    
+                    </section>
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../guide/UiActions.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../guide/Bricks.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
+        <script src="..\gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+        <script src="..\gitbook/app.js"></script>
+        
+
+    
+    <script src="..\gitbook/plugins/gitbook-plugin-disqus/plugin.js"></script>
+    
+
+    
+    <script src="..\gitbook/plugins/gitbook-plugin-mixpanel/plugin.js"></script>
+    
+
+    
+    <script src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+    
+    <script src="..\gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"disqus":{"shortName":"macroid"}};
+    gitbook.start(config);
+});
+</script>
+
+    </body>
+</html>

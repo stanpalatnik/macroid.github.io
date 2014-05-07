@@ -1,0 +1,970 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html>
+        <head>
+          <title>macroid - macroid</title>
+          <meta name="description" content="macroid - macroid" />
+          <meta name="keywords" content="macroid macroid" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../index.html';
+            var hash = 'macroid.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img src="../lib/package_big.png" />
+        
+        <h1>macroid</h1>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">macroid</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="macroid.ActivityContext" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ActivityContextextendsProductwithSerializable"></a>
+      <a id="ActivityContext:ActivityContext"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="ActivityContext.html"><span class="name">ActivityContext</span></a><span class="params">(<span name="activity">activity: <span class="extype" name="scala.ref.WeakReference">WeakReference</span>[<span class="extype" name="android.app.Activity">Activity</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@implicitNotFound</span><span class="args">(<span>
+      
+      <span class="defval" name="&quot;Could not find `ActivityContext`. If you are inside Activity or Fragment, extend Contexts[Activity] or Contexts[Fragment], otherwise pass an instance of `ActivityContext` from outside.&quot;">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="macroid.AppContext" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="AppContextextendsProductwithSerializable"></a>
+      <a id="AppContext:AppContext"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="AppContext.html"><span class="name">AppContext</span></a><span class="params">(<span name="app">app: <span class="extype" name="android.content.Context">Context</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@implicitNotFound</span><span class="args">(<span>
+      
+      <span class="defval" name="&quot;Could not find `AppContext`. If you are inside Activity or Fragment, extend Contexts[Activity] or Contexts[Fragment], otherwise pass an instance of `AppContext` from outside.&quot;">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="macroid.CanFindFragments" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="CanFindFragments[-X,-F]extendsAnyRef"></a>
+      <a id="CanFindFragments[-X,-F]:CanFindFragments[X,F]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="CanFindFragments.html"><span class="name">CanFindFragments</span></a><span class="tparams">[<span name="X">-X</span>, <span name="F">-F</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.CanFindViews" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="CanFindViews[-X]extendsAnyRef"></a>
+      <a id="CanFindViews[-X]:CanFindViews[X]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="CanFindViews.html"><span class="name">CanFindViews</span></a><span class="tparams">[<span name="X">-X</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.CanSnail" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="CanSnail[W,S,R]extendsAnyRef"></a>
+      <a id="CanSnail[W,S,R]:CanSnail[W,S,R]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="CanSnail.html"><span class="name">CanSnail</span></a><span class="tparams">[<span name="W">W</span>, <span name="S">S</span>, <span name="R">R</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@implicitNotFound</span><span class="args">(<span>
+      
+      <span class="defval" name="&quot;Don't know how to snail ${W} with ${S}. Try importing an instance of CanSnail[${W}, ${S}, ...]&quot;">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="macroid.CanTransform" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="CanTransform[L,T,R]extendsAnyRef"></a>
+      <a id="CanTransform[L,T,R]:CanTransform[L,T,R]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="CanTransform.html"><span class="name">CanTransform</span></a><span class="tparams">[<span name="L">L</span>, <span name="T">T</span>, <span name="R">R</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.CanTweak" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="CanTweak[W,T,R]extendsAnyRef"></a>
+      <a id="CanTweak[W,T,R]:CanTweak[W,T,R]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="CanTweak.html"><span class="name">CanTweak</span></a><span class="tparams">[<span name="W">W</span>, <span name="T">T</span>, <span name="R">R</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@implicitNotFound</span><span class="args">(<span>
+      
+      <span class="defval" name="&quot;Don't know how to tweak ${W} with ${T}. Try importing an instance of CanTweak[${W}, ${T}, ...].&quot;">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="macroid.Contexts" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="Contexts[X]extendsAnyRef"></a>
+      <a id="Contexts[X]:Contexts[X]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="Contexts.html"><span class="name">Contexts</span></a><span class="tparams">[<span name="X">X</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.FragmentBuilder" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FragmentBuilder[F]extendsProductwithSerializable"></a>
+      <a id="FragmentBuilder[F]:FragmentBuilder[F]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="FragmentBuilder.html"><span class="name">FragmentBuilder</span></a><span class="tparams">[<span name="F">F</span>]</span><span class="params">(<span name="constructor">constructor: <a href="util/Ui.html" class="extype" name="macroid.util.Ui">Ui</a>[<span class="extype" name="macroid.FragmentBuilder.F">F</span>]</span>, <span name="arguments">arguments: <span class="extype" name="android.os.Bundle">Bundle</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ctx">ctx: <a href="ActivityContext.html" class="extype" name="macroid.ActivityContext">ActivityContext</a></span>, <span name="fragment">fragment: <a href="support/Fragment.html" class="extype" name="macroid.support.Fragment">Fragment</a>[<span class="extype" name="macroid.FragmentBuilder.F">F</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A fragment builder proxy</p>
+    </li><li name="macroid.FragmentManagerContext" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FragmentManagerContext[-F,M]extendsProductwithSerializable"></a>
+      <a id="FragmentManagerContext[-F,M]:FragmentManagerContext[F,M]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="FragmentManagerContext.html"><span class="name">FragmentManagerContext</span></a><span class="tparams">[<span name="F">-F</span>, <span name="M">M</span>]</span><span class="params">(<span name="manager">manager: <span class="extype" name="macroid.FragmentManagerContext.M">M</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="fragmentApi">fragmentApi: <a href="support/FragmentApi.html" class="extype" name="macroid.support.FragmentApi">FragmentApi</a>[<span class="extype" name="macroid.FragmentManagerContext.F">F</span>, <span class="extype" name="macroid.FragmentManagerContext.M">M</span>, _]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@implicitNotFound</span><span class="args">(<span>
+      
+      <span class="defval" name="&quot;Could not find `FragmentManagerContext[${F}, ${M}]`. If you are inside Activity or Fragment, extend Contexts[Activity] or Contexts[Fragment], otherwise pass an instance of `FragmentManagerContext` from outside.&quot;">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="macroid.IdGen" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="IdGenextendsDynamic"></a>
+      <a id="IdGen:IdGen"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="IdGen.html"><span class="name">IdGen</span></a><span class="result"> extends <span class="extype" name="scala.Dynamic">Dynamic</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A class to generate unique Ids</p>
+    </li><li name="macroid.IdGeneration" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="IdGenerationextendsAnyRef"></a>
+      <a id="IdGeneration:IdGeneration"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="IdGeneration.html"><span class="name">IdGeneration</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.Loaf" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LoafextendsProductwithSerializable"></a>
+      <a id="Loaf:Loaf"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Loaf.html"><span class="name">Loaf</span></a><span class="params">(<span name="f">f: (<span class="extype" name="android.widget.Toast">Toast</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.LogTag" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LogTagextendsProductwithSerializable"></a>
+      <a id="LogTag:LogTag"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="LogTag.html"><span class="name">LogTag</span></a><span class="params">(<span name="tag">tag: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.MediaQuery" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MediaQueryextendsProductwithSerializable"></a>
+      <a id="MediaQuery:MediaQuery"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="MediaQuery.html"><span class="name">MediaQuery</span></a><span class="params">(<span name="b">b: <span class="extype" name="scala.Boolean">Boolean</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A media query is a small wrapper around Boolean with nicer operators</p>
+    </li><li name="macroid.Phrase" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PhraseextendsProductwithSerializable"></a>
+      <a id="Phrase:Phrase"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Phrase.html"><span class="name">Phrase</span></a><span class="params">(<span name="f">f: (<span class="extype" name="android.app.AlertDialog.Builder">Builder</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.Snail" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Snail[-W&lt;:android.view.View]extendsProductwithSerializable"></a>
+      <a id="Snail[-W&lt;:View]:Snail[W]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Snail.html"><span class="name">Snail</span></a><span class="tparams">[<span name="W">-W &lt;: <span class="extype" name="android.view.View">View</span></span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="macroid.Snail.W">W</span>) ⇒ <span class="extype" name="scala.concurrent.Future">Future</span>[<span class="extype" name="scala.Unit">Unit</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A snail mutates the view slowly (e.</p>
+    </li><li name="macroid.TagGen" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TagGenextendsDynamic"></a>
+      <a id="TagGen:TagGen"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="TagGen.html"><span class="name">TagGen</span></a><span class="result"> extends <span class="extype" name="scala.Dynamic">Dynamic</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A toy class to allow more descriptive syntax for tags (Tag.</p>
+    </li><li name="macroid.Transformer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TransformerextendsProductwithSerializable"></a>
+      <a id="Transformer:Transformer"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Transformer.html"><span class="name">Transformer</span></a><span class="params">(<span name="f">f: <span class="extype" name="scala.PartialFunction">PartialFunction</span>[<span class="extype" name="android.view.View">View</span>, <a href="util/Ui.html" class="extype" name="macroid.util.Ui">Ui</a>[<span class="extype" name="scala.Any">Any</span>]]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.Tweak" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Tweak[-W&lt;:android.view.View]extendsProductwithSerializable"></a>
+      <a id="Tweak[-W&lt;:View]:Tweak[W]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="Tweak.html"><span class="name">Tweak</span></a><span class="tparams">[<span name="W">-W &lt;: <span class="extype" name="android.view.View">View</span></span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="macroid.Tweak.W">W</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A Tweak is something that mutates a widget</p>
+    </li></ol>
+            </div>
+
+        
+
+        <div id="values" class="values members">
+              <h3>Value Members</h3>
+              <ol><li name="macroid.ActivityContext" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ActivityContext"></a>
+      <a id="ActivityContext:ActivityContext"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ActivityContext$.html"><span class="name">ActivityContext</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.BasicTweakMacros" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BasicTweakMacros"></a>
+      <a id="BasicTweakMacros:BasicTweakMacros"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="BasicTweakMacros$.html"><span class="name">BasicTweakMacros</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.BundleMacros" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BundleMacros"></a>
+      <a id="BundleMacros:BundleMacros"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="BundleMacros$.html"><span class="name">BundleMacros</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.Bundles" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Bundles"></a>
+      <a id="Bundles:Bundles"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Bundles$.html"><span class="name">Bundles</span></a><span class="result"> extends <span class="extype" name="macroid.Bundles">Bundles</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.CanFindFragments" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CanFindFragments"></a>
+      <a id="CanFindFragments:CanFindFragments"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="CanFindFragments$.html"><span class="name">CanFindFragments</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.CanFindViews" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CanFindViews"></a>
+      <a id="CanFindViews:CanFindViews"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="CanFindViews$.html"><span class="name">CanFindViews</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.CanSnail" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CanSnail"></a>
+      <a id="CanSnail:CanSnail"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="CanSnail$.html"><span class="name">CanSnail</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.CanTransform" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CanTransform"></a>
+      <a id="CanTransform:CanTransform"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="CanTransform$.html"><span class="name">CanTransform</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.CanTweak" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CanTweak"></a>
+      <a id="CanTweak:CanTweak"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="CanTweak$.html"><span class="name">CanTweak</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.DialogBuilding" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DialogBuilding"></a>
+      <a id="DialogBuilding:DialogBuilding"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="DialogBuilding$.html"><span class="name">DialogBuilding</span></a><span class="result"> extends <span class="extype" name="macroid.DialogBuilding">DialogBuilding</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.DialogDsl" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DialogDsl"></a>
+      <a id="DialogDsl:DialogDsl"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="DialogDsl$.html"><span class="name">DialogDsl</span></a><span class="result"> extends <span class="extype" name="macroid.DialogDsl">DialogDsl</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.EventTweakMacros" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="EventTweakMacros"></a>
+      <a id="EventTweakMacros:EventTweakMacros"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="EventTweakMacros$.html"><span class="name">EventTweakMacros</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.FragmentBuilding" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FragmentBuilding"></a>
+      <a id="FragmentBuilding:FragmentBuilding"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="FragmentBuilding$.html"><span class="name">FragmentBuilding</span></a><span class="result"> extends <span class="extype" name="macroid.FragmentBuilding">FragmentBuilding</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.FragmentBuildingMacros" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FragmentBuildingMacros"></a>
+      <a id="FragmentBuildingMacros:FragmentBuildingMacros"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="FragmentBuildingMacros$.html"><span class="name">FragmentBuildingMacros</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.FullDsl" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FullDsl"></a>
+      <a id="FullDsl:FullDsl"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="FullDsl$.html"><span class="name">FullDsl</span></a><span class="result"> extends <span class="extype" name="macroid.FullDsl">FullDsl</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.Layout" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Layout"></a>
+      <a id="Layout:Layout"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Layout$.html"><span class="name">Layout</span></a>
+      </span>
+      </h4>
+      <p class="comment cmt">Layout extractor</p>
+    </li><li name="macroid.LayoutBuilding" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LayoutBuilding"></a>
+      <a id="LayoutBuilding:LayoutBuilding"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="LayoutBuilding$.html"><span class="name">LayoutBuilding</span></a><span class="result"> extends <span class="extype" name="macroid.LayoutBuilding">LayoutBuilding</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.LayoutBuildingMacros" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LayoutBuildingMacros"></a>
+      <a id="LayoutBuildingMacros:LayoutBuildingMacros"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="LayoutBuildingMacros$.html"><span class="name">LayoutBuildingMacros</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.LayoutDsl" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LayoutDsl"></a>
+      <a id="LayoutDsl:LayoutDsl"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="LayoutDsl$.html"><span class="name">LayoutDsl</span></a><span class="result"> extends <span class="extype" name="macroid.LayoutDsl">LayoutDsl</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.LayoutTweakMacros" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LayoutTweakMacros"></a>
+      <a id="LayoutTweakMacros:LayoutTweakMacros"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="LayoutTweakMacros$.html"><span class="name">LayoutTweakMacros</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.Loafing" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Loafing"></a>
+      <a id="Loafing:Loafing"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Loafing$.html"><span class="name">Loafing</span></a><span class="result"> extends <span class="extype" name="macroid.Loafing">Loafing</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.Loafs" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Loafs"></a>
+      <a id="Loafs:Loafs"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Loafs$.html"><span class="name">Loafs</span></a><span class="result"> extends <span class="extype" name="macroid.Loafs">Loafs</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.Logging" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Logging"></a>
+      <a id="Logging:Logging"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Logging$.html"><span class="name">Logging</span></a><span class="result"> extends <span class="extype" name="macroid.Logging">Logging</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.MediaQueries" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MediaQueries"></a>
+      <a id="MediaQueries:MediaQueries"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="MediaQueries$.html"><span class="name">MediaQueries</span></a><span class="result"> extends <span class="extype" name="macroid.MediaQueries">MediaQueries</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.MediaQuery" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MediaQuery"></a>
+      <a id="MediaQuery:MediaQuery"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="MediaQuery$.html"><span class="name">MediaQuery</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.Phrases" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Phrases"></a>
+      <a id="Phrases:Phrases"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Phrases$.html"><span class="name">Phrases</span></a><span class="result"> extends <span class="extype" name="macroid.Phrases">Phrases</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.Phrasing" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Phrasing"></a>
+      <a id="Phrasing:Phrasing"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Phrasing$.html"><span class="name">Phrasing</span></a><span class="result"> extends <span class="extype" name="macroid.Phrasing">Phrasing</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.ResourceMacros" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ResourceMacros"></a>
+      <a id="ResourceMacros:ResourceMacros"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ResourceMacros$.html"><span class="name">ResourceMacros</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.Resources" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Resources"></a>
+      <a id="Resources:Resources"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Resources$.html"><span class="name">Resources</span></a><span class="result"> extends <span class="extype" name="macroid.Resources">Resources</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.Searching" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Searching"></a>
+      <a id="Searching:Searching"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Searching$.html"><span class="name">Searching</span></a><span class="result"> extends <span class="extype" name="macroid.Searching">Searching</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.Snail" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Snail"></a>
+      <a id="Snail:Snail"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Snail$.html"><span class="name">Snail</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.Snailing" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Snailing"></a>
+      <a id="Snailing:Snailing"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Snailing$.html"><span class="name">Snailing</span></a><span class="result"> extends <span class="extype" name="macroid.Snailing">Snailing</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.Snails" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Snails"></a>
+      <a id="Snails:Snails"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Snails$.html"><span class="name">Snails</span></a><span class="result"> extends <span class="extype" name="macroid.Snails">Snails</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.ToastBuilding" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ToastBuilding"></a>
+      <a id="ToastBuilding:ToastBuilding"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ToastBuilding$.html"><span class="name">ToastBuilding</span></a><span class="result"> extends <span class="extype" name="macroid.ToastBuilding">ToastBuilding</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.ToastDsl" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ToastDsl"></a>
+      <a id="ToastDsl:ToastDsl"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="ToastDsl$.html"><span class="name">ToastDsl</span></a><span class="result"> extends <span class="extype" name="macroid.ToastDsl">ToastDsl</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.Transformer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Transformer"></a>
+      <a id="Transformer:Transformer"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Transformer$.html"><span class="name">Transformer</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.Transforming" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Transforming"></a>
+      <a id="Transforming:Transforming"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Transforming$.html"><span class="name">Transforming</span></a><span class="result"> extends <span class="extype" name="macroid.Transforming">Transforming</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.Tweak" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Tweak"></a>
+      <a id="Tweak:Tweak"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Tweak$.html"><span class="name">Tweak</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.Tweaking" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Tweaking"></a>
+      <a id="Tweaking:Tweaking"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Tweaking$.html"><span class="name">Tweaking</span></a><span class="result"> extends <span class="extype" name="macroid.Tweaking">Tweaking</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.Tweaks" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Tweaks"></a>
+      <a id="Tweaks:Tweaks"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Tweaks$.html"><span class="name">Tweaks</span></a><span class="result"> extends <span class="extype" name="macroid.Tweaks">Tweaks</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.UiThreading" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="UiThreading"></a>
+      <a id="UiThreading:UiThreading"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="UiThreading$.html"><span class="name">UiThreading</span></a><span class="result"> extends <span class="extype" name="macroid.UiThreading">UiThreading</span></span>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.contrib" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="contrib"></a>
+      <a id="contrib:contrib"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="contrib/package.html"><span class="name">contrib</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.support" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="support"></a>
+      <a id="support:support"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="support/package.html"><span class="name">support</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.util" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="util"></a>
+      <a id="util:util"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="util/package.html"><span class="name">util</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.warts" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="warts"></a>
+      <a id="warts:warts"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a href="warts/package.html"><span class="name">warts</span></a>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../lib/template.js"></script>
+    </body>
+      </html>
