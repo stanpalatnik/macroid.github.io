@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# Revision 1399563591402
+# Revision 1399563700008
 
 CACHE:
 ScalaOnAndroid.html
@@ -7,22 +7,22 @@ Differences.html
 Installation.html
 index.html
 Recipes.html
-Related.html
 Samples.html
+Related.html
 Guide.html
 Talks.html
 Tutorial.html
 differences/Scaloid.html
-differences/Vanilla.html
 guide/Searching.html
+differences/Vanilla.html
 guide/Advanced.html
 guide/Contexts.html
 guide/Fragments.html
 guide/Logging.html
 guide/MediaQueries.html
 guide/Bricks.html
-guide/Snails.html
 guide/ToastsDialogs.html
+guide/Snails.html
 guide/Transformers.html
 guide/Tweaks.html
 guide/UiActions.html

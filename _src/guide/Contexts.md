@@ -8,7 +8,7 @@ may cause [memory leaks](http://stackoverflow.com/questions/3346080/android-refe
 
 *Macroid* distinguishes between these two types of Context and passes them implicitly to prevent code bloat.
 
-## What are they?
+## What are they
 
 * `macroid.AppContext` holds the application context;
 * `macroid.ActivityContext` holds a weak reference to the activity context, so that it’s safe to store it.

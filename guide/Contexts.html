@@ -42,7 +42,7 @@
 
 
         
-    <div class="book" data-github="macroid/macroid" data-level="3.2" data-basepath=".." data-revision="1399563591402">
+    <div class="book" data-github="macroid/macroid" data-level="3.2" data-basepath=".." data-revision="1399563700007">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -463,7 +463,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_392">
+                    <section class="normal" id="section-gitbook_15">
                     
                         <h1 id="contexts">Contexts</h1>
 <p>Android Context is normally required to construct widgets, check screen orientation, etc.
@@ -472,7 +472,7 @@ two types of context: one obtained from an activity
 and one obtained from the application. The reason is that holding on to the activity context
 may cause <a href="http://stackoverflow.com/questions/3346080/android-references-to-a-context-and-memory-leaks" target="_blank">memory leaks</a>.</p>
 <p><em>Macroid</em> distinguishes between these two types of Context and passes them implicitly to prevent code bloat.</p>
-<h2 id="what-are-they-">What are they?</h2>
+<h2 id="what-are-they">What are they</h2>
 <ul>
 <li><code>macroid.AppContext</code> holds the application context;</li>
 <li><code>macroid.ActivityContext</code> holds a weak reference to the activity context, so that it’s safe to store it.</li>
