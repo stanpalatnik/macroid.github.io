@@ -8,7 +8,7 @@ button <~ On.click {
 }
 ```
 
-Before we setup our button to show the greeting, we need to wire the
+Before we setup our button to show the greeting, we need to [wire](../guide/Searching.html#slots-and-wires) the
 greeting textbox to a variable:
 
 ```scala

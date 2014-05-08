@@ -42,7 +42,7 @@
 
 
         
-    <div class="book" data-github="macroid/macroid" data-level="3.8" data-basepath=".." data-revision="1399477210165">
+    <div class="book" data-github="macroid/macroid" data-level="3.8" data-basepath=".." data-revision="1399563591402">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -462,6 +462,103 @@
 </div>
 
                 <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_390">
+                    
+                        <h1 id="searching">Searching</h1>
+<p>Sometimes you need to search for a particular widget, layout, or fragment. Let’s see how it can be done.</p>
+<h2 id="slots-and-wires">Slots and wires</h2>
+<p>This is a better and safer (and thus the preferred) way. First, declare a slot:</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">var</span> button = slot[Button]
+</code></pre>
+<p>The variable is given a type <code>Option[Button]</code> with a value of <code>None</code>.
+Now you can wire a widget to it:</p>
+<pre><code class="lang-scala">w[Button] &lt;~ wire(button)
+</code></pre>
+<p>Once the layout is created, <code>button</code> will point to the actual widget.</p>
+<p>Even though slots are <code>Option</code>s,
+tweaking works with them as expected (<a href="Advanced.html">see why</a>). On the other hand,
+using an <code>Option</code> protects you from <code>NullPointerException</code>s in cases when the layout is
+not yet created or the slot is not wired.</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">var</span> button = slot[Button]
+...
+button &lt;~ text(<span class="hljs-string">"Hi"</span>)
+</code></pre>
+<p>Note that getting a property back from the slot, e.g. the text from the <code>EditText</code> will
+require you to either call through <code>get</code> or deal with an <code>Option</code>:</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">var</span> edit = slot[EditText]
+...
+<span class="hljs-keyword">val</span> text1: String = edit.get.getText
+<span class="hljs-comment">// or</span>
+<span class="hljs-keyword">val</span> text2: Option[String] = edit.map(_.getText)
+</code></pre>
+<p>This may be addressed in future versions of <em>Macroid</em>.</p>
+<h2 id="id-and-tag-generation">Id and tag generation</h2>
+<p>Creating your widget ids in code might not be very rewarding. <em>Macroid</em> offers an elegant solution
+using Scala’s <a href="http://docs.scala-lang.org/sips/completed/type-dynamic.html" target="_blank"><code>Dynamic</code> feature</a>.</p>
+<p>Once you mix in <code>IdGeneration</code>, <code>Id.something</code> will generate a new id for you:</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> macroid.IdGeneration
+
+<span class="hljs-comment">// mix in IdGeneration</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyActivity</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Activity</span> <span class="hljs-keyword">with</span> <span class="hljs-title">Contexts</span>[<span class="hljs-title">Activity</span>] <span class="hljs-keyword">with</span> <span class="hljs-title">IdGeneration</span> {</span>
+  ...
+  <span class="hljs-comment">// Id.button creates a new id</span>
+  w[Button] &lt;~ id(Id.button)
+
+  <span class="hljs-comment">// once created, the id stays the same</span>
+  assert(Id.button == Id.button)
+  ...
+}
+</code></pre>
+<p>Sometimes you also need fragment tags, which are plain strings.
+For symmetry, <code>IdGeneration</code> adds <code>Tag.something</code>, which simply returns <code>&quot;something&quot;</code>:</p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyActivity</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Activity</span> <span class="hljs-keyword">with</span> <span class="hljs-title">Contexts</span>[<span class="hljs-title">Activity</span>] <span class="hljs-keyword">with</span> <span class="hljs-title">IdGeneration</span> {</span>
+  ...
+  f[MapFragment].framed(Id.map, Tag.map)
+  ...
+}
+</code></pre>
+<h2 id="-find-and-findfrag-"><code>find</code> and <code>findFrag</code></h2>
+<p>If a <code>View</code> has an id, it can be found like this:</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> macroid.FullDsl._
+<span class="hljs-comment">// or just</span>
+<span class="hljs-comment">// import macroid.Searching._</span>
+
+someParentView.find[ViewClass](id)
+<span class="hljs-comment">// or</span>
+activity.find[ViewClass](id)
+<span class="hljs-comment">// or</span>
+fragment.find[ViewClass](id)
+</code></pre>
+<p>For example:</p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyActivity</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Activity</span> <span class="hljs-keyword">with</span> <span class="hljs-title">Contexts</span>[<span class="hljs-title">Activity</span>] <span class="hljs-keyword">with</span> <span class="hljs-title">IdGeneration</span> {</span>
+  ...
+  w[Button] &lt;~ id(Id.button)
+  ...
+  <span class="hljs-keyword">val</span> button = <span class="hljs-keyword">this</span>.find[Button](Id.button)
+}
+</code></pre>
+<p>Note that <code>find</code> returns an <code>Options</code>: if the <code>View</code> is not found or has a wrong type, the result will be <code>None</code>.
+This however <a href="Advanced.html">poses no problem</a> for tweaking:</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">this</span>.find[Button](Id.button) &lt;~ text(<span class="hljs-string">"foo"</span>)
+</code></pre>
+<p>There is also a <code>findFrag</code> method:</p>
+<pre><code class="lang-scala">activity.findFrag[FragmentClass](tag)
+<span class="hljs-comment">// or</span>
+fragment.findFrag[FragmentClass](tag)
+</code></pre>
+<p>For example:</p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyActivity</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Activity</span> <span class="hljs-keyword">with</span> <span class="hljs-title">Contexts</span>[<span class="hljs-title">Activity</span>] <span class="hljs-keyword">with</span> <span class="hljs-title">IdGeneration</span> {</span>
+  ...
+  f[MapFragment].framed(Id.map, Tag.map)
+  ...
+  <span class="hljs-keyword">val</span> map = <span class="hljs-keyword">this</span>.findFrag[MapFragment](Tag.map)
+}
+</code></pre>
+<p><code>findFrag</code> returns an <code>Option</code> as well.</p>
+
+                    
+                    </section>
                 
                 </div>
             </div>
