@@ -18,7 +18,7 @@ may cause [memory leaks](http://stackoverflow.com/questions/3346080/android-refe
 To include the implicit contexts in your activity, inherit `Contexts`:
 
 ```scala
-import macroid.FullDsl._
+import macroid.Contexts
 
 class MyActivity extends Activity with Contexts[Activity] {
   ...
@@ -29,8 +29,6 @@ If you use fragments from the support library
 (see the [section on fragments](Fragments.html)):
 
 ```scala
-import macroid.FullDsl._
-
 class MyActivity extends FragmentActivity with Contexts[FragmentActivity] {
   ...
 }

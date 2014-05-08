@@ -13,10 +13,10 @@
         <meta name="generator" content="www.gitbook.io">
 
         
-        <link rel="next" href="../guide/ToastsDialogs.html" />
+        <link rel="next" href="../guide/Searching.html" />
         
         
-        <link rel="prev" href="../guide/Searching.html" />
+        <link rel="prev" href="../guide/MediaQueries.html" />
         
 
         <meta property="og:title" content="Fragments | Macroid">
@@ -42,7 +42,7 @@
 
 
         
-    <div class="book" data-github="macroid/macroid" data-level="3.9" data-basepath=".." data-revision="1399563700007">
+    <div class="book" data-github="macroid/macroid" data-level="3.8" data-basepath=".." data-revision="1399567313314">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -261,18 +261,18 @@
                             
                         </li>
                     
-                        <li  data-level="3.8" data-path="guide/Searching.html">
+                        <li  data-level="3.8" data-path="guide/Fragments.html">
                             
-                            <a href="../guide/Searching.html">
-                                <i class="fa fa-check"></i> <b>3.8.</b> Searching
+                            <a href="../guide/Fragments.html">
+                                <i class="fa fa-check"></i> <b>3.8.</b> Fragments
                             </a>
                             
                         </li>
                     
-                        <li  data-level="3.9" data-path="guide/Fragments.html">
+                        <li  data-level="3.9" data-path="guide/Searching.html">
                             
-                            <a href="../guide/Fragments.html">
-                                <i class="fa fa-check"></i> <b>3.9.</b> Fragments
+                            <a href="../guide/Searching.html">
+                                <i class="fa fa-check"></i> <b>3.9.</b> Searching
                             </a>
                             
                         </li>
@@ -394,7 +394,7 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 72.41379310344827%;min-width: 68.96551724137932%;"></div>
+        <div class="inner" style="width: 68.96551724137932%;min-width: 65.51724137931035%;"></div>
     </div>
     <div class="chapters">
     
@@ -438,9 +438,9 @@
     
         <a href="../guide/MediaQueries.html" title="Media queries" class="chapter done " data-progress="3.7" style="left: 65.51724137931035%;"></a>
     
-        <a href="../guide/Searching.html" title="Searching" class="chapter done " data-progress="3.8" style="left: 68.96551724137932%;"></a>
+        <a href="../guide/Fragments.html" title="Fragments" class="chapter done " data-progress="3.8" style="left: 68.96551724137932%;"></a>
     
-        <a href="../guide/Fragments.html" title="Fragments" class="chapter done " data-progress="3.9" style="left: 72.41379310344827%;"></a>
+        <a href="../guide/Searching.html" title="Searching" class="chapter  " data-progress="3.9" style="left: 72.41379310344827%;"></a>
     
         <a href="../Differences.html" title="Differences from..." class="chapter  new-chapter" data-progress="4" style="left: 75.86206896551724%;"></a>
     
@@ -463,15 +463,79 @@
 
                 <div class="page-inner">
                 
+                    <section class="normal" id="section-gitbook_103">
+                    
+                        <h1 id="fragments">Fragments</h1>
+<p>To quote the Android documentation,</p>
+<blockquote>
+<p>A Fragment represents a behavior or a portion of user interface in an Activity. You can combine multiple fragments in a single activity to build a multi-pane UI and reuse a fragment in multiple activities.</p>
+</blockquote>
+<p><em>Macroid</em> allows you to deal with fragments, both <code>android.app.Fragment</code> and <code>android.support.v4.app.Fragment</code>.</p>
+<h2 id="contexts">Contexts</h2>
+<p>For the below features to work, you need to include the right <a href="Contexts.html">contexts</a>:</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> macroid.Contexts
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyActivity</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Activity</span> <span class="hljs-keyword">with</span> <span class="hljs-title">Contexts</span>[<span class="hljs-title">Activity</span>] {</span>
+  ...
+}
+</code></pre>
+<p>If you use fragments from the support library:</p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyActivity</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">FragmentActivity</span> <span class="hljs-keyword">with</span> <span class="hljs-title">Contexts</span>[<span class="hljs-title">FragmentActivity</span>] {</span>
+  ...
+}
+</code></pre>
+<p>Finally, in a fragment (either <code>android.app.Fragment</code> or <code>android.support.v4.app.Fragment</code>):</p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyFragment</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Fragment</span> <span class="hljs-keyword">with</span> <span class="hljs-title">Contexts</span>[<span class="hljs-title">Fragment</span>] {</span>
+  ...
+}
+</code></pre>
+<h2 id="the-f-word">The <code>f</code> word</h2>
+<p><em>Macroid</em> provides an <code>f</code> brick, which is somewhat similar to the <a href="Bricks.html"><code>l</code> and <code>w</code> bricks</a>:</p>
+<pre><code class="lang-scala">f[MapFragment]
+</code></pre>
+<p>The fragment is created with its primary constructor, or with a <code>newInstance</code> method in its companion
+(or static method in Java fragments), if it exists. Like with <code>w</code> bricks, you can provide arguments
+to the <code>newInstance</code> method:</p>
+<pre><code class="lang-scala"><span class="hljs-comment">// same as FragmentClass.newInstance(arg1, arg2, ...)</span>
+f[FragmentClass](arg1, arg2, ...)
+</code></pre>
+<p>You can also put arguments into a <code>Bundle</code> and pass via the <code>setArguments</code> method:</p>
+<pre><code class="lang-scala"><span class="hljs-comment">// same as</span>
+<span class="hljs-comment">// val b = new Bundle</span>
+<span class="hljs-comment">// b.putXXX("arg1", arg1)</span>
+<span class="hljs-comment">// b.putXXX("arg2", arg2)</span>
+<span class="hljs-comment">// (new FragmentClass).setArguments(b)</span>
+f[FragmentClass].pass(<span class="hljs-string">"arg1"</span> → arg1, <span class="hljs-string">"arg2"</span> → arg2, ...)
+</code></pre>
+<p>The <code>factory</code> method allows to obtain a fragment factory (<code>Ui[FragmentClass]</code>), which is
+very useful for creating fragment pagers:</p>
+<pre><code class="lang-scala">f[FragmentClass].pass(...).factory
+</code></pre>
+<p>Finally, here is a way to insert the fragment directly into the layout (it will be assigned a tag
+and wrapped into a <code>FrameLayout</code>). Note that for this to work, you need to <a href="Searching.html#id-generation">mix <code>IdGeneration</code></a>
+into your activity or parent fragment.</p>
+<pre><code class="lang-scala">f[FragmentClass].pass(...).framed(Id.someId, Tag.someTag)
+</code></pre>
+<p>A more elaborate example:</p>
+<pre><code class="lang-scala">l[LinearLayout](
+  w[Button],
+  w[TextView],
+  f[MapFragment].framed(Id.map, Tag.map)
+)
+</code></pre>
+
+                    
+                    </section>
+                
                 </div>
             </div>
         </div>
 
         
-        <a href="../guide/Searching.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
+        <a href="../guide/MediaQueries.html" class="navigation navigation-prev"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../guide/ToastsDialogs.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
+        <a href="../guide/Searching.html" class="navigation navigation-next"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
