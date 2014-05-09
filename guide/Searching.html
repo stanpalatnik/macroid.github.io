@@ -42,7 +42,7 @@
 
 
         
-    <div class="book" data-github="macroid/macroid" data-level="3.9" data-basepath=".." data-revision="1399645053984">
+    <div class="book" data-github="macroid/macroid" data-level="3.9" data-basepath=".." data-revision="1399650739989">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -473,7 +473,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_260">
+                    <section class="normal" id="section-gitbook_679">
                     
                         <h1 id="searching">Searching</h1>
 <p>Sometimes you need to search for a particular widget, layout, or fragment. Let’s see how it can be done.</p>
@@ -482,6 +482,8 @@
 <pre><code class="lang-scala"><span class="hljs-keyword">var</span> button = slot[Button]
 </code></pre>
 <p>The variable is given a type <code>Option[Button]</code> with a value of <code>None</code>.
+(Read about <code>Option</code>s in
+<a href="http://danielwestheide.com/blog/2012/12/19/the-neophytes-guide-to-scala-part-5-the-option-type.html" target="_blank">Neophyte’s guide to Scala</a>)
 Now you can wire a widget to it:</p>
 <pre><code class="lang-scala">w[Button] &lt;~ wire(button)
 </code></pre>
@@ -548,7 +550,7 @@ fragment.find[ViewClass](id)
   <span class="hljs-keyword">val</span> button = <span class="hljs-keyword">this</span>.find[Button](Id.button)
 }
 </code></pre>
-<p>Note that <code>find</code> returns an <code>Options</code>: if the <code>View</code> is not found or has a wrong type, the result will be <code>None</code>.
+<p>Note that <code>find</code> returns an <code>Ui[Option[...]]</code>: if the <code>View</code> is not found or has a wrong type, the underlying result will be <code>None</code>.
 This however <a href="Advanced.html">poses no problem</a> for tweaking:</p>
 <pre><code class="lang-scala"><span class="hljs-keyword">this</span>.find[Button](Id.button) &lt;~ text(<span class="hljs-string">"foo"</span>)
 </code></pre>
@@ -565,7 +567,7 @@ fragment.findFrag[FragmentClass](tag)
   <span class="hljs-keyword">val</span> map = <span class="hljs-keyword">this</span>.findFrag[MapFragment](Tag.map)
 }
 </code></pre>
-<p><code>findFrag</code> returns an <code>Option</code> as well.</p>
+<p><code>findFrag</code> returns an <code>Ui[Option[...]]</code> as well.</p>
 
                     
                     </section>

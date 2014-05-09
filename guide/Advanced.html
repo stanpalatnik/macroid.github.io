@@ -42,7 +42,7 @@
 
 
         
-    <div class="book" data-github="macroid/macroid" data-level="3.12" data-basepath=".." data-revision="1399645053984">
+    <div class="book" data-github="macroid/macroid" data-level="3.12" data-basepath=".." data-revision="1399650739989">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -472,6 +472,103 @@
 </div>
 
                 <div class="page-inner">
+                
+                    <section class="normal" id="section-gitbook_674">
+                    
+                        <h1 id="advanced-techniques">Advanced techniques</h1>
+<p>This section explains why <a href="Tweaks.html#tweaking">tweaking</a> and <a href="Snails.html#-snailing-">snailing</a> are much more powerful
+than they seem at the first glance.</p>
+<h2 id="options">Options</h2>
+<p>What are options? My favorite explanation is in the <a href="http://danielwestheide.com/blog/2012/12/19/the-neophytes-guide-to-scala-part-5-the-option-type.html" target="_blank">Neophyte’s guide to Scala</a>. Anyway, as you may already know, <a href="Searching.html"><code>searching for widgets</code></a> or
+<a href="MediaQueries.html"><code>media queries</code></a> often force you to deal with <code>Option[...]</code> or even <code>Ui[Option[...]]</code>:</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">val</span> display: Option[Tweak[View]] = widerThan(<span class="hljs-number">100</span> dp) ? show
+
+<span class="hljs-keyword">val</span> button: Ui[Option[Button]] = <span class="hljs-keyword">this</span>.find[Button](Id.button)
+</code></pre>
+<p>However this poses no problem for either tweaking or snailing:</p>
+<pre><code class="lang-scala"><span class="hljs-comment">// if display is None, nothing happens</span>
+w[TextView] &lt;~ (display: Option[Tweak[View]])
+
+<span class="hljs-comment">// if button is None (e.g. not found), nothing happens</span>
+(button: Ui[Option[Button]]) &lt;~ show
+
+<span class="hljs-comment">// this works as well!</span>
+(button: Ui[Option[Button]]) &lt;~ (display: Option[Tweak[View]])
+
+<span class="hljs-comment">// the same with snailing</span>
+buton &lt;@~ fadeOut(<span class="hljs-number">300</span>)
+</code></pre>
+<p>All this is possible thanks to a typeclass-based design (recommended reading:
+<a href="http://danielwestheide.com/blog/2013/02/06/the-neophytes-guide-to-scala-part-12-type-classes.html" target="_blank">Neophyte’s guide to Scala</a>)
+Now that we see the flexibility under the hood, let’s find out what else works!</p>
+<h2 id="lists">Lists</h2>
+<p>A widget can be tweaked with a list of tweaks:</p>
+<pre><code class="lang-scala">textView &lt;~ List(show, text(<span class="hljs-string">"Hi"</span>))
+</code></pre>
+<p>Perhaps more interestinly, widgets can be tweaked in batches:</p>
+<pre><code class="lang-scala">List(button1, button2) &lt;~ show
+</code></pre>
+<p>Of course, you can use lists on both sides:</p>
+<pre><code class="lang-scala">List(button1, button2) &lt;~ List(show, text(<span class="hljs-string">"Hi"</span>))
+</code></pre>
+<p>Or use lists with options:</p>
+<pre><code class="lang-scala">List(button1, button2) &lt;~ (hdpi ? show)
+</code></pre>
+<h2 id="futures">Futures</h2>
+<p>Here’s where it gets really interesting. Suppose we have a <code>Future[String]</code> with a caption,
+that will become available only in a few moments:</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">val</span> futureCaption = Future {
+  Thread.sleep(<span class="hljs-number">4000</span>) <span class="hljs-comment">// used here for demonstration purposes only, never use in real code ;)</span>
+  <span class="hljs-string">"Wait for it!"</span>
+}
+</code></pre>
+<p>But we can use it in tweaking right now!</p>
+<pre><code class="lang-scala"><span class="hljs-comment">// the caption will be set </span>
+textView &lt;~ futureCaption.map(text)
+</code></pre>
+<h2 id="functional-reactive-programming">Functional-reactive programming</h2>
+<p>Using a functional-reactive library like <a href="https://github.com/lihaoyi/scala.rx" target="_blank">scala.rx</a>, we can go even further:</p>
+<pre><code class="lang-scala"><span class="hljs-comment">// create a reactive variable</span>
+<span class="hljs-keyword">val</span> caption = rx.Var(<span class="hljs-string">"Olá"</span>)
+
+<span class="hljs-comment">// set text to “Olá”</span>
+textView &lt;~ caption.map(text)
+
+<span class="hljs-comment">// text automatically updates to “Adeus”</span>
+caption.update(<span class="hljs-string">"Adeus"</span>)
+</code></pre>
+<p><code>EventStream</code>s from <a href="https://github.com/dylemma/scala.frp" target="_blank">scala.frp</a> are very similar, but do not have an initial value:</p>
+<pre><code class="lang-scala"><span class="hljs-comment">// create an event source</span>
+<span class="hljs-keyword">val</span> clicks = EventSource[Unit]
+
+<span class="hljs-comment">// setup a button to fire events</span>
+button &lt;~ On.click(Ui(clicks.fire(())))
+
+<span class="hljs-comment">// a more useful event stream</span>
+<span class="hljs-keyword">val</span> randomInts = clicks.map(_ ⇒ scala.util.Random.nextInt().toString)
+
+<span class="hljs-comment">// the caption will update with each button click</span>
+textView &lt;~ randomInts.map(text)
+</code></pre>
+<p>The respective helper declarations have been cut from <em>Macroid</em> with the intention of putting them into the newly-born
+<a href="../Related.html">macroid-frp library</a>. Please stay tuned!</p>
+<h2 id="extending">Extending</h2>
+<p>If you want to use tweaking with your own container types, like <code>AdvancedFuture</code> or <code>CrazyOption</code>, there are
+two ways of going about it:</p>
+<ul>
+<li>Provide an instance of a <a href="../api/macroid/util/Effector.html"><code>macroid.util.Effector</code> typeclass</a>,<br>
+which requires just a <code>foreach</code> method;</li>
+<li>Specify a <a href="../api/macroid/CanTweak.html"><code>macroid.CanTweak[W, T, R]</code> functional dependency</a>,<br>
+which allows to tweak <code>W</code> with <code>T</code> and get an <code>Ui[R]</code> as a result (see the sources for examples).</li>
+</ul>
+<p>Extending snailing offers only the latter option:</p>
+<ul>
+<li>Specify a <a href="../api/macroid/CanSnail.html"><code>macroid.CanSnail[W, T, R]</code> functional dependency</a>,<br>
+which allows to snail <code>W</code> with <code>T</code> and get an <code>Ui[Future[R]]</code> as a result (see the sources for examples).</li>
+</ul>
+
+                    
+                    </section>
                 
                 </div>
             </div>

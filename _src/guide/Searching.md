@@ -11,6 +11,8 @@ var button = slot[Button]
 ```
 
 The variable is given a type `Option[Button]` with a value of `None`.
+(Read about `Option`s in
+[Neophyte’s guide to Scala](http://danielwestheide.com/blog/2012/12/19/the-neophytes-guide-to-scala-part-5-the-option-type.html))
 Now you can wire a widget to it:
 
 ```scala
@@ -103,7 +105,7 @@ class MyActivity extends Activity with Contexts[Activity] with IdGeneration {
 }
 ```
 
-Note that `find` returns an `Options`: if the `View` is not found or has a wrong type, the result will be `None`.
+Note that `find` returns an `Ui[Option[...]]`: if the `View` is not found or has a wrong type, the underlying result will be `None`.
 This however [poses no problem](Advanced.html) for tweaking:
 
 ```scala
@@ -129,4 +131,4 @@ class MyActivity extends Activity with Contexts[Activity] with IdGeneration {
 }
 ```
 
-`findFrag` returns an `Option` as well.
+`findFrag` returns an `Ui[Option[...]]` as well.
