@@ -21,6 +21,7 @@
     * [Toasts and dialogs](guide/ToastsDialogs.md)
     * [Logging](guide/Logging.md)
     * [Advanced techniques](guide/Advanced.md)
+    * [Imports](guide/Imports.md)
 * [Differences from...](Differences.md)
     * [Vanilla Android](differences/Vanilla.md)
     * [Scaloid](differences/Scaloid.md)
