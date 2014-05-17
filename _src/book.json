@@ -5,10 +5,13 @@
     "description": "Macroid documentation",
     "github": "macroid/macroid",
     "githubHost": "https://github.com/",
-    "plugins": ["disqus"],
+    "plugins": ["disqus", "ga"],
     "pluginsConfig": {
         "disqus": {
             "shortName": "macroid"
+        },
+        "ga": {
+            "token": "UA-51095378-1"
         }
     },
     "links": {
