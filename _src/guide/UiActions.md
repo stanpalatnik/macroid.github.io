@@ -138,4 +138,4 @@ def wrong = {
 the UI action will not be run and the compiler will normally not help you. Don’t panic.
 You can either enable `-Xlint`, under which non-`Unit` statements produce warnings, or use *Macroid*’s custom linter
 written with [Wartremover](https://github.com/typelevel/wartremover), which will produce a compile error.
-For instructions refer to the [installation](../Installation.md) section.
+For instructions refer to the [installation](../Installation.html) section.
