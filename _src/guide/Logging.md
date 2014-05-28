@@ -1,7 +1,7 @@
 # Logging
 
 *Macroid* provides logging string interpolators, which can be imported either
-via `import macroid.FullDsl._` or via `import macorid.Logging._`. They are all of the form `logX`,
+via `import macroid.FullDsl._` or via `import macroid.Logging._`. They are all of the form `logX`,
 where `X` can be `V`, `I`, `D`, `W`, `E` or `Wtf`. Here is an example:
 
 ```scala
