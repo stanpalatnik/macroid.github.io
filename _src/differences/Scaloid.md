@@ -57,7 +57,7 @@ def largeText(str: String)(implicit appCtx: AppContext) =
   text(str) + TextSize.large
 ```
 
-and use it somewhere. The documentation has a section on [tweaks](../guide/tweaks.html).
+and use it somewhere. The documentation has a section on [tweaks](../guide/Tweaks.html).
 
 ## High-level abstractions
 
