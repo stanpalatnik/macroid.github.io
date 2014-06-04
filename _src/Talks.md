@@ -6,7 +6,7 @@
 * Slides: http://stanch.github.io/codebits2014/
 * Video: Coming soon!
 
-## 3rd Fun(Lx) meetup
+## 3<sup>rd</sup> Fun(Lx) meetup
 
 * Event: http://www.meetup.com/Fun-Lx/events/182710042/
 * Slides: http://stanch.github.io/funlx-meetup-2
