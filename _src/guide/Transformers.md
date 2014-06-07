@@ -24,7 +24,7 @@ val imagesOnly = Transformer {
 There is also a useful `Layout` extractor:
 
 ```scala
-import macroid.Layout
+import macroid.Transformer.Layout
 
 val foobar = Transformer {
   case Layout(x: TextView, y: TextView) ⇒ Ui.sequence(

@@ -42,7 +42,7 @@
 
 
         
-    <div class="book" data-github="macroid/macroid" data-level="3.6" data-basepath=".." data-revision="1402172557885">
+    <div class="book" data-github="macroid/macroid" data-level="3.6" data-basepath=".." data-revision="1402172645095">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -529,7 +529,7 @@ it encounters, if the function is defined for that widget.</p>
 }
 </code></pre>
 <p>There is also a useful <code>Layout</code> extractor:</p>
-<pre><code class="lang-scala"><span class="hljs-keyword">import</span> macroid.Layout
+<pre><code class="lang-scala"><span class="hljs-keyword">import</span> macroid.Transformer.Layout
 
 <span class="hljs-keyword">val</span> foobar = Transformer {
   <span class="hljs-keyword">case</span> Layout(x: TextView, y: TextView) ⇒ Ui.sequence(
