@@ -30,5 +30,6 @@
 * [Sample projects](Samples.md)
 * [Talks](Talks.md)
 * [Related libraries](Related.md)
+* [Mailing list](https://groups.google.com/forum/#!forum/macroid)
 * [Changelog](Changelog.md)
 * [Scaladoc](api/macroid/package.html)
