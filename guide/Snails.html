@@ -42,7 +42,7 @@
 
 
         
-    <div class="book" data-github="macroid/macroid" data-level="3.5" data-basepath=".." data-revision="1402171547562">
+    <div class="book" data-github="macroid/macroid" data-level="3.5" data-basepath=".." data-revision="1402171947630">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -500,7 +500,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_22">
+                    <section class="normal" id="section-gitbook_23">
                     
                         <h1 id="snails">Snails</h1>
 <p>Snails provide a dataflow mini-language for animations and things like that.</p>
@@ -532,7 +532,8 @@ A snail is defined by a function <code>WidgetClass ⇒ Future[Unit]</code>.</p>
 <pre><code class="lang-scala"><span class="hljs-keyword">val</span> wink = fadeIn ++ fadeOut
 </code></pre>
 <p>It is also possible to combine snails with tweaks by using either <code>+</code> or <code>++</code>.
-More specifically, snails are added with <code>++</code>, and tweaks are added with <code>+</code>.</p>
+More specifically, snails are added with <code>++</code>, and tweaks are added with <code>+</code>
+(see <a href="Operators.html">Understanding operators</a>):</p>
 <pre><code class="lang-scala"><span class="hljs-keyword">def</span> textAndFade(str: String) =
   text(str) ++ fadeIn
 

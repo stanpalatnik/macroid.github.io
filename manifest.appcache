@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# Revision 1402171547563
+# Revision 1402171947630
 
 CACHE:
 Samples.html
@@ -11,8 +11,8 @@ Recipes.html
 Related.html
 Differences.html
 ScalaOnAndroid.html
-Tutorial.html
 Talks.html
+Tutorial.html
 differences/Scaloid.html
 differences/Vanilla.html
 guide/Operators.html
@@ -23,14 +23,14 @@ guide/Imports.html
 guide/Logging.html
 guide/MediaQueries.html
 guide/Bricks.html
-guide/Snails.html
 guide/Searching.html
+guide/Snails.html
 guide/ToastsDialogs.html
 guide/Transformers.html
-guide/UiActions.html
 guide/Tweaks.html
-tutorial/CompleteCode.html
+guide/UiActions.html
 tutorial/BuildingLayouts.html
+tutorial/CompleteCode.html
 tutorial/GettingAdaptive.html
 tutorial/HandlingEvents.html
 tutorial/Tweaking.html

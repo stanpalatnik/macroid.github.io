@@ -33,6 +33,9 @@ tweak1 + tweak2
 (widget1 <~ tweak1) ~ (widget2 <~ tweak2)
 
 
+// wait for the future tweak
+textView <~ hide <~~ futureCaption.map(text) <~ show
+
 // when applying snail1 or snail2, wait until they finish
 widget <~ tweak1 <~~ snail1 <~~ snail2 <~ tweak2
 
@@ -47,3 +50,4 @@ snail2 + tweak2
 
 // sequence two UI actions, waiting for the first one to finish
 (widget1 <~~ snail1) ~~ (widget2 <~~ snail2)
+```

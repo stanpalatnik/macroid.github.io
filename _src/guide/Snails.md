@@ -40,7 +40,8 @@ val wink = fadeIn ++ fadeOut
 ```
 
 It is also possible to combine snails with tweaks by using either `+` or `++`.
-More specifically, snails are added with `++`, and tweaks are added with `+`.
+More specifically, snails are added with `++`, and tweaks are added with `+`
+(see [Understanding operators](Operators.html)):
 
 ```scala
 def textAndFade(str: String) =

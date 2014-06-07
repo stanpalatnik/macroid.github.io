@@ -92,7 +92,7 @@ UI actions can be composed in several ways.
   ```
 
 * Using the `~~` operator (in case of `Ui[Future]`).
-  See [Snailing workflows](Snailing.html#Snailing-workflows) for more details, or
+  See [Snailing workflows](Snails.html#Snailing-workflows) for more details, or
   [Understanding operators](Operators.html), if you are confused.
 
 * Using `Ui.sequence` (the sequence type is preserved)

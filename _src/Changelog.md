@@ -10,4 +10,4 @@ Breaking changes are in bold.
 * *Remove `showProgress` tweaks*
 * Added `dialog(items, handler)` constructor [#21](https://github.com/macroid/macroid/issues/21)
 * Added `AutoLogTag` trait [#20](https://github.com/macroid/macroid/issues/20)
-* Improved implicitNotFound annotations
+* Improved `implicitNotFound` annotations

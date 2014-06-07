@@ -42,7 +42,7 @@
 
 
         
-    <div class="book" data-github="macroid/macroid" data-level="3.7" data-basepath=".." data-revision="1402171547562">
+    <div class="book" data-github="macroid/macroid" data-level="3.7" data-basepath=".." data-revision="1402171947630">
     <div class="book-header">
     <!-- Actions Left -->
     
@@ -513,30 +513,44 @@ However, there is a very simple logic behind them, which is explained in this se
 </ul>
 <p>For example, when triggering an animation you can choose whether to proceed immediately or not.</p>
 <p>This distinction is directly mirrored in the operators: <code>·</code> means “fire and forget”, <code>··</code> means “apply and wait”:</p>
-<p>```scala
-// fire the label change
-textView &lt;~ text(&quot;foo&quot;)</p>
-<p>// fire the transformer
-widget &lt;~ transformer</p>
-<p>// fire something, that will backfire in the future
-// and continue immediately
-textView &lt;~ futureCaption.map(text) &lt;~ show</p>
-<p>// fire the snail, without waiting for it to finish
-textView &lt;~ fadeIn(300) &lt;~ text(&quot;bar&quot;)</p>
-<p>// add two tweaks
-tweak1 + tweak2</p>
-<p>// sequence two UI actions
-(widget1 &lt;~ tweak1) ~ (widget2 &lt;~ tweak2)</p>
-<p>// when applying snail1 or snail2, wait until they finish
-widget &lt;~ tweak1 &lt;~~ snail1 &lt;~~ snail2 &lt;~ tweak2</p>
-<p>// combine tweak1 with snail1, waiting for snail1 to finish (gives a snail)
-tweak1 ++ snail1</p>
-<p>// combine two snails (gives a snail)
-snail1 ++ snail2</p>
-<p>// combine snail with a tweak (no need to wait for tweak2)
-snail2 + tweak2</p>
-<p>// sequence two UI actions, waiting for the first one to finish
-(widget1 &lt;~~ snail1) ~~ (widget2 &lt;~~ snail2)</p>
+<pre><code class="lang-scala"><span class="hljs-comment">// fire the label change</span>
+textView &lt;~ text(<span class="hljs-string">"foo"</span>)
+
+<span class="hljs-comment">// fire the transformer</span>
+widget &lt;~ transformer
+
+<span class="hljs-comment">// fire something, that will backfire in the future</span>
+<span class="hljs-comment">// and continue immediately</span>
+textView &lt;~ futureCaption.map(text) &lt;~ show
+
+<span class="hljs-comment">// fire the snail, without waiting for it to finish</span>
+textView &lt;~ fadeIn(<span class="hljs-number">300</span>) &lt;~ text(<span class="hljs-string">"bar"</span>)
+
+<span class="hljs-comment">// add two tweaks</span>
+tweak1 + tweak2
+
+<span class="hljs-comment">// sequence two UI actions</span>
+(widget1 &lt;~ tweak1) ~ (widget2 &lt;~ tweak2)
+
+
+<span class="hljs-comment">// wait for the future tweak</span>
+textView &lt;~ hide &lt;~~ futureCaption.map(text) &lt;~ show
+
+<span class="hljs-comment">// when applying snail1 or snail2, wait until they finish</span>
+widget &lt;~ tweak1 &lt;~~ snail1 &lt;~~ snail2 &lt;~ tweak2
+
+<span class="hljs-comment">// combine tweak1 with snail1, waiting for snail1 to finish (gives a snail)</span>
+tweak1 ++ snail1
+
+<span class="hljs-comment">// combine two snails (gives a snail)</span>
+snail1 ++ snail2
+
+<span class="hljs-comment">// combine snail with a tweak (no need to wait for tweak2)</span>
+snail2 + tweak2
+
+<span class="hljs-comment">// sequence two UI actions, waiting for the first one to finish</span>
+(widget1 &lt;~~ snail1) ~~ (widget2 &lt;~~ snail2)
+</code></pre>
 
                     
                     </section>
