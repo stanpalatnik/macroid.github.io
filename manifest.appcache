@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# Revision 1402172412029
+# Revision 1402172557886
 
 CACHE:
 Samples.html
@@ -28,8 +28,8 @@ guide/Snails.html
 guide/ToastsDialogs.html
 guide/Transformers.html
 guide/Tweaks.html
-tutorial/BuildingLayouts.html
 guide/UiActions.html
+tutorial/BuildingLayouts.html
 tutorial/CompleteCode.html
 tutorial/GettingAdaptive.html
 tutorial/HandlingEvents.html

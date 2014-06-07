@@ -39,7 +39,7 @@
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/macroid/macroid/tree/master/src/main/scala/macroid/util/Ui.scala" target="_blank">Ui.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A UI action that can be sent to the UI thread for execution</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/macroid/macroid/tree/master/src/main/scala/macroid/util/Ui.scala" target="_blank">Ui.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -255,7 +255,7 @@
         <span class="name">flatMap</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="macroid.util.Ui.A">A</span>) ⇒ <a href="" class="extype" name="macroid.util.Ui">Ui</a>[<span class="extype" name="macroid.util.Ui.flatMap.B">B</span>]</span>)</span><span class="result">: <a href="" class="extype" name="macroid.util.Ui">Ui</a>[<span class="extype" name="macroid.util.Ui.flatMap.B">B</span>]</span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">flatMap combinator</p>
     </li><li name="macroid.util.Ui#flatRun" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="flatRun[B](implicitevidence:&lt;:&lt;[A,scala.concurrent.Future[B]]):scala.concurrent.Future[B]"></a>
       <a id="flatRun[B](&lt;:&lt;[A,Future[B]]):Future[B]"></a>
@@ -268,7 +268,7 @@
         <span class="name">flatRun</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="evidence">evidence: <span class="extype" name="scala.Predef.&lt;:&lt;">&lt;:&lt;</span>[<span class="extype" name="macroid.util.Ui.A">A</span>, <span class="extype" name="scala.concurrent.Future">Future</span>[<span class="extype" name="macroid.util.Ui.flatRun.B">B</span>]]</span>)</span><span class="result">: <span class="extype" name="scala.concurrent.Future">Future</span>[<span class="extype" name="macroid.util.Ui.flatRun.B">B</span>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Run the code on the UI thread, flattening the Future it returns</p>
+      <p class="shortcomment cmt">Run the action on the UI thread, flattening the Future it returns</p>
     </li><li name="macroid.util.Ui#get" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="get:A"></a>
       <a id="get:A"></a>
@@ -281,7 +281,7 @@
         <span class="name">get</span><span class="result">: <span class="extype" name="macroid.util.Ui.A">A</span></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Get the result of executing the code on the current (hopefully, UI!) thread</p>
+      <p class="shortcomment cmt">Get the result of executing the action on the current (hopefully, UI!) thread</p>
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <a id="getClass():Class[_]"></a>
@@ -333,7 +333,7 @@
         <span class="name">map</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="macroid.util.Ui.A">A</span>) ⇒ <span class="extype" name="macroid.util.Ui.map.B">B</span></span>)</span><span class="result">: <a href="" class="extype" name="macroid.util.Ui">Ui</a>[<span class="extype" name="macroid.util.Ui.map.B">B</span>]</span>
       </span>
       </h4>
-      
+      <p class="shortcomment cmt">map combinator</p>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -385,7 +385,7 @@
         <span class="name">run</span><span class="result">: <span class="extype" name="scala.concurrent.Future">Future</span>[<span class="extype" name="macroid.util.Ui.A">A</span>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Run the code on the UI thread</p>
+      <p class="shortcomment cmt">Run the action on the UI thread</p>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -469,6 +469,32 @@
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="macroid.util.Ui#~" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="~[B](next:macroid.util.Ui[B]):macroid.util.Ui[B]"></a>
+      <a id="~[B](Ui[B]):Ui[B]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $tilde" class="name">~</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="next">next: <a href="" class="extype" name="macroid.util.Ui">Ui</a>[<span class="extype" name="macroid.util.Ui.~.B">B</span>]</span>)</span><span class="result">: <a href="" class="extype" name="macroid.util.Ui">Ui</a>[<span class="extype" name="macroid.util.Ui.~.B">B</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Combine (sequence) with another UI action</p>
+    </li><li name="macroid.util.Ui#~~" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="~~[B,C](next:macroid.util.Ui[B])(implicitevidence:&lt;:&lt;[A,scala.concurrent.Future[C]]):macroid.util.Ui[scala.concurrent.Future[B]]"></a>
+      <a id="~~[B,C](Ui[B])(&lt;:&lt;[A,Future[C]]):Ui[Future[B]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $tilde$tilde" class="name">~~</span><span class="tparams">[<span name="B">B</span>, <span name="C">C</span>]</span><span class="params">(<span name="next">next: <a href="" class="extype" name="macroid.util.Ui">Ui</a>[<span class="extype" name="macroid.util.Ui.~~.B">B</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="evidence">evidence: <span class="extype" name="scala.Predef.&lt;:&lt;">&lt;:&lt;</span>[<span class="extype" name="macroid.util.Ui.A">A</span>, <span class="extype" name="scala.concurrent.Future">Future</span>[<span class="extype" name="macroid.util.Ui.~~.C">C</span>]]</span>)</span><span class="result">: <a href="" class="extype" name="macroid.util.Ui">Ui</a>[<span class="extype" name="scala.concurrent.Future">Future</span>[<span class="extype" name="macroid.util.Ui.~~.B">B</span>]]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Wait until this action is finished and combine (sequence) it with another one</p>
     </li></ol>
             </div>
 

@@ -96,6 +96,19 @@
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="macroid.AutoLogTag" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="AutoLogTagextendsAnyRef"></a>
+      <a id="AutoLogTag:AutoLogTag"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a href="AutoLogTag.html"><span class="name">AutoLogTag</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      
     </li><li name="macroid.CanFindFragments" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="CanFindFragments[-X,-F]extendsAnyRef"></a>
       <a id="CanFindFragments[-X,-F]:CanFindFragments[X,F]"></a>
@@ -137,23 +150,10 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
                 <span class="name">@implicitNotFound</span><span class="args">(<span>
       
-      <span class="defval" name="&quot;Don't know how to snail ${W} with ${S}. Try importing an instance of CanSnail[${W}, ${S}, ...]&quot;">...</span>
+      <span class="defval" name="&quot;Don't know how to snail ${W} with ${S}. Try importing an instance of CanSnail[${W}, ${S}, ...]. It is also possible that you are missing an implicit scala.concurrent.ExecutionContext&quot;">...</span>
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="macroid.CanTransform" visbl="pub" data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="CanTransform[L,T,R]extendsAnyRef"></a>
-      <a id="CanTransform[L,T,R]:CanTransform[L,T,R]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a href="CanTransform.html"><span class="name">CanTransform</span></a><span class="tparams">[<span name="L">L</span>, <span name="T">T</span>, <span name="R">R</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
-      </span>
-      </h4>
-      
     </li><li name="macroid.CanTweak" visbl="pub" data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="CanTweak[W,T,R]extendsAnyRef"></a>
       <a id="CanTweak[W,T,R]:CanTweak[W,T,R]"></a>
@@ -214,7 +214,7 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
                 <span class="name">@implicitNotFound</span><span class="args">(<span>
       
-      <span class="defval" name="&quot;Could not find `FragmentManagerContext[${F}, ${M}]`. If you are inside Activity or Fragment, extend Contexts[Activity] or Contexts[Fragment], otherwise pass an instance of `FragmentManagerContext` from outside.&quot;">...</span>
+      <span class="defval" name="&quot;Could not find `FragmentManagerContext[${F}, ${M}]`. If you are inside Activity or Fragment, extend Contexts[Activity] or Contexts[Fragment], otherwise pass an instance of `FragmentManagerContext` from outside. Please note that for support fragments you need to extends Contexts[FragmentActivity]&quot;">...</span>
     </span>)</span>
               
         </dd></dl></div>
@@ -446,19 +446,6 @@
       </span>
       </h4>
       
-    </li><li name="macroid.CanTransform" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="CanTransform"></a>
-      <a id="CanTransform:CanTransform"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="CanTransform$.html"><span class="name">CanTransform</span></a>
-      </span>
-      </h4>
-      
     </li><li name="macroid.CanTweak" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="CanTweak"></a>
       <a id="CanTweak:CanTweak"></a>
@@ -550,19 +537,6 @@
       </span>
       </h4>
       
-    </li><li name="macroid.Layout" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Layout"></a>
-      <a id="Layout:Layout"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="Layout$.html"><span class="name">Layout</span></a>
-      </span>
-      </h4>
-      <p class="comment cmt">Layout extractor</p>
     </li><li name="macroid.LayoutBuilding" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="LayoutBuilding"></a>
       <a id="LayoutBuilding:LayoutBuilding"></a>
@@ -820,19 +794,6 @@
       </span>
       <span class="symbol">
         <a href="Transformer$.html"><span class="name">Transformer</span></a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
-      </span>
-      </h4>
-      
-    </li><li name="macroid.Transforming" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Transforming"></a>
-      <a id="Transforming:Transforming"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a href="Transforming$.html"><span class="name">Transforming</span></a><span class="result"> extends <span class="extype" name="macroid.Transforming">Transforming</span></span>
       </span>
       </h4>
       
