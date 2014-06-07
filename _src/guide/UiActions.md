@@ -83,16 +83,19 @@ setContentView {
 
 UI actions can be composed in several ways.
 
-* Using for-comprehensions
+* Using the `~` operator (the type of the last action is preserved)
 
   ```scala
-  val action: Ui[Unit] = for {
-    _ ← startButton <~ disable
-    _ ← stopButton <~ enable
-  } yield ()
+  val action: Ui[Button] =
+    (startButton <~ disable) ~
+    (stopButton <~ enable)
   ```
 
-* Using `Ui.sequence`
+* Using the `~~` operator (in case of `Ui[Future]`).
+  See [Snailing workflows](Snailing.html#Snailing-workflows) for more details, or
+  [Understanding operators](Operators.html), if you are confused.
+
+* Using `Ui.sequence` (the sequence type is preserved)
 
   ```scala
   val action: Ui[Seq[Button]] = Ui.sequence(
@@ -121,6 +124,10 @@ your code that need to use it. Returning UI actions instead of just executing th
 allows to do just that. That’s why, for example, setting an event handler in *Macroid*
 requires you to provide a UI action. Declaring your methods as UI actions also helps
 when they should be evaluated each time they are called (which is normally the case with event handlers).
+
+For an example of how to take advantage of UI actions together with [Akka](http://akka.io) actors,
+take a look at [macroid-akka-pingpong](http://typesafe.com/activator/template/macroid-akka-pingpong) Activator
+template.
 
 ## Caveats
 

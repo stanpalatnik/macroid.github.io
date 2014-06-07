@@ -36,10 +36,10 @@ val foobar = Transformer {
 
 ## Transforming
 
-Transforming is performed with the `<~~` operator:
+Transformers can be applied with the tweaking operator (`<~`):
 
 ```scala
-linearLayout <~~ Transformer {
+linearLayout <~ Transformer {
   case t: TextView ⇒ t <~ text("foo")
   case i: ImageView ⇒ i <~ hide
 }

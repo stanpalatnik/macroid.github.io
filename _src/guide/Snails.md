@@ -33,61 +33,62 @@ val focusLoudly = Snail[View] { view ⇒
 
 ## Composing
 
-Snails can be composed by using a funny `+@+` operator (`@` should look like a snail):
+Snails can be composed by using the `++` operator:
 
 ```scala
-val wink = fadeIn +@+ fadeOut
+val wink = fadeIn ++ fadeOut
 ```
 
-It is also possible to combine snails with tweaks by using either `+@` or `@+` (the `@` should be facing the snail):
+It is also possible to combine snails with tweaks by using either `+` or `++`.
+More specifically, snails are added with `++`, and tweaks are added with `+`.
 
 ```scala
 def textAndFade(str: String) =
-  text(str) +@ fadeIn
+  text(str) ++ fadeIn
 
 val fadeAndDisappear =
-  fadeOut @+ hide
+  fadeOut + hide
 ```
 
 ## “Snailing”
 
 “Snailing” is a made-up word that denotes the process of applying snails to widgets.
-Snailing is very similar to [tweaking](Tweaks.html#tweaking), except it uses another
-funny operator (again, `@` should resemble a snail!):
+Snailing is very similar to [tweaking](Tweaks.html#tweaking), except it uses the `<~~` operator
+(see [Changelog](../Changelog.html) for the recent syntax changes):
 
 ```scala
-textView <@~ fadeIn
+textView <~~ fadeIn
 ```
 
 It can be chained:
 
 ```scala
-textView <@~ fadeIn <@~ fadeOut
+textView <~~ fadeIn <~~ fadeOut
 ```
 
 Snailing can be also mixed with tweaking:
 
 ```scala
-editText <~ text("foo") <@~ fadeIn <~ enable
+editText <~ text("foo") <~~ fadeIn <~ enable
 ```
 
+It you want to apply the snail without waiting for it to finish, you can use `<~`.
+By the way, if you are confused about all these operators, check the [Understanding operators](Operators.html) section.
+
 Snailing returns a [UI action](UiActions.html), to be more specific, a `Ui[Future[...]]`.
-Since calling a `run` method of the UI action and getting `Future[Future[...]]` is not very
-convenient, a `flatRun` method is provided, that flattens the `Future`s.
 
 ## Snailing workflows
 
-With [scala-async](https://github.com/scala/async) multiple snailings can be performed in a sequence.
-Note the usage if `flatRun`, which returns a `Future[...]` instead of `Future[Future[...]]`.
+By combining UI actions, we can program complex asynchronous snailing (and tweaking) workflows,
+for example:
 
 ```scala
-async {
-  await((textView <@~ fadeIn).flatRun)
-  await((button <@~ fadeOut).flatRun)
-}
+(myProgressBar <~~ fadeOut(400)) ~~
+(myTextView <~~ blink) ~~
+(myOtherTextView <~ text("’SUP?"))
 ```
 
-It is possible that a more convenient combinator will be introduced later.
+Note the use of `~~` operator: it denotes that we need to wait for completion of the action.
 
 ## Standard snails
 

@@ -15,3 +15,5 @@ Prerequisites: Scala `2.10.x` or `2.11.x`, Android `API 9+`.
 * [What does it look like](Tutorial.html)
 * [How is it different from...](Differences.html)
 * [Detailed guide](Guide.html)
+
+Latest version: `2.0.0-M2` [changelog](Changelog.md)

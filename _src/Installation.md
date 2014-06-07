@@ -3,7 +3,7 @@
 *Macroid* is an ordinary Scala library and can be added to your sbt project like this:
 
 ```scala
-libraryDependencies += "org.macroid" %% "macroid" % "2.0.0-M1"
+libraryDependencies += "org.macroid" %% "macroid" % "2.0.0-M2"
 ```
 
 It is also recommended to add a linter (the snippet below assumes sbt `0.13.x`):

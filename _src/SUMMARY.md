@@ -15,6 +15,7 @@
     * [Tweaks](guide/Tweaks.md)
     * [Snails](guide/Snails.md)
     * [Transformers](guide/Transformers.md)
+    * [Understanding operators](guide/Operators.md)
     * [Media queries](guide/MediaQueries.md)
     * [Fragments](guide/Fragments.md)
     * [Searching](guide/Searching.md)
@@ -29,4 +30,5 @@
 * [Sample projects](Samples.md)
 * [Talks](Talks.md)
 * [Related libraries](Related.md)
+* [Changelog](Changelog.md)
 * [Scaladoc](api/macroid/package.html)
