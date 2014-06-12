@@ -1,46 +1,40 @@
 CACHE MANIFEST
-# Revision 1402172645095
+# Revision 1402589512259
 
 CACHE:
-Samples.html
-Changelog.html
+Talks.html
+Differences.html
 Guide.html
 Installation.html
-index.html
 Recipes.html
+index.html
 Related.html
-Differences.html
 ScalaOnAndroid.html
-Talks.html
+Changelog.html
 Tutorial.html
+Samples.html
 differences/Scaloid.html
 differences/Vanilla.html
-guide/Operators.html
 guide/Advanced.html
 guide/Contexts.html
-guide/Fragments.html
+guide/Operators.html
 guide/Imports.html
+guide/Fragments.html
 guide/Logging.html
 guide/MediaQueries.html
-guide/Bricks.html
 guide/Searching.html
+guide/Bricks.html
 guide/Snails.html
 guide/ToastsDialogs.html
-guide/Transformers.html
 guide/Tweaks.html
 guide/UiActions.html
+guide/Transformers.html
 tutorial/BuildingLayouts.html
-tutorial/CompleteCode.html
 tutorial/GettingAdaptive.html
+tutorial/CompleteCode.html
 tutorial/HandlingEvents.html
 tutorial/Tweaking.html
 gitbook\app.js
-gitbook\fonts\anonymouspro\400.woff
-gitbook\fonts\anonymouspro\400i.woff
-gitbook\fonts\anonymouspro\700.woff
-gitbook\fonts\anonymouspro\700i.woff
-gitbook\fonts\ebgaramond\400.woff
-gitbook\fonts\ebgaramond\400i.woff
 gitbook\fonts\fontawesome\FontAwesome.otf
 gitbook\fonts\fontawesome\fontawesome-webfont.eot
 gitbook\fonts\fontawesome\fontawesome-webfont.svg
@@ -68,12 +62,11 @@ gitbook\jsrepl\jsrepl.js
 gitbook\jsrepl\langs\javascript\jsrepl_js.js
 gitbook\jsrepl\sandbox.html
 gitbook\jsrepl\sandbox.js
-gitbook\plugins\gitbook-plugin-disqus\plugin.js
-gitbook\plugins\gitbook-plugin-ga\plugin.js
-gitbook\plugins\gitbook-plugin-mathjax\plugin.js
-gitbook\plugins\gitbook-plugin-mixpanel\plugin.js
 gitbook\print.css
 gitbook\style.css
+gitbook\plugins\gitbook-plugin-ga\plugin.js
+gitbook\plugins\gitbook-plugin-disqus\plugin.js
+gitbook\plugins\gitbook-plugin-mathjax\plugin.js
 
 NETWORK:
 *

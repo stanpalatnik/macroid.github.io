@@ -1,92 +1,84 @@
 <!DOCTYPE HTML>
 <html lang="en-US" manifest="../manifest.appcache">
-    <head prefix="og: http://ogp.me/ns# book: http://ogp.me/ns/book#">
+    
+    <head>
         
         <meta charset="UTF-8">
         <title>Toasts and dialogs | Macroid</title>
-
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <meta name="robots" content="index, follow">
-        <meta name="author" content="macroid">
-        <meta name="description" content="Macroid documentation">
-        <meta name="keywords" content="gitbook,github" >
-        <meta name="generator" content="www.gitbook.io">
-
-        
-        <link rel="next" href="../guide/Logging.html" />
-        
-        
-        <link rel="prev" href="../guide/Searching.html" />
-        
-
-        <meta property="og:title" content="Toasts and dialogs | Macroid">
-        <meta property="og:site_name" content="Macroid">
-        <meta property="og:type" content="book">
-        <meta property="og:locale" content="en_US">
-
-        <meta property="book:author" content="https://github.com/macroid">
-        <meta property="book:tag" content="GitBook">
-
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 0.5.2">
+        <meta name="HandheldFriendly" content="true"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    
+    
+    <meta name="author" content="macroid">
+    
+    
+    <link rel="next" href="../guide/Logging.html" />
+    
+    
+    <link rel="prev" href="../guide/Searching.html" />
+    
 
-        <link rel="shortcut icon" href="..\gitbook/images/favicon.ico" type="image/x-icon">
         
     </head>
     <body>
         
-
-        <link rel="stylesheet" href="..\gitbook/style.css">
         
+<link rel="stylesheet" href="../gitbook/style.css">
 
 
         
-    <div class="book" data-github="macroid/macroid" data-level="3.11" data-basepath=".." data-revision="1402172645095">
+    <div class="book" data-github="macroid/macroid" data-level="3.11" data-basepath=".." data-revision="1402589512259">
     <div class="book-header">
     <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
     
-    <a href="https://github.com/macroid/macroid" target="_blank" class="btn pull-left"><i class="fa fa-bookmark-o"></i></a>
+    <a href="https://github.com/macroid/macroid" target="_blank" class="btn pull-left home-bookmark" aria-label="GitHub home"><i class="fa fa-bookmark-o"></i></a>
     
-    <a href="#" class="btn pull-left toggle-summary"><i class="fa fa-align-justify"></i></a>
-    <a href="#" class="btn pull-left toggle-search"><i class="fa fa-search"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Toggle search"><i class="fa fa-search"></i></a>
     <span id="font-settings-wrapper">
-        <a href="#" class="btn pull-left toggle-font-settings"><i class="fa fa-font"></i>
+        <a href="#" class="btn pull-left toggle-font-settings" aria-label="Toggle font settings"><i class="fa fa-font"></i>
         </a>
         <div class="dropdown-menu font-settings">
-	<div class="dropdown-caret">
-  <span class="caret-outer"></span>
-  <span class="caret-inner"></span>
-</div>
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
 
-	<div class="btn-group btn-block">
-		<button id="reduce-font-size" class="btn btn-default">A</button>
-		<button id="enlarge-font-size" class="btn btn-default">A</button>
-	</div>
+    <div class="btn-group btn-block">
+        <button id="reduce-font-size" class="btn btn-default">A</button>
+        <button id="enlarge-font-size" class="btn btn-default">A</button>
+    </div>
 
-	<ul class="list-group font-family-list">
-		<li class="list-group-item" data-font="0">Serif</li>
-		<li class="list-group-item" data-font="1">Sans</li>
-	</ul>
+    <ul class="list-group font-family-list">
+        <li class="list-group-item" data-font="0">Serif</li>
+        <li class="list-group-item" data-font="1">Sans</li>
+    </ul>
 
-	<div class="btn-group btn-group-xs btn-block color-theme-list">
-	  <button type="button" class="btn btn-default" id="color-theme-preview-0" data-theme="0">White</button>
-	  <button type="button" class="btn btn-default" id="color-theme-preview-1" data-theme="1">Sepia</button>
-	  <button type="button" class="btn btn-default" id="color-theme-preview-2" data-theme="2">Night</button>
-	</div>
+    <div class="btn-group btn-group-xs btn-block color-theme-list">
+        <button type="button" class="btn btn-default" id="color-theme-preview-0" data-theme="0">White</button>
+        <button type="button" class="btn btn-default" id="color-theme-preview-1" data-theme="1">Sepia</button>
+        <button type="button" class="btn btn-default" id="color-theme-preview-2" data-theme="2">Night</button>
+    </div>
 </div>
 
     </span>
 
     <!-- Actions Right -->
     
-    <a href="#" target="_blank" class="btn pull-right" data-sharing="google-plus"><i class="fa fa-google-plus"></i></a>
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Share on Google Plus"><i class="fa fa-google-plus"></i></a>
     
     
-    <a href="#" target="_blank" class="btn pull-right" data-sharing="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Share on Facebook"><i class="fa fa-facebook"></i></a>
     
     
-    <a href="#" target="_blank" class="btn pull-right" data-sharing="twitter"><i class="fa fa-twitter"></i></a>
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Share on Twitter"><i class="fa fa-twitter"></i></a>
     
 
     
@@ -101,20 +93,25 @@
     </h1>
 </div>
 
-    <div class="book-summary">
+    
+
+<div class="book-summary">
     <div class="book-search">
         <input type="text" placeholder="Search" class="form-control" />
     </div>
     <ul class="summary">
         
+        
+        
         <li>
-            <a href="https://github.com/stanch" target="blank">About the author</a>
+            <a href="https://github.com/stanch" target="blank" class="author-link">About the author</a>
         </li>
         
 
         
+        
         <li>
-            <a href="https://github.com/macroid/macroid/issues" target="blank">Questions and Issues</a>
+            <a href="https://github.com/macroid/macroid/issues" target="blank"class="issues-link">Questions and Issues</a>
         </li>
         
 
@@ -128,302 +125,433 @@
             <a href="../"><i class="fa fa-check"></i> Introduction</a>
         </li>
         
-            <li  data-level="1" data-path="Installation.html">
-                
-                <a href="../Installation.html">
-                    <i class="fa fa-check"></i> <b>1.</b> Installation
-                </a>
-                
-                
-                <ul class="articles">
-                    
-                        <li  data-level="1.1" data-path="ScalaOnAndroid.html">
-                            
-                            <a href="../ScalaOnAndroid.html">
-                                <i class="fa fa-check"></i> <b>1.1.</b> Scala on Android
-                            </a>
-                            
-                        </li>
-                    
-                </ul>
-                
-            </li>
+    
         
-            <li  data-level="2" data-path="Tutorial.html">
+        <li class="chapter " data-level="1" data-path="Installation.html">
+            
                 
-                <a href="../Tutorial.html">
-                    <i class="fa fa-check"></i> <b>2.</b> Tutorial
-                </a>
+                    <a href="../Installation.html">
+                        <i class="fa fa-check"></i> <b>1.</b> Installation
+                    </a>
                 
+            
+            
+            <ul class="articles">
                 
-                <ul class="articles">
-                    
-                        <li  data-level="2.1" data-path="tutorial/BuildingLayouts.html">
-                            
-                            <a href="../tutorial/BuildingLayouts.html">
-                                <i class="fa fa-check"></i> <b>2.1.</b> Building layouts
-                            </a>
-                            
-                        </li>
-                    
-                        <li  data-level="2.2" data-path="tutorial/Tweaking.html">
-                            
-                            <a href="../tutorial/Tweaking.html">
-                                <i class="fa fa-check"></i> <b>2.2.</b> Tweaking widgets
-                            </a>
-                            
-                        </li>
-                    
-                        <li  data-level="2.3" data-path="tutorial/HandlingEvents.html">
-                            
-                            <a href="../tutorial/HandlingEvents.html">
-                                <i class="fa fa-check"></i> <b>2.3.</b> Handling events
-                            </a>
-                            
-                        </li>
-                    
-                        <li  data-level="2.4" data-path="tutorial/GettingAdaptive.html">
-                            
-                            <a href="../tutorial/GettingAdaptive.html">
-                                <i class="fa fa-check"></i> <b>2.4.</b> Getting adaptive
-                            </a>
-                            
-                        </li>
-                    
-                        <li  data-level="2.5" data-path="tutorial/CompleteCode.html">
-                            
-                            <a href="../tutorial/CompleteCode.html">
-                                <i class="fa fa-check"></i> <b>2.5.</b> Complete code
-                            </a>
-                            
-                        </li>
-                    
-                </ul>
-                
-            </li>
+    
         
-            <li  data-level="3" data-path="Guide.html">
+        <li class="chapter " data-level="1.1" data-path="ScalaOnAndroid.html">
+            
                 
-                <a href="../Guide.html">
-                    <i class="fa fa-check"></i> <b>3.</b> Guide
-                </a>
+                    <a href="../ScalaOnAndroid.html">
+                        <i class="fa fa-check"></i> <b>1.1.</b> Scala on Android
+                    </a>
                 
-                
-                <ul class="articles">
-                    
-                        <li  data-level="3.1" data-path="guide/UiActions.html">
-                            
-                            <a href="../guide/UiActions.html">
-                                <i class="fa fa-check"></i> <b>3.1.</b> UI actions
-                            </a>
-                            
-                        </li>
-                    
-                        <li  data-level="3.2" data-path="guide/Contexts.html">
-                            
-                            <a href="../guide/Contexts.html">
-                                <i class="fa fa-check"></i> <b>3.2.</b> Contexts
-                            </a>
-                            
-                        </li>
-                    
-                        <li  data-level="3.3" data-path="guide/Bricks.html">
-                            
-                            <a href="../guide/Bricks.html">
-                                <i class="fa fa-check"></i> <b>3.3.</b> Bricks
-                            </a>
-                            
-                        </li>
-                    
-                        <li  data-level="3.4" data-path="guide/Tweaks.html">
-                            
-                            <a href="../guide/Tweaks.html">
-                                <i class="fa fa-check"></i> <b>3.4.</b> Tweaks
-                            </a>
-                            
-                        </li>
-                    
-                        <li  data-level="3.5" data-path="guide/Snails.html">
-                            
-                            <a href="../guide/Snails.html">
-                                <i class="fa fa-check"></i> <b>3.5.</b> Snails
-                            </a>
-                            
-                        </li>
-                    
-                        <li  data-level="3.6" data-path="guide/Transformers.html">
-                            
-                            <a href="../guide/Transformers.html">
-                                <i class="fa fa-check"></i> <b>3.6.</b> Transformers
-                            </a>
-                            
-                        </li>
-                    
-                        <li  data-level="3.7" data-path="guide/Operators.html">
-                            
-                            <a href="../guide/Operators.html">
-                                <i class="fa fa-check"></i> <b>3.7.</b> Understanding operators
-                            </a>
-                            
-                        </li>
-                    
-                        <li  data-level="3.8" data-path="guide/MediaQueries.html">
-                            
-                            <a href="../guide/MediaQueries.html">
-                                <i class="fa fa-check"></i> <b>3.8.</b> Media queries
-                            </a>
-                            
-                        </li>
-                    
-                        <li  data-level="3.9" data-path="guide/Fragments.html">
-                            
-                            <a href="../guide/Fragments.html">
-                                <i class="fa fa-check"></i> <b>3.9.</b> Fragments
-                            </a>
-                            
-                        </li>
-                    
-                        <li  data-level="3.10" data-path="guide/Searching.html">
-                            
-                            <a href="../guide/Searching.html">
-                                <i class="fa fa-check"></i> <b>3.10.</b> Searching
-                            </a>
-                            
-                        </li>
-                    
-                        <li  data-level="3.11" data-path="guide/ToastsDialogs.html">
-                            
-                            <a href="../guide/ToastsDialogs.html">
-                                <i class="fa fa-check"></i> <b>3.11.</b> Toasts and dialogs
-                            </a>
-                            
-                        </li>
-                    
-                        <li  data-level="3.12" data-path="guide/Logging.html">
-                            
-                            <a href="../guide/Logging.html">
-                                <i class="fa fa-check"></i> <b>3.12.</b> Logging
-                            </a>
-                            
-                        </li>
-                    
-                        <li  data-level="3.13" data-path="guide/Advanced.html">
-                            
-                            <a href="../guide/Advanced.html">
-                                <i class="fa fa-check"></i> <b>3.13.</b> Advanced techniques
-                            </a>
-                            
-                        </li>
-                    
-                        <li  data-level="3.14" data-path="guide/Imports.html">
-                            
-                            <a href="../guide/Imports.html">
-                                <i class="fa fa-check"></i> <b>3.14.</b> Imports
-                            </a>
-                            
-                        </li>
-                    
-                </ul>
-                
-            </li>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
         
-            <li  data-level="4" data-path="Differences.html">
+        <li class="chapter " data-level="2" data-path="Tutorial.html">
+            
                 
-                <a href="../Differences.html">
-                    <i class="fa fa-check"></i> <b>4.</b> Differences from...
-                </a>
+                    <a href="../Tutorial.html">
+                        <i class="fa fa-check"></i> <b>2.</b> Tutorial
+                    </a>
                 
+            
+            
+            <ul class="articles">
                 
-                <ul class="articles">
-                    
-                        <li  data-level="4.1" data-path="differences/Vanilla.html">
-                            
-                            <a href="../differences/Vanilla.html">
-                                <i class="fa fa-check"></i> <b>4.1.</b> Vanilla Android
-                            </a>
-                            
-                        </li>
-                    
-                        <li  data-level="4.2" data-path="differences/Scaloid.html">
-                            
-                            <a href="../differences/Scaloid.html">
-                                <i class="fa fa-check"></i> <b>4.2.</b> Scaloid
-                            </a>
-                            
-                        </li>
-                    
-                </ul>
-                
-            </li>
+    
         
-            <li  data-level="5" data-path="Recipes.html">
+        <li class="chapter " data-level="2.1" data-path="tutorial/BuildingLayouts.html">
+            
                 
-                <a href="../Recipes.html">
-                    <i class="fa fa-check"></i> <b>5.</b> Recipes
-                </a>
+                    <a href="../tutorial/BuildingLayouts.html">
+                        <i class="fa fa-check"></i> <b>2.1.</b> Building layouts
+                    </a>
                 
-                
-            </li>
+            
+            
+        </li>
+    
         
-            <li  data-level="6" data-path="Samples.html">
+        <li class="chapter " data-level="2.2" data-path="tutorial/Tweaking.html">
+            
                 
-                <a href="../Samples.html">
-                    <i class="fa fa-check"></i> <b>6.</b> Sample projects
-                </a>
+                    <a href="../tutorial/Tweaking.html">
+                        <i class="fa fa-check"></i> <b>2.2.</b> Tweaking widgets
+                    </a>
                 
-                
-            </li>
+            
+            
+        </li>
+    
         
-            <li  data-level="7" data-path="Talks.html">
+        <li class="chapter " data-level="2.3" data-path="tutorial/HandlingEvents.html">
+            
                 
-                <a href="../Talks.html">
-                    <i class="fa fa-check"></i> <b>7.</b> Talks
-                </a>
+                    <a href="../tutorial/HandlingEvents.html">
+                        <i class="fa fa-check"></i> <b>2.3.</b> Handling events
+                    </a>
                 
-                
-            </li>
+            
+            
+        </li>
+    
         
-            <li  data-level="8" data-path="Related.html">
+        <li class="chapter " data-level="2.4" data-path="tutorial/GettingAdaptive.html">
+            
                 
-                <a href="../Related.html">
-                    <i class="fa fa-check"></i> <b>8.</b> Related libraries
-                </a>
+                    <a href="../tutorial/GettingAdaptive.html">
+                        <i class="fa fa-check"></i> <b>2.4.</b> Getting adaptive
+                    </a>
                 
-                
-            </li>
+            
+            
+        </li>
+    
         
-            <li  data-level="9" data-path="https://groups.google.com/forum/#!forum/macroid">
+        <li class="chapter " data-level="2.5" data-path="tutorial/CompleteCode.html">
+            
                 
-                <a href="../https://groups.google.com/forum/#!forum/macroid">
-                    <i class="fa fa-check"></i> <b>9.</b> Mailing list
-                </a>
+                    <a href="../tutorial/CompleteCode.html">
+                        <i class="fa fa-check"></i> <b>2.5.</b> Complete code
+                    </a>
                 
-                
-            </li>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
         
-            <li  data-level="10" data-path="Changelog.html">
+        <li class="chapter " data-level="3" data-path="Guide.html">
+            
                 
-                <a href="../Changelog.html">
-                    <i class="fa fa-check"></i> <b>10.</b> Changelog
-                </a>
+                    <a href="../Guide.html">
+                        <i class="fa fa-check"></i> <b>3.</b> Guide
+                    </a>
                 
+            
+            
+            <ul class="articles">
                 
-            </li>
+    
         
-            <li  data-level="11" data-path="api/macroid/package.html">
+        <li class="chapter " data-level="3.1" data-path="guide/UiActions.html">
+            
                 
-                <a href="../api/macroid/package.html">
-                    <i class="fa fa-check"></i> <b>11.</b> Scaladoc
-                </a>
+                    <a href="../guide/UiActions.html">
+                        <i class="fa fa-check"></i> <b>3.1.</b> UI actions
+                    </a>
                 
-                
-            </li>
+            
+            
+        </li>
+    
         
+        <li class="chapter " data-level="3.2" data-path="guide/Contexts.html">
+            
+                
+                    <a href="../guide/Contexts.html">
+                        <i class="fa fa-check"></i> <b>3.2.</b> Contexts
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="3.3" data-path="guide/Bricks.html">
+            
+                
+                    <a href="../guide/Bricks.html">
+                        <i class="fa fa-check"></i> <b>3.3.</b> Bricks
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="3.4" data-path="guide/Tweaks.html">
+            
+                
+                    <a href="../guide/Tweaks.html">
+                        <i class="fa fa-check"></i> <b>3.4.</b> Tweaks
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="3.5" data-path="guide/Snails.html">
+            
+                
+                    <a href="../guide/Snails.html">
+                        <i class="fa fa-check"></i> <b>3.5.</b> Snails
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="3.6" data-path="guide/Transformers.html">
+            
+                
+                    <a href="../guide/Transformers.html">
+                        <i class="fa fa-check"></i> <b>3.6.</b> Transformers
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="3.7" data-path="guide/Operators.html">
+            
+                
+                    <a href="../guide/Operators.html">
+                        <i class="fa fa-check"></i> <b>3.7.</b> Understanding operators
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="3.8" data-path="guide/MediaQueries.html">
+            
+                
+                    <a href="../guide/MediaQueries.html">
+                        <i class="fa fa-check"></i> <b>3.8.</b> Media queries
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="3.9" data-path="guide/Fragments.html">
+            
+                
+                    <a href="../guide/Fragments.html">
+                        <i class="fa fa-check"></i> <b>3.9.</b> Fragments
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="3.10" data-path="guide/Searching.html">
+            
+                
+                    <a href="../guide/Searching.html">
+                        <i class="fa fa-check"></i> <b>3.10.</b> Searching
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="3.11" data-path="guide/ToastsDialogs.html">
+            
+                
+                    <a href="../guide/ToastsDialogs.html">
+                        <i class="fa fa-check"></i> <b>3.11.</b> Toasts and dialogs
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="3.12" data-path="guide/Logging.html">
+            
+                
+                    <a href="../guide/Logging.html">
+                        <i class="fa fa-check"></i> <b>3.12.</b> Logging
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="3.13" data-path="guide/Advanced.html">
+            
+                
+                    <a href="../guide/Advanced.html">
+                        <i class="fa fa-check"></i> <b>3.13.</b> Advanced techniques
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="3.14" data-path="guide/Imports.html">
+            
+                
+                    <a href="../guide/Imports.html">
+                        <i class="fa fa-check"></i> <b>3.14.</b> Imports
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4" data-path="Differences.html">
+            
+                
+                    <a href="../Differences.html">
+                        <i class="fa fa-check"></i> <b>4.</b> Differences from...
+                    </a>
+                
+            
+            
+            <ul class="articles">
+                
+    
+        
+        <li class="chapter " data-level="4.1" data-path="differences/Vanilla.html">
+            
+                
+                    <a href="../differences/Vanilla.html">
+                        <i class="fa fa-check"></i> <b>4.1.</b> Vanilla Android
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="4.2" data-path="differences/Scaloid.html">
+            
+                
+                    <a href="../differences/Scaloid.html">
+                        <i class="fa fa-check"></i> <b>4.2.</b> Scaloid
+                    </a>
+                
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="5" data-path="Recipes.html">
+            
+                
+                    <a href="../Recipes.html">
+                        <i class="fa fa-check"></i> <b>5.</b> Recipes
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="6" data-path="Samples.html">
+            
+                
+                    <a href="../Samples.html">
+                        <i class="fa fa-check"></i> <b>6.</b> Sample projects
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="7" data-path="Talks.html">
+            
+                
+                    <a href="../Talks.html">
+                        <i class="fa fa-check"></i> <b>7.</b> Talks
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="8" data-path="Related.html">
+            
+                
+                    <a href="../Related.html">
+                        <i class="fa fa-check"></i> <b>8.</b> Related libraries
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="9" >
+            
+                
+                    <a target="_blank" href="https://groups.google.com/forum/#!forum/macroid">
+                        <i class="fa fa-check"></i> <b>9.</b> Mailing list
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="10" data-path="Changelog.html">
+            
+                
+                    <a href="../Changelog.html">
+                        <i class="fa fa-check"></i> <b>10.</b> Changelog
+                    </a>
+                
+            
+            
+        </li>
+    
+        
+        <li class="chapter " data-level="11" data-path="api/macroid/package.html">
+            
+                
+                    <a href="../api/macroid/package.html">
+                        <i class="fa fa-check"></i> <b>11.</b> Scaladoc
+                    </a>
+                
+            
+            
+        </li>
+    
+
 
         
         <li class="divider"></li>
         <li>
-            <a href="http://www.gitbook.io/" target="blank">Generated using GitBook</a>
+            <a href="http://www.gitbook.io/" target="blank" class="gitbook-link">Generated using GitBook</a>
         </li>
         
     </ul>
@@ -434,7 +562,7 @@
             <div class="page-wrapper" tabindex="-1">
                 <div class="book-progress">
     <div class="bar">
-        <div class="inner" style="width: 42.42424242424242%;min-width: 39.39393939393939%;"></div>
+        <div class="inner" style="width: 36.36363636363637%;min-width: 33.333333333333336%;"></div>
     </div>
     <div class="chapters">
     
@@ -444,67 +572,67 @@
     
         <a href="../ScalaOnAndroid.html" title="Scala on Android" class="chapter done " data-progress="1.1" style="left: 6.0606060606060606%;"></a>
     
-        <a href="../Changelog.html" title="Changelog" class="chapter done " data-progress="10" style="left: 9.090909090909092%;"></a>
+        <a href="../Tutorial.html" title="Tutorial" class="chapter done new-chapter" data-progress="2" style="left: 9.090909090909092%;"></a>
     
-        <a href="../api/macroid/package.html" title="Scaladoc" class="chapter done " data-progress="11" style="left: 12.121212121212121%;"></a>
+        <a href="../tutorial/BuildingLayouts.html" title="Building layouts" class="chapter done " data-progress="2.1" style="left: 12.121212121212121%;"></a>
     
-        <a href="../Tutorial.html" title="Tutorial" class="chapter done new-chapter" data-progress="2" style="left: 15.151515151515152%;"></a>
+        <a href="../tutorial/Tweaking.html" title="Tweaking widgets" class="chapter done " data-progress="2.2" style="left: 15.151515151515152%;"></a>
     
-        <a href="../tutorial/BuildingLayouts.html" title="Building layouts" class="chapter done " data-progress="2.1" style="left: 18.181818181818183%;"></a>
+        <a href="../tutorial/HandlingEvents.html" title="Handling events" class="chapter done " data-progress="2.3" style="left: 18.181818181818183%;"></a>
     
-        <a href="../tutorial/Tweaking.html" title="Tweaking widgets" class="chapter done " data-progress="2.2" style="left: 21.21212121212121%;"></a>
+        <a href="../tutorial/GettingAdaptive.html" title="Getting adaptive" class="chapter done " data-progress="2.4" style="left: 21.21212121212121%;"></a>
     
-        <a href="../tutorial/HandlingEvents.html" title="Handling events" class="chapter done " data-progress="2.3" style="left: 24.242424242424242%;"></a>
+        <a href="../tutorial/CompleteCode.html" title="Complete code" class="chapter done " data-progress="2.5" style="left: 24.242424242424242%;"></a>
     
-        <a href="../tutorial/GettingAdaptive.html" title="Getting adaptive" class="chapter done " data-progress="2.4" style="left: 27.272727272727273%;"></a>
+        <a href="../Guide.html" title="Guide" class="chapter done new-chapter" data-progress="3" style="left: 27.272727272727273%;"></a>
     
-        <a href="../tutorial/CompleteCode.html" title="Complete code" class="chapter done " data-progress="2.5" style="left: 30.303030303030305%;"></a>
+        <a href="../guide/UiActions.html" title="UI actions" class="chapter done " data-progress="3.1" style="left: 30.303030303030305%;"></a>
     
-        <a href="../Guide.html" title="Guide" class="chapter done new-chapter" data-progress="3" style="left: 33.333333333333336%;"></a>
+        <a href="../guide/Searching.html" title="Searching" class="chapter done " data-progress="3.10" style="left: 33.333333333333336%;"></a>
     
-        <a href="../guide/UiActions.html" title="UI actions" class="chapter done " data-progress="3.1" style="left: 36.36363636363637%;"></a>
+        <a href="../guide/ToastsDialogs.html" title="Toasts and dialogs" class="chapter done " data-progress="3.11" style="left: 36.36363636363637%;"></a>
     
-        <a href="../guide/Searching.html" title="Searching" class="chapter done " data-progress="3.10" style="left: 39.39393939393939%;"></a>
+        <a href="../guide/Logging.html" title="Logging" class="chapter  " data-progress="3.12" style="left: 39.39393939393939%;"></a>
     
-        <a href="../guide/ToastsDialogs.html" title="Toasts and dialogs" class="chapter done " data-progress="3.11" style="left: 42.42424242424242%;"></a>
+        <a href="../guide/Advanced.html" title="Advanced techniques" class="chapter  " data-progress="3.13" style="left: 42.42424242424242%;"></a>
     
-        <a href="../guide/Logging.html" title="Logging" class="chapter  " data-progress="3.12" style="left: 45.45454545454545%;"></a>
+        <a href="../guide/Imports.html" title="Imports" class="chapter  " data-progress="3.14" style="left: 45.45454545454545%;"></a>
     
-        <a href="../guide/Advanced.html" title="Advanced techniques" class="chapter  " data-progress="3.13" style="left: 48.484848484848484%;"></a>
+        <a href="../guide/Contexts.html" title="Contexts" class="chapter  " data-progress="3.2" style="left: 48.484848484848484%;"></a>
     
-        <a href="../guide/Imports.html" title="Imports" class="chapter  " data-progress="3.14" style="left: 51.515151515151516%;"></a>
+        <a href="../guide/Bricks.html" title="Bricks" class="chapter  " data-progress="3.3" style="left: 51.515151515151516%;"></a>
     
-        <a href="../guide/Contexts.html" title="Contexts" class="chapter  " data-progress="3.2" style="left: 54.54545454545455%;"></a>
+        <a href="../guide/Tweaks.html" title="Tweaks" class="chapter  " data-progress="3.4" style="left: 54.54545454545455%;"></a>
     
-        <a href="../guide/Bricks.html" title="Bricks" class="chapter  " data-progress="3.3" style="left: 57.57575757575758%;"></a>
+        <a href="../guide/Snails.html" title="Snails" class="chapter  " data-progress="3.5" style="left: 57.57575757575758%;"></a>
     
-        <a href="../guide/Tweaks.html" title="Tweaks" class="chapter  " data-progress="3.4" style="left: 60.60606060606061%;"></a>
+        <a href="../guide/Transformers.html" title="Transformers" class="chapter  " data-progress="3.6" style="left: 60.60606060606061%;"></a>
     
-        <a href="../guide/Snails.html" title="Snails" class="chapter  " data-progress="3.5" style="left: 63.63636363636363%;"></a>
+        <a href="../guide/Operators.html" title="Understanding operators" class="chapter  " data-progress="3.7" style="left: 63.63636363636363%;"></a>
     
-        <a href="../guide/Transformers.html" title="Transformers" class="chapter  " data-progress="3.6" style="left: 66.66666666666667%;"></a>
+        <a href="../guide/MediaQueries.html" title="Media queries" class="chapter  " data-progress="3.8" style="left: 66.66666666666667%;"></a>
     
-        <a href="../guide/Operators.html" title="Understanding operators" class="chapter  " data-progress="3.7" style="left: 69.6969696969697%;"></a>
+        <a href="../guide/Fragments.html" title="Fragments" class="chapter  " data-progress="3.9" style="left: 69.6969696969697%;"></a>
     
-        <a href="../guide/MediaQueries.html" title="Media queries" class="chapter  " data-progress="3.8" style="left: 72.72727272727273%;"></a>
+        <a href="../Differences.html" title="Differences from..." class="chapter  new-chapter" data-progress="4" style="left: 72.72727272727273%;"></a>
     
-        <a href="../guide/Fragments.html" title="Fragments" class="chapter  " data-progress="3.9" style="left: 75.75757575757575%;"></a>
+        <a href="../differences/Vanilla.html" title="Vanilla Android" class="chapter  " data-progress="4.1" style="left: 75.75757575757575%;"></a>
     
-        <a href="../Differences.html" title="Differences from..." class="chapter  new-chapter" data-progress="4" style="left: 78.78787878787878%;"></a>
+        <a href="../differences/Scaloid.html" title="Scaloid" class="chapter  " data-progress="4.2" style="left: 78.78787878787878%;"></a>
     
-        <a href="../differences/Vanilla.html" title="Vanilla Android" class="chapter  " data-progress="4.1" style="left: 81.81818181818181%;"></a>
+        <a href="../Recipes.html" title="Recipes" class="chapter  new-chapter" data-progress="5" style="left: 81.81818181818181%;"></a>
     
-        <a href="../differences/Scaloid.html" title="Scaloid" class="chapter  " data-progress="4.2" style="left: 84.84848484848484%;"></a>
+        <a href="../Samples.html" title="Sample projects" class="chapter  new-chapter" data-progress="6" style="left: 84.84848484848484%;"></a>
     
-        <a href="../Recipes.html" title="Recipes" class="chapter  new-chapter" data-progress="5" style="left: 87.87878787878788%;"></a>
+        <a href="../Talks.html" title="Talks" class="chapter  new-chapter" data-progress="7" style="left: 87.87878787878788%;"></a>
     
-        <a href="../Samples.html" title="Sample projects" class="chapter  new-chapter" data-progress="6" style="left: 90.9090909090909%;"></a>
+        <a href="../Related.html" title="Related libraries" class="chapter  new-chapter" data-progress="8" style="left: 90.9090909090909%;"></a>
     
-        <a href="../Talks.html" title="Talks" class="chapter  new-chapter" data-progress="7" style="left: 93.93939393939394%;"></a>
+        <a href="../https://groups.google.com/forum/#!forum/macroid" title="Mailing list" class="chapter  new-chapter" data-progress="9" style="left: 93.93939393939394%;"></a>
     
-        <a href="../Related.html" title="Related libraries" class="chapter  new-chapter" data-progress="8" style="left: 96.96969696969697%;"></a>
+        <a href="../Changelog.html" title="Changelog" class="chapter  " data-progress="10" style="left: 96.96969696969697%;"></a>
     
-        <a href="../https://groups.google.com/forum/#!forum/macroid" title="Mailing list" class="chapter  new-chapter" data-progress="9" style="left: 100%;"></a>
+        <a href="../api/macroid/package.html" title="Scaladoc" class="chapter  " data-progress="11" style="left: 100%;"></a>
     
     </div>
 </div>
@@ -566,32 +694,24 @@ dialog(<span class="hljs-string">"Please fasten your seat belts"</span>) &lt;~ t
         </div>
 
         
-        <a href="../guide/Searching.html" class="navigation navigation-prev "><i class="fa fa-angle-left"></i></a>
+        <a href="../guide/Searching.html" class="navigation navigation-prev " aria-label="Previous page: Searching"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../guide/Logging.html" class="navigation navigation-next "><i class="fa fa-angle-right"></i></a>
+        <a href="../guide/Logging.html" class="navigation navigation-next " aria-label="Next page: Logging"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
 
         
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/ace.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.3/mode-javascript.js"></script>
-        <script src="..\gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
-        <script src="..\gitbook/app.js"></script>
-        
+<script src="../gitbook/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+<script src="../gitbook/app.js"></script>
 
     
-    <script src="..\gitbook/plugins/gitbook-plugin-disqus/plugin.js"></script>
+    <script src="../gitbook/plugins/gitbook-plugin-disqus/plugin.js"></script>
     
 
     
-    <script src="..\gitbook/plugins/gitbook-plugin-ga/plugin.js"></script>
-    
-
-    
-    <script src="..\gitbook/plugins/gitbook-plugin-mixpanel/plugin.js"></script>
+    <script src="../gitbook/plugins/gitbook-plugin-ga/plugin.js"></script>
     
 
     
@@ -599,7 +719,7 @@ dialog(<span class="hljs-string">"Please fasten your seat belts"</span>) &lt;~ t
     
 
     
-    <script src="..\gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
+    <script src="../gitbook/plugins/gitbook-plugin-mathjax/plugin.js"></script>
     
 
 <script>
@@ -609,5 +729,7 @@ require(["gitbook"], function(gitbook) {
 });
 </script>
 
+        <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-51095378-1', 'auto');ga('send', 'pageview');</script>
     </body>
+    
 </html>
