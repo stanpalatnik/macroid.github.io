@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-github="macroid/macroid" data-level="1.1" data-basepath="." data-revision="1403445777916">
+    <div class="book" data-github="macroid/macroid" data-level="1.1" data-basepath="." data-revision="1403447847459">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -639,11 +639,16 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_8">
+                    <section class="normal" id="section-gitbook_1">
                     
                         <h1 id="scala-on-android">Scala on Android</h1>
 <p>Writing your Android project in <a href="http://scala-lang.org/" target="_blank">Scala</a> is becoming smoother and smoother.
 This is a short guide that will help you get started.</p>
+<h2 id="the-android-sdk">The Android SDK</h2>
+<p>The SDK can be downloaded from the <a href="http://developer.android.com/sdk/index.html" target="_blank">Android website</a>.
+You will also need to configure <code>ANDROID_SDK_HOME</code> environment variable to point to the installation.</p>
+<p>To use the bundled libraries, such as the support library, make sure you install the following items:
+<img src="SDK-manager.png" alt="SDK manager screenshot"></p>
 <h2 id="the-build-system">The build system</h2>
 <p>The most important part of the equation is the build system (even in mainland Android your are likely to use one anyway).
 After configuring the build you will be able to compile and <em>run the project from the command line</em> and <em>generate IDE project
@@ -666,6 +671,17 @@ create IDE project files.</p>
 be reconfigured for that purpose: go to Run → Edit Configurations →
 (select a configuration) → Before launch → (click +) → SBT → (type <code>android:run</code> or <code>android:start</code>,
 depending on the plugin you use).</p>
+<h2 id="alternative-approaches">Alternative approaches</h2>
+<ul>
+<li><p>Both Intellij IDEA / Android Studio and Scala IDE for Eclipse can be used without a build system.
+In case of Scala IDE, the <a href="https://github.com/banshee/AndroidProguardScala" target="_blank">AndroidProguardScala plugin</a> is
+necessary. This approach however is not recommended, as it lacks automatic dependency management and
+is tied to a particular IDE.</p>
+</li>
+<li><p><a href="http://www.gradle.org/" target="_blank">Gradle</a>, the now-standard Android build system, can be used as well. You will
+need <a href="https://github.com/saturday06/gradle-android-scala-plugin" target="_blank">gradle-android-scala-plugin</a>.</p>
+</li>
+</ul>
 <h2 id="useful-resources">Useful resources</h2>
 <ul>
 <li>When in doubt, don’t hesitate to use the <a href="https://groups.google.com/forum/#!forum/scala-on-android" target="_blank">mailing list</a>.</li>
