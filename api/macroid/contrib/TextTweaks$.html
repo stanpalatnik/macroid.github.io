@@ -2,17 +2,17 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>UnitListener - macroid.EventTweakMacros.UnitListener</title>
-          <meta name="description" content="UnitListener - macroid.EventTweakMacros.UnitListener" />
-          <meta name="keywords" content="UnitListener macroid.EventTweakMacros.UnitListener" />
+          <title>TextTweaks - macroid.contrib.TextTweaks</title>
+          <meta name="description" content="TextTweaks - macroid.contrib.TextTweaks" />
+          <meta name="keywords" content="TextTweaks macroid.contrib.TextTweaks" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
-      <link href="../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
-      <link href="../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
       <script type="text/javascript">
          if(top === self) {
-            var url = '../index.html';
-            var hash = 'macroid.EventTweakMacros$$UnitListener$';
+            var url = '../../index.html';
+            var hash = 'macroid.contrib.TextTweaks$';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -24,9 +24,9 @@
         </head>
         <body class="value">
       <div id="definition">
-        <img src="../lib/object_big.png" />
-        <p id="owner"><a href="package.html" class="extype" name="macroid">macroid</a>.<a href="EventTweakMacros$.html" class="extype" name="macroid.EventTweakMacros">EventTweakMacros</a></p>
-        <h1>UnitListener</h1>
+        <img src="../../lib/object_big.png" />
+        <p id="owner"><a href="../package.html" class="extype" name="macroid">macroid</a>.<a href="package.html" class="extype" name="macroid.contrib">contrib</a></p>
+        <h1>TextTweaks</h1>
       </div>
 
       <h4 id="signature" class="signature">
@@ -35,13 +35,13 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <span class="name">UnitListener</span><span class="result"> extends <a href="EventTweakMacros$$ListenerType.html" class="extype" name="macroid.EventTweakMacros.ListenerType">ListenerType</a></span>
+        <span class="name">TextTweaks</span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/macroid/macroid/tree/master/src/main/scala/macroid/Tweaks.scala" target="_blank">Tweaks.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Extra tweaks for TextView</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/macroid/macroid/tree/master/src/main/scala/macroid/contrib/ExtraTweaks.scala" target="_blank">ExtraTweaks.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
-          <div class="superTypes hiddenContent"><a href="EventTweakMacros$$ListenerType.html" class="extype" name="macroid.EventTweakMacros.ListenerType">ListenerType</a>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -59,7 +59,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="macroid.EventTweakMacros.UnitListener"><span>UnitListener</span></li><li class="in" name="macroid.EventTweakMacros.ListenerType"><span>ListenerType</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="macroid.contrib.TextTweaks"><span>TextTweaks</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -79,7 +79,23 @@
         <div id="allMembers">
         
 
-        
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="macroid.contrib.TextTweaks.W" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="W=android.widget.TextView"></a>
+      <a id="W:W"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">type</span>
+      </span>
+      <span class="symbol">
+        <span class="name">W</span><span class="result"> = <span class="extype" name="android.widget.TextView">TextView</span></span>
+      </span>
+      </h4>
+      
+    </li></ol>
+            </div>
 
         
 
@@ -163,6 +179,32 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="macroid.contrib.TextTweaks#bold" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="bold:macroid.Tweak[macroid.contrib.TextTweaks.W]"></a>
+      <a id="bold:Tweak[W]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">bold</span><span class="result">: <a href="../Tweak.html" class="extype" name="macroid.Tweak">Tweak</a>[<a href="#W=android.widget.TextView" class="extmbr" name="macroid.contrib.TextTweaks.W">W</a>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.contrib.TextTweaks#boldItalic" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="boldItalic:macroid.Tweak[macroid.contrib.TextTweaks.W]"></a>
+      <a id="boldItalic:Tweak[W]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">boldItalic</span><span class="result">: <a href="../Tweak.html" class="extype" name="macroid.Tweak">Tweak</a>[<a href="#W=android.widget.TextView" class="extmbr" name="macroid.contrib.TextTweaks.W">W</a>]</span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a>
       <a id="clone():AnyRef"></a>
@@ -175,13 +217,26 @@
         <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="macroid.contrib.TextTweaks#color" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="color(color:Int):macroid.Tweak[macroid.contrib.TextTweaks.W]"></a>
+      <a id="color(Int):Tweak[W]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">color</span><span class="params">(<span name="color">color: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="../Tweak.html" class="extype" name="macroid.Tweak">Tweak</a>[<a href="#W=android.widget.TextView" class="extmbr" name="macroid.contrib.TextTweaks.W">W</a>]</span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a>
       <a id="eq(AnyRef):Boolean"></a>
@@ -220,7 +275,7 @@
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="symbol">classOf[java.lang.Throwable]</span>
@@ -266,6 +321,58 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="macroid.contrib.TextTweaks#italic" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="italic:macroid.Tweak[macroid.contrib.TextTweaks.W]"></a>
+      <a id="italic:Tweak[W]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">italic</span><span class="result">: <a href="../Tweak.html" class="extype" name="macroid.Tweak">Tweak</a>[<a href="#W=android.widget.TextView" class="extmbr" name="macroid.contrib.TextTweaks.W">W</a>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.contrib.TextTweaks#large" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="large:macroid.Tweak[macroid.contrib.TextTweaks.W]"></a>
+      <a id="large:Tweak[W]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">large</span><span class="result">: <a href="../Tweak.html" class="extype" name="macroid.Tweak">Tweak</a>[<a href="#W=android.widget.TextView" class="extmbr" name="macroid.contrib.TextTweaks.W">W</a>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.contrib.TextTweaks#medium" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="medium:macroid.Tweak[macroid.contrib.TextTweaks.W]"></a>
+      <a id="medium:Tweak[W]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">medium</span><span class="result">: <a href="../Tweak.html" class="extype" name="macroid.Tweak">Tweak</a>[<a href="#W=android.widget.TextView" class="extmbr" name="macroid.contrib.TextTweaks.W">W</a>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.contrib.TextTweaks#mono" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="mono:macroid.Tweak[macroid.contrib.TextTweaks.W]"></a>
+      <a id="mono:Tweak[W]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">mono</span><span class="result">: <a href="../Tweak.html" class="extype" name="macroid.Tweak">Tweak</a>[<a href="#W=android.widget.TextView" class="extmbr" name="macroid.contrib.TextTweaks.W">W</a>]</span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -305,6 +412,45 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="macroid.contrib.TextTweaks#sans" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="sans:macroid.Tweak[macroid.contrib.TextTweaks.W]"></a>
+      <a id="sans:Tweak[W]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">sans</span><span class="result">: <a href="../Tweak.html" class="extype" name="macroid.Tweak">Tweak</a>[<a href="#W=android.widget.TextView" class="extmbr" name="macroid.contrib.TextTweaks.W">W</a>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.contrib.TextTweaks#serif" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="serif:macroid.Tweak[macroid.contrib.TextTweaks.W]"></a>
+      <a id="serif:Tweak[W]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">serif</span><span class="result">: <a href="../Tweak.html" class="extype" name="macroid.Tweak">Tweak</a>[<a href="#W=android.widget.TextView" class="extmbr" name="macroid.contrib.TextTweaks.W">W</a>]</span>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.contrib.TextTweaks#size" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="size(points:Int):macroid.Tweak[macroid.contrib.TextTweaks.W]"></a>
+      <a id="size(Int):Tweak[W]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">size</span><span class="params">(<span name="points">points: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <a href="../Tweak.html" class="extype" name="macroid.Tweak">Tweak</a>[<a href="#W=android.widget.TextView" class="extmbr" name="macroid.contrib.TextTweaks.W">W</a>]</span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -397,9 +543,7 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="macroid.EventTweakMacros.ListenerType">
-              <h3>Inherited from <a href="EventTweakMacros$$ListenerType.html" class="extype" name="macroid.EventTweakMacros.ListenerType">ListenerType</a></h3>
-            </div><div class="parent" name="scala.AnyRef">
+        <div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>
@@ -419,6 +563,6 @@
       <div id="tooltip"></div>
 
       <div id="footer">  </div>
-      <script defer="defer" type="text/javascript" id="jquery-js" src="../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../lib/template.js"></script>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../lib/template.js"></script>
     </body>
       </html>
