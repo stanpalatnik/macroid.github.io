@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-github="macroid/macroid" data-level="3.5" data-basepath=".." data-revision="1405639317089">
+    <div class="book" data-github="macroid/macroid" data-level="3.5" data-basepath=".." data-revision="1405639683689">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -703,8 +703,26 @@ for example:</p>
 </code></pre>
 <p>Note the use of <code>~~</code> operator: it denotes that we need to wait for completion of the action.</p>
 <h2 id="standard-snails">Standard snails</h2>
-<p>A number of standard snails are included. Please refer to the <a href="../api/macroid/Snails$.html">scaladoc</a>.
-Note that all these snails can be imported with <code>import macroid.FullDsl._</code>.</p>
+<p>A number of standard snails are included. You can always find them in the <a href="../api/macroid/Snails$.html">scaladoc</a>.
+Note that all these snails can be imported with <code>import macroid.FullDsl._</code> or just <code>import macroid.Snails._</code>.</p>
+<p>A quick rundown:</p>
+<ul>
+<li>Basic snails<ul>
+<li><code>delay</code> — wait for a given time</li>
+<li><code>wait</code> — wait for a given <code>Future</code></li>
+</ul>
+</li>
+<li>Progress<ul>
+<li><code>waitProgress</code> — modify a <code>ProgressBar</code> to track a <code>Future</code> or a list of <code>Future</code>s</li>
+</ul>
+</li>
+<li>Animation<ul>
+<li><code>anim</code> — apply an animation</li>
+<li><code>fadeIn</code> — apply a fade-in</li>
+<li><code>fadeOut</code> — apply a fade-out</li>
+</ul>
+</li>
+</ul>
 
                     
                     </section>
