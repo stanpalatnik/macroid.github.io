@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-github="macroid/macroid" data-level="3.2" data-basepath=".." data-revision="1405636689755">
+    <div class="book" data-github="macroid/macroid" data-level="3.2" data-basepath=".." data-revision="1405636845759">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -678,11 +678,11 @@ activity or a fragment, you are golden. However sometimes you need to pass the c
 to other methods:</p>
 <pre><code class="lang-scala"><span class="hljs-keyword">import</span> macroid.{ AppContext, ActivityContext }
 <span class="hljs-keyword">import</span> macroid.FullDsl._
-<span class="hljs-keyword">import</span> macroid.contrib.ExtraTweaks._
+<span class="hljs-keyword">import</span> macroid.contrib._
 
 <span class="hljs-keyword">def</span> customTweak(implicit appCtx: AppContext) =
   <span class="hljs-comment">// this one requires AppContext</span>
-  TextSize.large +
+  TextTweaks.large +
   text(<span class="hljs-string">"foo"</span>)
 
 <span class="hljs-keyword">def</span> customLayout(implicit ctx: ActivityContext) =
