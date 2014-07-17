@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-github="macroid/macroid" data-level="3.4" data-basepath=".." data-revision="1405638581759">
+    <div class="book" data-github="macroid/macroid" data-level="3.4" data-basepath=".." data-revision="1405638853550">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -695,8 +695,12 @@ Note that all these tweaks can be imported with <code>import macroid.FullDsl._</
 <li><code>disable</code></li>
 </ul>
 </li>
-<li>Padding<ul>
-<li><code>padding</code></li>
+<li><p>Padding</p>
+<ul>
+<li><p><code>padding</code> — supports named arguments. Example:</p>
+<pre><code class="lang-scala">w[TextView] &lt;~ padding(top = <span class="hljs-number">8</span> dp, bottom = <span class="hljs-number">8</span> dp)
+</code></pre>
+</li>
 </ul>
 </li>
 <li><p>Layout</p>
@@ -707,7 +711,11 @@ Note that all these tweaks can be imported with <code>import macroid.FullDsl._</
 </li>
 <li><code>vertical</code></li>
 <li><code>horizontal</code></li>
-<li><code>addViews</code></li>
+<li><p><code>addViews</code> — add views to a ViewGroup. Example:</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">val</span> views = List(<span class="hljs-string">"foo"</span>, <span class="hljs-string">"bar"</span>).map(s ⇒ w[TextView] &lt;~ text(s))
+linearLayout &lt;~ addViews(views, removeOld = <span class="hljs-keyword">true</span>)
+</code></pre>
+</li>
 </ul>
 </li>
 <li>Text/captions<ul>
@@ -716,7 +724,7 @@ Note that all these tweaks can be imported with <code>import macroid.FullDsl._</
 </li>
 <li><p>Handling events</p>
 <ul>
-<li><p><code>On</code> — works with (almost) any events. Expects an <a href="UiActions.html">UI action</a> that takes no arguments and returns the same type as the associated listener. Examples:</p>
+<li><p><code>On</code> — works with (almost) any events. Expects a <a href="UiActions.html">UI action</a> that takes no arguments and returns the same type as the associated listener. Examples:</p>
 <pre><code class="lang-scala">w[Button] &lt;~ On.click(textView &lt;~ hide)
 
 w[Button] &lt;~ On.longClick((textView &lt;~ show) ~ Ui(<span class="hljs-keyword">true</span>))
