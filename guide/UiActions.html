@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-github="macroid/macroid" data-level="3.1" data-basepath=".." data-revision="1405637314365">
+    <div class="book" data-github="macroid/macroid" data-level="3.1" data-basepath=".." data-revision="1405637813531">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -639,7 +639,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_26">
+                    <section class="normal" id="section-gitbook_27">
                     
                         <h1 id="ui-actions">UI actions</h1>
 <p>It is well-known that</p>
@@ -669,6 +669,7 @@ runUi(action)
 <p>Running an action of type <code>Ui[A]</code> returns a <code>Future[A]</code> (in this case — <code>Future[Int]</code>),
 so that you can monitor its completion. If the action fails,
 you can handle the failure with the standard <a href="http://docs.scala-lang.org/overviews/core/futures.html" target="_blank">Future API</a>.</p>
+<p><em>Note that UI actions are not memoized, so running an action will recalculate the result each time</em>.</p>
 <p>In some cases you will also want to run it on the current thread (but you have to be 100% sure you are inside
 the UI thread):</p>
 <pre><code class="lang-scala">action.get
