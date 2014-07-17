@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-github="macroid/macroid" data-level="10" data-basepath="." data-revision="1405633558226">
+    <div class="book" data-github="macroid/macroid" data-level="10" data-basepath="." data-revision="1405634220766">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -642,9 +642,19 @@
                     <section class="normal" id="section-gitbook_11">
                     
                         <h1 id="changelog">Changelog</h1>
+<p>Breaking changes are in bold.</p>
+<h2 id="version-2-0-0-m3-">Version <code>2.0.0-M3</code></h2>
+<p>Detailed diff can be found <a href="https://github.com/macroid/macroid/compare/v2.0.0-M2...v2.0.0-M3" target="_blank">on GitHub</a>.</p>
+<ul>
+<li><strong>Macroid is now packaged in AAR</strong></li>
+<li><strong>ExtraTweaks were refactored into <code>TextTweaks</code>, <code>ImageTweaks</code>, etc</strong></li>
+<li><strong><code>macroid.util.Ui</code> is now <code>macroid.Ui</code> for consistency with <code>macroid.Tweak</code>, <code>macroid.Snail</code>, etc</strong></li>
+<li>When applying <code>Future[Tweak[View]]</code>, completed futures are now handled in-place (inspired by <a href="https://github.com/scala/async/issues/73" target="_blank">scala/async#73</a>)</li>
+<li>Added <code>RuleRelativeLayout</code> to work with <code>RelativeLayout</code> <a href="https://github.com/macroid/macroid/issues/24" target="_blank">#24</a></li>
+<li>Many new tweaks were added to <code>macroid.contrib</code></li>
+</ul>
 <h2 id="version-2-0-0-m2-">Version <code>2.0.0-M2</code></h2>
 <p>Detailed diff can be found <a href="https://github.com/macroid/macroid/compare/v2.0.0-M1...v2.0.0-M2" target="_blank">on GitHub</a>.</p>
-<p>Breaking changes are in bold.</p>
 <ul>
 <li><strong>Operator overhaul <a href="https://github.com/macroid/macroid/issues/23" target="_blank">#23</a></strong></li>
 <li><strong>Remove <code>showProgress</code> tweaks</strong></li>
