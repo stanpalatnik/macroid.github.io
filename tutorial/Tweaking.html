@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-github="macroid/macroid" data-level="2.2" data-basepath=".." data-revision="1405635061393">
+    <div class="book" data-github="macroid/macroid" data-level="2.2" data-basepath=".." data-revision="1405636620654">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -663,12 +663,12 @@ Using these things, we can improve our layout as follows:</p>
 <pre><code class="lang-scala"><span class="hljs-comment">// AppContext is an Android Context obtained from getApplicationContext</span>
 <span class="hljs-keyword">import</span> macroid.AppContext
 <span class="hljs-comment">// More tweaks</span>
-<span class="hljs-keyword">import</span> macroid.contrib.ExtraTweaks._
+<span class="hljs-keyword">import</span> macroid.contrib.TextTweaks
 
 <span class="hljs-comment">// A module with custom tweaks</span>
 <span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">OurTweaks</span> {</span>
   <span class="hljs-keyword">def</span> greeting(greeting: String)(implicit appCtx: AppContext) =
-    TextSize.large +
+    TextTweaks.large +
     text(greeting) +
     hide
 }
