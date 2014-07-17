@@ -120,6 +120,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FragmentFinding</dd></dl></div>
+    </li><li name="macroid.UiThreading.InPlaceFuture" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="InPlaceFuture[T]extendsAnyRef"></a>
+      <a id="InPlaceFuture[T]:InPlaceFuture[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">InPlaceFuture</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Helpers to perform Future callbacks in-place if it is completed</p><div class="fullcomment"><div class="comment cmt"><p>Helpers to perform Future callbacks in-place if it is completed</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>UiThreading</dd></dl></div>
     </li><li name="macroid.Loafing.LoafingOps" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="LoafingOpsextendsAnyRef"></a>
       <a id="LoafingOps:LoafingOps"></a>
@@ -362,7 +375,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>EventTweaks</dd></dl></div>
     </li><li name="macroid.LayoutTweaks#addViews" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="addViews(children:Seq[macroid.util.Ui[android.view.View]],removeOld:Boolean,reverse:Boolean):macroid.Tweak[android.view.ViewGroup]"></a>
+      <a id="addViews(children:Seq[macroid.Ui[android.view.View]],removeOld:Boolean,reverse:Boolean):macroid.Tweak[android.view.ViewGroup]"></a>
       <a id="addViews(Seq[Ui[View]],Boolean,Boolean):Tweak[ViewGroup]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -370,7 +383,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">addViews</span><span class="params">(<span name="children">children: <span class="extype" name="scala.Seq">Seq</span>[<a href="util/Ui.html" class="extype" name="macroid.util.Ui">Ui</a>[<span class="extype" name="android.view.View">View</span>]]</span>, <span name="removeOld">removeOld: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="reverse">reverse: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>)</span><span class="result">: <a href="Tweak.html" class="extype" name="macroid.Tweak">Tweak</a>[<span class="extype" name="android.view.ViewGroup">ViewGroup</span>]</span>
+        <span class="name">addViews</span><span class="params">(<span name="children">children: <span class="extype" name="scala.Seq">Seq</span>[<a href="Ui.html" class="extype" name="macroid.Ui">Ui</a>[<span class="extype" name="android.view.View">View</span>]]</span>, <span name="removeOld">removeOld: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="reverse">reverse: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>)</span><span class="result">: <a href="Tweak.html" class="extype" name="macroid.Tweak">Tweak</a>[<span class="extype" name="android.view.ViewGroup">ViewGroup</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Add views to the layout</p><div class="fullcomment"><div class="comment cmt"><p>Add views to the layout</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>LayoutTweaks</dd></dl></div>
@@ -655,7 +668,7 @@ Without arguments, newInstance() is called, and if that fails, class constructor
       </h4>
       <p class="shortcomment cmt">Show the toast</p><div class="fullcomment"><div class="comment cmt"><p>Show the toast</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>Loafs</dd></dl></div>
     </li><li name="macroid.DialogImplicits#func2OnClickListener" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="func2OnClickListener(f:(android.content.DialogInterface,Int)=&gt;macroid.util.Ui[Any]):android.content.DialogInterface.OnClickListener"></a>
+      <a id="func2OnClickListener(f:(android.content.DialogInterface,Int)=&gt;macroid.Ui[Any]):android.content.DialogInterface.OnClickListener"></a>
       <a id="func2OnClickListener((DialogInterface,Int)⇒Ui[Any]):OnClickListener"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -663,7 +676,7 @@ Without arguments, newInstance() is called, and if that fails, class constructor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">func2OnClickListener</span><span class="params">(<span name="f">f: (<span class="extype" name="android.content.DialogInterface">DialogInterface</span>, <span class="extype" name="scala.Int">Int</span>) ⇒ <a href="util/Ui.html" class="extype" name="macroid.util.Ui">Ui</a>[<span class="extype" name="scala.Any">Any</span>]</span>)</span><span class="result">: <span class="extype" name="android.content.DialogInterface.OnClickListener">OnClickListener</span></span>
+        <span class="name">func2OnClickListener</span><span class="params">(<span name="f">f: (<span class="extype" name="android.content.DialogInterface">DialogInterface</span>, <span class="extype" name="scala.Int">Int</span>) ⇒ <a href="Ui.html" class="extype" name="macroid.Ui">Ui</a>[<span class="extype" name="scala.Any">Any</span>]</span>)</span><span class="result">: <span class="extype" name="android.content.DialogInterface.OnClickListener">OnClickListener</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DialogImplicits</dd></dl></div>
@@ -681,7 +694,7 @@ Without arguments, newInstance() is called, and if that fails, class constructor
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="macroid.UiThreading#getUi" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getUi[A](ui:macroid.util.Ui[A]):A"></a>
+      <a id="getUi[A](ui:macroid.Ui[A]):A"></a>
       <a id="getUi[A](Ui[A]):A"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -689,7 +702,7 @@ Without arguments, newInstance() is called, and if that fails, class constructor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getUi</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="ui">ui: <a href="util/Ui.html" class="extype" name="macroid.util.Ui">Ui</a>[<span class="extype" name="macroid.UiThreading.getUi.A">A</span>]</span>)</span><span class="result">: <span class="extype" name="macroid.UiThreading.getUi.A">A</span></span>
+        <span class="name">getUi</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="ui">ui: <a href="Ui.html" class="extype" name="macroid.Ui">Ui</a>[<span class="extype" name="macroid.UiThreading.getUi.A">A</span>]</span>)</span><span class="result">: <span class="extype" name="macroid.UiThreading.getUi.A">A</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Get the result of executing UI code on the current (hopefully, UI!) tread</p><div class="fullcomment"><div class="comment cmt"><p>Get the result of executing UI code on the current (hopefully, UI!) tread</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>UiThreading</dd></dl></div>
@@ -811,7 +824,7 @@ Without arguments, newInstance() is called, and if that fails, class constructor
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="macroid.LayoutBuilding#l" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="l[L&lt;:android.view.ViewGroup](children:macroid.util.Ui[android.view.View]*)(implicitctx:macroid.ActivityContext):macroid.util.Ui[L]"></a>
+      <a id="l[L&lt;:android.view.ViewGroup](children:macroid.Ui[android.view.View]*)(implicitctx:macroid.ActivityContext):macroid.Ui[L]"></a>
       <a id="l[L&lt;:ViewGroup](Ui[View]*)(ActivityContext):Ui[L]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -819,7 +832,7 @@ Without arguments, newInstance() is called, and if that fails, class constructor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">l</span><span class="tparams">[<span name="L">L &lt;: <span class="extype" name="android.view.ViewGroup">ViewGroup</span></span>]</span><span class="params">(<span name="children">children: <a href="util/Ui.html" class="extype" name="macroid.util.Ui">Ui</a>[<span class="extype" name="android.view.View">View</span>]*</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ctx">ctx: <a href="ActivityContext.html" class="extype" name="macroid.ActivityContext">ActivityContext</a></span>)</span><span class="result">: <a href="util/Ui.html" class="extype" name="macroid.util.Ui">Ui</a>[<span class="extype" name="macroid.LayoutBuilding.l.L">L</span>]</span>
+        <span class="name">l</span><span class="tparams">[<span name="L">L &lt;: <span class="extype" name="android.view.ViewGroup">ViewGroup</span></span>]</span><span class="params">(<span name="children">children: <a href="Ui.html" class="extype" name="macroid.Ui">Ui</a>[<span class="extype" name="android.view.View">View</span>]*</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ctx">ctx: <a href="ActivityContext.html" class="extype" name="macroid.ActivityContext">ActivityContext</a></span>)</span><span class="result">: <a href="Ui.html" class="extype" name="macroid.Ui">Ui</a>[<span class="extype" name="macroid.LayoutBuilding.l.L">L</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Define a layout</p><div class="fullcomment"><div class="comment cmt"><p>Define a layout</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>LayoutBuilding</dd><dt>Annotations</dt><dd>
@@ -1154,7 +1167,7 @@ Without arguments, newInstance() is called, and if that fails, class constructor
       </h4>
       <p class="shortcomment cmt">Set positive button with text &quot;yes&quot;</p><div class="fullcomment"><div class="comment cmt"><p>Set positive button with text &quot;yes&quot;</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>Phrases</dd></dl></div>
     </li><li name="macroid.UiThreading#runUi" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="runUi[A](ui1:macroid.util.Ui[A],ui2:macroid.util.Ui[A],uis:macroid.util.Ui[A]*):scala.concurrent.Future[Seq[A]]"></a>
+      <a id="runUi[A](ui1:macroid.Ui[A],ui2:macroid.Ui[A],uis:macroid.Ui[A]*):scala.concurrent.Future[Seq[A]]"></a>
       <a id="runUi[A](Ui[A],Ui[A],Ui[A]*):Future[Seq[A]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1162,12 +1175,12 @@ Without arguments, newInstance() is called, and if that fails, class constructor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">runUi</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="ui1">ui1: <a href="util/Ui.html" class="extype" name="macroid.util.Ui">Ui</a>[<span class="extype" name="macroid.UiThreading.runUi.A">A</span>]</span>, <span name="ui2">ui2: <a href="util/Ui.html" class="extype" name="macroid.util.Ui">Ui</a>[<span class="extype" name="macroid.UiThreading.runUi.A">A</span>]</span>, <span name="uis">uis: <a href="util/Ui.html" class="extype" name="macroid.util.Ui">Ui</a>[<span class="extype" name="macroid.UiThreading.runUi.A">A</span>]*</span>)</span><span class="result">: <span class="extype" name="scala.concurrent.Future">Future</span>[<span class="extype" name="scala.collection.Seq">Seq</span>[<span class="extype" name="macroid.UiThreading.runUi.A">A</span>]]</span>
+        <span class="name">runUi</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="ui1">ui1: <a href="Ui.html" class="extype" name="macroid.Ui">Ui</a>[<span class="extype" name="macroid.UiThreading.runUi.A">A</span>]</span>, <span name="ui2">ui2: <a href="Ui.html" class="extype" name="macroid.Ui">Ui</a>[<span class="extype" name="macroid.UiThreading.runUi.A">A</span>]</span>, <span name="uis">uis: <a href="Ui.html" class="extype" name="macroid.Ui">Ui</a>[<span class="extype" name="macroid.UiThreading.runUi.A">A</span>]*</span>)</span><span class="result">: <span class="extype" name="scala.concurrent.Future">Future</span>[<span class="extype" name="scala.collection.Seq">Seq</span>[<span class="extype" name="macroid.UiThreading.runUi.A">A</span>]]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Run UI code on the UI thread</p><div class="fullcomment"><div class="comment cmt"><p>Run UI code on the UI thread</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>UiThreading</dd></dl></div>
     </li><li name="macroid.UiThreading#runUi" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="runUi[A](ui:macroid.util.Ui[A]):scala.concurrent.Future[A]"></a>
+      <a id="runUi[A](ui:macroid.Ui[A]):scala.concurrent.Future[A]"></a>
       <a id="runUi[A](Ui[A]):Future[A]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1175,7 +1188,7 @@ Without arguments, newInstance() is called, and if that fails, class constructor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">runUi</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="ui">ui: <a href="util/Ui.html" class="extype" name="macroid.util.Ui">Ui</a>[<span class="extype" name="macroid.UiThreading.runUi.A">A</span>]</span>)</span><span class="result">: <span class="extype" name="scala.concurrent.Future">Future</span>[<span class="extype" name="macroid.UiThreading.runUi.A">A</span>]</span>
+        <span class="name">runUi</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="ui">ui: <a href="Ui.html" class="extype" name="macroid.Ui">Ui</a>[<span class="extype" name="macroid.UiThreading.runUi.A">A</span>]</span>)</span><span class="result">: <span class="extype" name="scala.concurrent.Future">Future</span>[<span class="extype" name="macroid.UiThreading.runUi.A">A</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Run UI code on the UI thread</p><div class="fullcomment"><div class="comment cmt"><p>Run UI code on the UI thread</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>UiThreading</dd></dl></div>
@@ -1310,7 +1323,7 @@ Without arguments, newInstance() is called, and if that fails, class constructor
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="macroid.ToastBuilding#toast" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="toast(view:macroid.util.Ui[android.view.View])(implicitctx:macroid.AppContext):macroid.util.Ui[android.widget.Toast]"></a>
+      <a id="toast(view:macroid.Ui[android.view.View])(implicitctx:macroid.AppContext):macroid.Ui[android.widget.Toast]"></a>
       <a id="toast(Ui[View])(AppContext):Ui[Toast]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1318,12 +1331,12 @@ Without arguments, newInstance() is called, and if that fails, class constructor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toast</span><span class="params">(<span name="view">view: <a href="util/Ui.html" class="extype" name="macroid.util.Ui">Ui</a>[<span class="extype" name="android.view.View">View</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ctx">ctx: <a href="AppContext.html" class="extype" name="macroid.AppContext">AppContext</a></span>)</span><span class="result">: <a href="util/Ui.html" class="extype" name="macroid.util.Ui">Ui</a>[<span class="extype" name="android.widget.Toast">Toast</span>]</span>
+        <span class="name">toast</span><span class="params">(<span name="view">view: <a href="Ui.html" class="extype" name="macroid.Ui">Ui</a>[<span class="extype" name="android.view.View">View</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ctx">ctx: <a href="AppContext.html" class="extype" name="macroid.AppContext">AppContext</a></span>)</span><span class="result">: <a href="Ui.html" class="extype" name="macroid.Ui">Ui</a>[<span class="extype" name="android.widget.Toast">Toast</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Create a toast with the specified view</p><div class="fullcomment"><div class="comment cmt"><p>Create a toast with the specified view</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>ToastBuilding</dd></dl></div>
     </li><li name="macroid.ToastBuilding#toast" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="toast(text:CharSequence)(implicitctx:macroid.AppContext):macroid.util.Ui[android.widget.Toast]"></a>
+      <a id="toast(text:CharSequence)(implicitctx:macroid.AppContext):macroid.Ui[android.widget.Toast]"></a>
       <a id="toast(CharSequence)(AppContext):Ui[Toast]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1331,12 +1344,12 @@ Without arguments, newInstance() is called, and if that fails, class constructor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toast</span><span class="params">(<span name="text">text: <span class="extype" name="java.lang.CharSequence">CharSequence</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ctx">ctx: <a href="AppContext.html" class="extype" name="macroid.AppContext">AppContext</a></span>)</span><span class="result">: <a href="util/Ui.html" class="extype" name="macroid.util.Ui">Ui</a>[<span class="extype" name="android.widget.Toast">Toast</span>]</span>
+        <span class="name">toast</span><span class="params">(<span name="text">text: <span class="extype" name="java.lang.CharSequence">CharSequence</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ctx">ctx: <a href="AppContext.html" class="extype" name="macroid.AppContext">AppContext</a></span>)</span><span class="result">: <a href="Ui.html" class="extype" name="macroid.Ui">Ui</a>[<span class="extype" name="android.widget.Toast">Toast</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Create a toast with the specified text</p><div class="fullcomment"><div class="comment cmt"><p>Create a toast with the specified text</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>ToastBuilding</dd></dl></div>
     </li><li name="macroid.DialogImplicits#unit2OnClickListener" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="unit2OnClickListener(f:macroid.util.Ui[Any]):android.content.DialogInterface.OnClickListener"></a>
+      <a id="unit2OnClickListener(f:macroid.Ui[Any]):android.content.DialogInterface.OnClickListener"></a>
       <a id="unit2OnClickListener(Ui[Any]):OnClickListener"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1344,7 +1357,7 @@ Without arguments, newInstance() is called, and if that fails, class constructor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">unit2OnClickListener</span><span class="params">(<span name="f">f: <a href="util/Ui.html" class="extype" name="macroid.util.Ui">Ui</a>[<span class="extype" name="scala.Any">Any</span>]</span>)</span><span class="result">: <span class="extype" name="android.content.DialogInterface.OnClickListener">OnClickListener</span></span>
+        <span class="name">unit2OnClickListener</span><span class="params">(<span name="f">f: <a href="Ui.html" class="extype" name="macroid.Ui">Ui</a>[<span class="extype" name="scala.Any">Any</span>]</span>)</span><span class="result">: <span class="extype" name="android.content.DialogInterface.OnClickListener">OnClickListener</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DialogImplicits</dd></dl></div>
@@ -1362,7 +1375,7 @@ Without arguments, newInstance() is called, and if that fails, class constructor
       </h4>
       <p class="shortcomment cmt">Make this layout vertical</p><div class="fullcomment"><div class="comment cmt"><p>Make this layout vertical</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>LayoutTweaks</dd></dl></div>
     </li><li name="macroid.LayoutBuilding#w" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="w[W&lt;:android.view.View](args:Any*)(implicitctx:macroid.ActivityContext):macroid.util.Ui[W]"></a>
+      <a id="w[W&lt;:android.view.View](args:Any*)(implicitctx:macroid.ActivityContext):macroid.Ui[W]"></a>
       <a id="w[W&lt;:View](Any*)(ActivityContext):Ui[W]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1370,7 +1383,7 @@ Without arguments, newInstance() is called, and if that fails, class constructor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">w</span><span class="tparams">[<span name="W">W &lt;: <span class="extype" name="android.view.View">View</span></span>]</span><span class="params">(<span name="args">args: <span class="extype" name="scala.Any">Any</span>*</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ctx">ctx: <a href="ActivityContext.html" class="extype" name="macroid.ActivityContext">ActivityContext</a></span>)</span><span class="result">: <a href="util/Ui.html" class="extype" name="macroid.util.Ui">Ui</a>[<span class="extype" name="macroid.LayoutBuilding.w.W">W</span>]</span>
+        <span class="name">w</span><span class="tparams">[<span name="W">W &lt;: <span class="extype" name="android.view.View">View</span></span>]</span><span class="params">(<span name="args">args: <span class="extype" name="scala.Any">Any</span>*</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ctx">ctx: <a href="ActivityContext.html" class="extype" name="macroid.ActivityContext">ActivityContext</a></span>)</span><span class="result">: <a href="Ui.html" class="extype" name="macroid.Ui">Ui</a>[<span class="extype" name="macroid.LayoutBuilding.w.W">W</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Define a widget, supplying additional arguments</p><div class="fullcomment"><div class="comment cmt"><p>Define a widget, supplying additional arguments</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>LayoutBuilding</dd><dt>Annotations</dt><dd>
@@ -1381,7 +1394,7 @@ Without arguments, newInstance() is called, and if that fails, class constructor
               
         </dd></dl></div>
     </li><li name="macroid.LayoutBuilding#w" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="w[W&lt;:android.view.View](implicitctx:macroid.ActivityContext):macroid.util.Ui[W]"></a>
+      <a id="w[W&lt;:android.view.View](implicitctx:macroid.ActivityContext):macroid.Ui[W]"></a>
       <a id="w[W&lt;:View](ActivityContext):Ui[W]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -1389,7 +1402,7 @@ Without arguments, newInstance() is called, and if that fails, class constructor
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">w</span><span class="tparams">[<span name="W">W &lt;: <span class="extype" name="android.view.View">View</span></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="ctx">ctx: <a href="ActivityContext.html" class="extype" name="macroid.ActivityContext">ActivityContext</a></span>)</span><span class="result">: <a href="util/Ui.html" class="extype" name="macroid.util.Ui">Ui</a>[<span class="extype" name="macroid.LayoutBuilding.w.W">W</span>]</span>
+        <span class="name">w</span><span class="tparams">[<span name="W">W &lt;: <span class="extype" name="android.view.View">View</span></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="ctx">ctx: <a href="ActivityContext.html" class="extype" name="macroid.ActivityContext">ActivityContext</a></span>)</span><span class="result">: <a href="Ui.html" class="extype" name="macroid.Ui">Ui</a>[<span class="extype" name="macroid.LayoutBuilding.w.W">W</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Define a widget</p><div class="fullcomment"><div class="comment cmt"><p>Define a widget</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>LayoutBuilding</dd><dt>Annotations</dt><dd>

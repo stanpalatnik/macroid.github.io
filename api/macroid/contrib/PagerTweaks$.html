@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>ListTweaks - macroid.contrib.ListTweaks</title>
-          <meta name="description" content="ListTweaks - macroid.contrib.ListTweaks" />
-          <meta name="keywords" content="ListTweaks macroid.contrib.ListTweaks" />
+          <title>PagerTweaks - macroid.contrib.PagerTweaks</title>
+          <meta name="description" content="PagerTweaks - macroid.contrib.PagerTweaks" />
+          <meta name="keywords" content="PagerTweaks macroid.contrib.PagerTweaks" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -12,7 +12,7 @@
       <script type="text/javascript">
          if(top === self) {
             var url = '../../index.html';
-            var hash = 'macroid.contrib.ListTweaks$';
+            var hash = 'macroid.contrib.PagerTweaks$';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -26,7 +26,7 @@
       <div id="definition">
         <img src="../../lib/object_big.png" />
         <p id="owner"><a href="../package.html" class="extype" name="macroid">macroid</a>.<a href="package.html" class="extype" name="macroid.contrib">contrib</a></p>
-        <h1>ListTweaks</h1>
+        <h1>PagerTweaks</h1>
       </div>
 
       <h4 id="signature" class="signature">
@@ -35,11 +35,11 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <span class="name">ListTweaks</span>
+        <span class="name">PagerTweaks</span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Extra tweaks for ListView</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/macroid/macroid/tree/master/src/main/scala/macroid/contrib/ExtraTweaks.scala" target="_blank">ExtraTweaks.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Extra tweaks for ViewPager</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/macroid/macroid/tree/master/src/main/scala/macroid/contrib/ExtraTweaks.scala" target="_blank">ExtraTweaks.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -59,7 +59,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="macroid.contrib.ListTweaks"><span>ListTweaks</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="macroid.contrib.PagerTweaks"><span>PagerTweaks</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -81,8 +81,8 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="macroid.contrib.ListTweaks.W" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="W=android.widget.ListView"></a>
+              <ol><li name="macroid.contrib.PagerTweaks.W" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="W=android.support.v4.view.ViewPager"></a>
       <a id="W:W"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -90,7 +90,7 @@
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">W</span><span class="result"> = <span class="extype" name="android.widget.ListView">ListView</span></span>
+        <span class="name">W</span><span class="result"> = <span class="extype" name="android.support.v4.view.ViewPager">ViewPager</span></span>
       </span>
       </h4>
       
@@ -166,16 +166,16 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="macroid.contrib.ListTweaks#adapter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="adapter(adapter:android.widget.ListAdapter):macroid.Tweak[android.widget.AbsListView]"></a>
-      <a id="adapter(ListAdapter):Tweak[AbsListView]"></a>
+    </li><li name="macroid.contrib.PagerTweaks#adapter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="adapter(adapter:android.support.v4.view.PagerAdapter):macroid.Tweak[macroid.contrib.PagerTweaks.W]"></a>
+      <a id="adapter(PagerAdapter):Tweak[W]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">adapter</span><span class="params">(<span name="adapter">adapter: <span class="extype" name="android.widget.ListAdapter">ListAdapter</span></span>)</span><span class="result">: <a href="../Tweak.html" class="extype" name="macroid.Tweak">Tweak</a>[<span class="extype" name="android.widget.AbsListView">AbsListView</span>]</span>
+        <span class="name">adapter</span><span class="params">(<span name="adapter">adapter: <span class="extype" name="android.support.v4.view.PagerAdapter">PagerAdapter</span></span>)</span><span class="result">: <a href="../Tweak.html" class="extype" name="macroid.Tweak">Tweak</a>[<a href="#W=android.support.v4.view.ViewPager" class="extmbr" name="macroid.contrib.PagerTweaks.W">W</a>]</span>
       </span>
       </h4>
       
@@ -308,19 +308,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="macroid.contrib.ListTweaks#noDivider" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="noDivider:macroid.Tweak[macroid.contrib.ListTweaks.W]"></a>
-      <a id="noDivider:Tweak[W]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">noDivider</span><span class="result">: <a href="../Tweak.html" class="extype" name="macroid.Tweak">Tweak</a>[<a href="#W=android.widget.ListView" class="extmbr" name="macroid.contrib.ListTweaks.W">W</a>]</span>
-      </span>
-      </h4>
-      
     </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <a id="notify():Unit"></a>
@@ -347,6 +334,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="macroid.contrib.PagerTweaks#page" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="page(index:Int,smoothScroll:Boolean):macroid.Tweak[macroid.contrib.PagerTweaks.W]"></a>
+      <a id="page(Int,Boolean):Tweak[W]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">page</span><span class="params">(<span name="index">index: <span class="extype" name="scala.Int">Int</span></span>, <span name="smoothScroll">smoothScroll: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>)</span><span class="result">: <a href="../Tweak.html" class="extype" name="macroid.Tweak">Tweak</a>[<a href="#W=android.support.v4.view.ViewPager" class="extmbr" name="macroid.contrib.PagerTweaks.W">W</a>]</span>
+      </span>
+      </h4>
+      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>

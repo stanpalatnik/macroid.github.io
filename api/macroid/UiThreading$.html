@@ -81,7 +81,20 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="macroid.UiThreading.UiFuture" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+              <ol><li name="macroid.UiThreading.InPlaceFuture" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="InPlaceFuture[T]extendsAnyRef"></a>
+      <a id="InPlaceFuture[T]:InPlaceFuture[T]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">InPlaceFuture</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Helpers to perform Future callbacks in-place if it is completed</p><div class="fullcomment"><div class="comment cmt"><p>Helpers to perform Future callbacks in-place if it is completed</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>UiThreading</dd></dl></div>
+    </li><li name="macroid.UiThreading.UiFuture" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="UiFuture[T]extendsAnyRef"></a>
       <a id="UiFuture[T]:UiFuture[T]"></a>
       <h4 class="signature">
@@ -257,7 +270,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="macroid.UiThreading#getUi" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getUi[A](ui:macroid.util.Ui[A]):A"></a>
+      <a id="getUi[A](ui:macroid.Ui[A]):A"></a>
       <a id="getUi[A](Ui[A]):A"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -265,7 +278,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getUi</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="ui">ui: <a href="util/Ui.html" class="extype" name="macroid.util.Ui">Ui</a>[<span class="extype" name="macroid.UiThreading.getUi.A">A</span>]</span>)</span><span class="result">: <span class="extype" name="macroid.UiThreading.getUi.A">A</span></span>
+        <span class="name">getUi</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="ui">ui: <a href="Ui.html" class="extype" name="macroid.Ui">Ui</a>[<span class="extype" name="macroid.UiThreading.getUi.A">A</span>]</span>)</span><span class="result">: <span class="extype" name="macroid.UiThreading.getUi.A">A</span></span>
       </span>
       </h4>
       <p class="shortcomment cmt">Get the result of executing UI code on the current (hopefully, UI!) tread</p><div class="fullcomment"><div class="comment cmt"><p>Get the result of executing UI code on the current (hopefully, UI!) tread</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>UiThreading</dd></dl></div>
@@ -335,7 +348,7 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="macroid.UiThreading#runUi" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="runUi[A](ui1:macroid.util.Ui[A],ui2:macroid.util.Ui[A],uis:macroid.util.Ui[A]*):scala.concurrent.Future[Seq[A]]"></a>
+      <a id="runUi[A](ui1:macroid.Ui[A],ui2:macroid.Ui[A],uis:macroid.Ui[A]*):scala.concurrent.Future[Seq[A]]"></a>
       <a id="runUi[A](Ui[A],Ui[A],Ui[A]*):Future[Seq[A]]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -343,12 +356,12 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">runUi</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="ui1">ui1: <a href="util/Ui.html" class="extype" name="macroid.util.Ui">Ui</a>[<span class="extype" name="macroid.UiThreading.runUi.A">A</span>]</span>, <span name="ui2">ui2: <a href="util/Ui.html" class="extype" name="macroid.util.Ui">Ui</a>[<span class="extype" name="macroid.UiThreading.runUi.A">A</span>]</span>, <span name="uis">uis: <a href="util/Ui.html" class="extype" name="macroid.util.Ui">Ui</a>[<span class="extype" name="macroid.UiThreading.runUi.A">A</span>]*</span>)</span><span class="result">: <span class="extype" name="scala.concurrent.Future">Future</span>[<span class="extype" name="scala.collection.Seq">Seq</span>[<span class="extype" name="macroid.UiThreading.runUi.A">A</span>]]</span>
+        <span class="name">runUi</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="ui1">ui1: <a href="Ui.html" class="extype" name="macroid.Ui">Ui</a>[<span class="extype" name="macroid.UiThreading.runUi.A">A</span>]</span>, <span name="ui2">ui2: <a href="Ui.html" class="extype" name="macroid.Ui">Ui</a>[<span class="extype" name="macroid.UiThreading.runUi.A">A</span>]</span>, <span name="uis">uis: <a href="Ui.html" class="extype" name="macroid.Ui">Ui</a>[<span class="extype" name="macroid.UiThreading.runUi.A">A</span>]*</span>)</span><span class="result">: <span class="extype" name="scala.concurrent.Future">Future</span>[<span class="extype" name="scala.collection.Seq">Seq</span>[<span class="extype" name="macroid.UiThreading.runUi.A">A</span>]]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Run UI code on the UI thread</p><div class="fullcomment"><div class="comment cmt"><p>Run UI code on the UI thread</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>UiThreading</dd></dl></div>
     </li><li name="macroid.UiThreading#runUi" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="runUi[A](ui:macroid.util.Ui[A]):scala.concurrent.Future[A]"></a>
+      <a id="runUi[A](ui:macroid.Ui[A]):scala.concurrent.Future[A]"></a>
       <a id="runUi[A](Ui[A]):Future[A]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -356,7 +369,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">runUi</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="ui">ui: <a href="util/Ui.html" class="extype" name="macroid.util.Ui">Ui</a>[<span class="extype" name="macroid.UiThreading.runUi.A">A</span>]</span>)</span><span class="result">: <span class="extype" name="scala.concurrent.Future">Future</span>[<span class="extype" name="macroid.UiThreading.runUi.A">A</span>]</span>
+        <span class="name">runUi</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="ui">ui: <a href="Ui.html" class="extype" name="macroid.Ui">Ui</a>[<span class="extype" name="macroid.UiThreading.runUi.A">A</span>]</span>)</span><span class="result">: <span class="extype" name="scala.concurrent.Future">Future</span>[<span class="extype" name="macroid.UiThreading.runUi.A">A</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Run UI code on the UI thread</p><div class="fullcomment"><div class="comment cmt"><p>Run UI code on the UI thread</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>UiThreading</dd></dl></div>

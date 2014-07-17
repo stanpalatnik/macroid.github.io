@@ -208,7 +208,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="FragmentBuilder.html"><span class="name">FragmentBuilder</span></a><span class="tparams">[<span name="F">F</span>]</span><span class="params">(<span name="constructor">constructor: <a href="util/Ui.html" class="extype" name="macroid.util.Ui">Ui</a>[<span class="extype" name="macroid.FragmentBuilder.F">F</span>]</span>, <span name="arguments">arguments: <span class="extype" name="android.os.Bundle">Bundle</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ctx">ctx: <a href="ActivityContext.html" class="extype" name="macroid.ActivityContext">ActivityContext</a></span>, <span name="fragment">fragment: <a href="support/Fragment.html" class="extype" name="macroid.support.Fragment">Fragment</a>[<span class="extype" name="macroid.FragmentBuilder.F">F</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="FragmentBuilder.html"><span class="name">FragmentBuilder</span></a><span class="tparams">[<span name="F">F</span>]</span><span class="params">(<span name="constructor">constructor: <a href="Ui.html" class="extype" name="macroid.Ui">Ui</a>[<span class="extype" name="macroid.FragmentBuilder.F">F</span>]</span>, <span name="arguments">arguments: <span class="extype" name="android.os.Bundle">Bundle</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ctx">ctx: <a href="ActivityContext.html" class="extype" name="macroid.ActivityContext">ActivityContext</a></span>, <span name="fragment">fragment: <a href="support/Fragment.html" class="extype" name="macroid.support.Fragment">Fragment</a>[<span class="extype" name="macroid.FragmentBuilder.F">F</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">A fragment builder proxy</p>
@@ -310,15 +310,15 @@
       </h4>
       
     </li><li name="macroid.Snail" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Snail[-W&lt;:android.view.View]extendsAnyValwithProductwithSerializable"></a>
+      <a id="Snail[-W&lt;:android.view.View]extendsProductwithSerializable"></a>
       <a id="Snail[-W&lt;:View]:Snail[W]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier">final </span>
+        <span class="modifier"></span>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="Snail.html"><span class="name">Snail</span></a><span class="tparams">[<span name="W">-W &lt;: <span class="extype" name="android.view.View">View</span></span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="macroid.Snail.W">W</span>) ⇒ <span class="extype" name="scala.concurrent.Future">Future</span>[<span class="extype" name="scala.Unit">Unit</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.AnyVal">AnyVal</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="Snail.html"><span class="name">Snail</span></a><span class="tparams">[<span name="W">-W &lt;: <span class="extype" name="android.view.View">View</span></span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="macroid.Snail.W">W</span>) ⇒ <span class="extype" name="scala.concurrent.Future">Future</span>[<span class="extype" name="scala.Unit">Unit</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">A snail mutates the view slowly (e.</p>
@@ -336,31 +336,44 @@
       </h4>
       <p class="comment cmt">A toy class to allow more descriptive syntax for tags (Tag.</p>
     </li><li name="macroid.Transformer" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="TransformerextendsAnyValwithProductwithSerializable"></a>
+      <a id="TransformerextendsProductwithSerializable"></a>
       <a id="Transformer:Transformer"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier">final </span>
+        <span class="modifier"></span>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="Transformer.html"><span class="name">Transformer</span></a><span class="params">(<span name="f">f: <span class="extype" name="scala.PartialFunction">PartialFunction</span>[<span class="extype" name="android.view.View">View</span>, <a href="util/Ui.html" class="extype" name="macroid.util.Ui">Ui</a>[<span class="extype" name="scala.Any">Any</span>]]</span>)</span><span class="result"> extends <span class="extype" name="scala.AnyVal">AnyVal</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="Transformer.html"><span class="name">Transformer</span></a><span class="params">(<span name="f">f: <span class="extype" name="scala.PartialFunction">PartialFunction</span>[<span class="extype" name="android.view.View">View</span>, <a href="Ui.html" class="extype" name="macroid.Ui">Ui</a>[<span class="extype" name="scala.Any">Any</span>]]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       
     </li><li name="macroid.Tweak" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Tweak[-W&lt;:android.view.View]extendsAnyValwithProductwithSerializable"></a>
+      <a id="Tweak[-W&lt;:android.view.View]extendsProductwithSerializable"></a>
       <a id="Tweak[-W&lt;:View]:Tweak[W]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
-        <span class="modifier">final </span>
+        <span class="modifier"></span>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a href="Tweak.html"><span class="name">Tweak</span></a><span class="tparams">[<span name="W">-W &lt;: <span class="extype" name="android.view.View">View</span></span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="macroid.Tweak.W">W</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result"> extends <span class="extype" name="scala.AnyVal">AnyVal</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <a href="Tweak.html"><span class="name">Tweak</span></a><span class="tparams">[<span name="W">-W &lt;: <span class="extype" name="android.view.View">View</span></span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="macroid.Tweak.W">W</span>) ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
       <p class="comment cmt">A Tweak is something that mutates a widget</p>
+    </li><li name="macroid.Ui" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Ui[+A]extendsAnyRef"></a>
+      <a id="Ui[+A]:Ui[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Ui.html"><span class="name">Ui</span></a><span class="tparams">[<span name="A">+A</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">A UI action that can be sent to the UI thread for execution</p>
     </li></ol>
             </div>
 
@@ -849,6 +862,32 @@
       </span>
       </h4>
       
+    </li><li name="macroid.Ui" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Ui"></a>
+      <a id="Ui:Ui"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="Ui$.html"><span class="name">Ui</span></a>
+      </span>
+      </h4>
+      
+    </li><li name="macroid.UiThreadExecutionContext" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="UiThreadExecutionContext"></a>
+      <a id="UiThreadExecutionContext:UiThreadExecutionContext"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a href="UiThreadExecutionContext$.html"><span class="name">UiThreadExecutionContext</span></a><span class="result"> extends <span class="extype" name="scala.concurrent.ExecutionContext">ExecutionContext</span></span>
+      </span>
+      </h4>
+      <p class="comment cmt">An ExecutionContext associated with the UI thread</p>
     </li><li name="macroid.UiThreading" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="UiThreading"></a>
       <a id="UiThreading:UiThreading"></a>

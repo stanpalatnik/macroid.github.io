@@ -2,17 +2,17 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>ListTweaks - macroid.contrib.ListTweaks</title>
-          <meta name="description" content="ListTweaks - macroid.contrib.ListTweaks" />
-          <meta name="keywords" content="ListTweaks macroid.contrib.ListTweaks" />
+          <title>Ui - macroid.Ui</title>
+          <meta name="description" content="Ui - macroid.Ui" />
+          <meta name="keywords" content="Ui macroid.Ui" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
-      <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
-      <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <link href="../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
       <script type="text/javascript">
          if(top === self) {
-            var url = '../../index.html';
-            var hash = 'macroid.contrib.ListTweaks$';
+            var url = '../index.html';
+            var hash = 'macroid.Ui';
             var anchor = window.location.hash;
             var anchor_opt = '';
             if (anchor.length >= 1)
@@ -22,24 +22,24 @@
    	  </script>
     
         </head>
-        <body class="value">
+        <body class="type">
       <div id="definition">
-        <img src="../../lib/object_big.png" />
-        <p id="owner"><a href="../package.html" class="extype" name="macroid">macroid</a>.<a href="package.html" class="extype" name="macroid.contrib">contrib</a></p>
-        <h1>ListTweaks</h1>
+        <a href="Ui$.html" title="Go to companion"><img src="../lib/class_to_object_big.png" /></a>
+        <p id="owner"><a href="package.html" class="extype" name="macroid">macroid</a></p>
+        <h1><a href="Ui$.html" title="Go to companion">Ui</a></h1>
       </div>
 
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">object</span>
+        <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">ListTweaks</span>
+        <span class="name">Ui</span><span class="tparams">[<span name="A">+A</span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Extra tweaks for ListView</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/macroid/macroid/tree/master/src/main/scala/macroid/contrib/ExtraTweaks.scala" target="_blank">ExtraTweaks.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A UI action that can be sent to the UI thread for execution</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/macroid/macroid/tree/master/src/main/scala/macroid/UiActions.scala" target="_blank">UiActions.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">Linear Supertypes</span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
@@ -59,7 +59,7 @@
                 <span class="filtertype">Inherited<br />
                 </span>
                 <ol id="linearization">
-                  <li class="in" name="macroid.contrib.ListTweaks"><span>ListTweaks</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  <li class="in" name="macroid.Ui"><span>Ui</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                 </ol>
               </div><div id="ancestors">
             <span class="filtertype"></span>
@@ -77,25 +77,25 @@
 
       <div id="template">
         <div id="allMembers">
-        
-
-        <div id="types" class="types members">
-              <h3>Type Members</h3>
-              <ol><li name="macroid.contrib.ListTweaks.W" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="W=android.widget.ListView"></a>
-      <a id="W:W"></a>
+        <div id="constructors" class="members">
+              <h3>Instance Constructors</h3>
+              <ol><li name="macroid.Ui#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;(v:()=&gt;A):macroid.Ui[A]"></a>
+      <a id="&lt;init&gt;:Ui[A]"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">type</span>
+        <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">W</span><span class="result"> = <span class="extype" name="android.widget.ListView">ListView</span></span>
+        <span class="name">Ui</span><span class="params">(<span name="v">v: () ⇒ <span class="extype" name="macroid.Ui.A">A</span></span>)</span>
       </span>
       </h4>
       
     </li></ol>
             </div>
+
+        
 
         
 
@@ -166,19 +166,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="macroid.contrib.ListTweaks#adapter" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="adapter(adapter:android.widget.ListAdapter):macroid.Tweak[android.widget.AbsListView]"></a>
-      <a id="adapter(ListAdapter):Tweak[AbsListView]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">adapter</span><span class="params">(<span name="adapter">adapter: <span class="extype" name="android.widget.ListAdapter">ListAdapter</span></span>)</span><span class="result">: <a href="../Tweak.html" class="extype" name="macroid.Tweak">Tweak</a>[<span class="extype" name="android.widget.AbsListView">AbsListView</span>]</span>
-      </span>
-      </h4>
-      
     </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <a id="asInstanceOf[T0]:T0"></a>
@@ -204,7 +191,7 @@
         <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
@@ -249,13 +236,52 @@
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="symbol">classOf[java.lang.Throwable]</span>
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="macroid.Ui#flatMap" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="flatMap[B](f:A=&gt;macroid.Ui[B]):macroid.Ui[B]"></a>
+      <a id="flatMap[B]((A)⇒Ui[B]):Ui[B]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">flatMap</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="macroid.Ui.A">A</span>) ⇒ <a href="" class="extype" name="macroid.Ui">Ui</a>[<span class="extype" name="macroid.Ui.flatMap.B">B</span>]</span>)</span><span class="result">: <a href="" class="extype" name="macroid.Ui">Ui</a>[<span class="extype" name="macroid.Ui.flatMap.B">B</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">flatMap combinator</p>
+    </li><li name="macroid.Ui#flatRun" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="flatRun[B](implicitevidence:&lt;:&lt;[A,scala.concurrent.Future[B]]):scala.concurrent.Future[B]"></a>
+      <a id="flatRun[B](&lt;:&lt;[A,Future[B]]):Future[B]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">flatRun</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="evidence">evidence: <span class="extype" name="scala.Predef.&lt;:&lt;">&lt;:&lt;</span>[<span class="extype" name="macroid.Ui.A">A</span>, <span class="extype" name="scala.concurrent.Future">Future</span>[<span class="extype" name="macroid.Ui.flatRun.B">B</span>]]</span>)</span><span class="result">: <span class="extype" name="scala.concurrent.Future">Future</span>[<span class="extype" name="macroid.Ui.flatRun.B">B</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Run the action on the UI thread, flattening the Future it returns</p>
+    </li><li name="macroid.Ui#get" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="get:A"></a>
+      <a id="get:A"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">get</span><span class="result">: <span class="extype" name="macroid.Ui.A">A</span></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Get the result of executing the action on the current (hopefully, UI!) thread</p>
     </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <a id="getClass():Class[_]"></a>
@@ -295,6 +321,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="macroid.Ui#map" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="map[B](f:A=&gt;B):macroid.Ui[B]"></a>
+      <a id="map[B]((A)⇒B):Ui[B]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">map</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="macroid.Ui.A">A</span>) ⇒ <span class="extype" name="macroid.Ui.map.B">B</span></span>)</span><span class="result">: <a href="" class="extype" name="macroid.Ui">Ui</a>[<span class="extype" name="macroid.Ui.map.B">B</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">map combinator</p>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -308,19 +347,6 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="macroid.contrib.ListTweaks#noDivider" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="noDivider:macroid.Tweak[macroid.contrib.ListTweaks.W]"></a>
-      <a id="noDivider:Tweak[W]"></a>
-      <h4 class="signature">
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">noDivider</span><span class="result">: <a href="../Tweak.html" class="extype" name="macroid.Tweak">Tweak</a>[<a href="#W=android.widget.ListView" class="extmbr" name="macroid.contrib.ListTweaks.W">W</a>]</span>
-      </span>
-      </h4>
-      
     </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <a id="notify():Unit"></a>
@@ -347,6 +373,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="macroid.Ui#run" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="run:scala.concurrent.Future[A]"></a>
+      <a id="run:Future[A]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">run</span><span class="result">: <span class="extype" name="scala.concurrent.Future">Future</span>[<span class="extype" name="macroid.Ui.A">A</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Run the action on the UI thread</p>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
       <a id="synchronized[T0](⇒T0):T0"></a>
@@ -430,6 +469,32 @@
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="macroid.Ui#~" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="~[B](next:macroid.Ui[B]):macroid.Ui[B]"></a>
+      <a id="~[B](Ui[B]):Ui[B]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $tilde" class="name">~</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="next">next: <a href="" class="extype" name="macroid.Ui">Ui</a>[<span class="extype" name="macroid.Ui.~.B">B</span>]</span>)</span><span class="result">: <a href="" class="extype" name="macroid.Ui">Ui</a>[<span class="extype" name="macroid.Ui.~.B">B</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Combine (sequence) with another UI action</p>
+    </li><li name="macroid.Ui#~~" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="~~[B,C](next:macroid.Ui[B])(implicitevidence:&lt;:&lt;[A,scala.concurrent.Future[C]]):macroid.Ui[scala.concurrent.Future[B]]"></a>
+      <a id="~~[B,C](Ui[B])(&lt;:&lt;[A,Future[C]]):Ui[Future[B]]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $tilde$tilde" class="name">~~</span><span class="tparams">[<span name="B">B</span>, <span name="C">C</span>]</span><span class="params">(<span name="next">next: <a href="" class="extype" name="macroid.Ui">Ui</a>[<span class="extype" name="macroid.Ui.~~.B">B</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="evidence">evidence: <span class="extype" name="scala.Predef.&lt;:&lt;">&lt;:&lt;</span>[<span class="extype" name="macroid.Ui.A">A</span>, <span class="extype" name="scala.concurrent.Future">Future</span>[<span class="extype" name="macroid.Ui.~~.C">C</span>]]</span>)</span><span class="result">: <a href="" class="extype" name="macroid.Ui">Ui</a>[<span class="extype" name="scala.concurrent.Future">Future</span>[<span class="extype" name="macroid.Ui.~~.B">B</span>]]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Wait until this action is finished and combine (sequence) it with another one</p>
     </li></ol>
             </div>
 
@@ -459,6 +524,6 @@
       <div id="tooltip"></div>
 
       <div id="footer">  </div>
-      <script defer="defer" type="text/javascript" id="jquery-js" src="../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../lib/template.js"></script>
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../lib/template.js"></script>
     </body>
       </html>
