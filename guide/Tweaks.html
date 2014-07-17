@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-github="macroid/macroid" data-level="3.4" data-basepath=".." data-revision="1405637813531">
+    <div class="book" data-github="macroid/macroid" data-level="3.4" data-basepath=".." data-revision="1405638581759">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -639,7 +639,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_25">
+                    <section class="normal" id="section-gitbook_26">
                     
                         <h1 id="tweaks">Tweaks</h1>
 <p>The idea behind tweaks is that widget styles and behaviors should be as composable as widget layouts themselves.</p>
@@ -676,8 +676,66 @@ first the caption will be set and then <code>bringToFront</code> will be called.
 </code></pre>
 <p>Note that tweaking does not require the widgets to be created with <em>Macroid</em> bricks.</p>
 <h2 id="standard-tweaks">Standard tweaks</h2>
-<p>A number of standard tweaks are included. Please refer to the <a href="../api/macroid/Tweaks$.html">scaladoc</a>.
+<p>A number of standard tweaks are included. You can always find them in the <a href="../api/macroid/Tweaks$.html">scaladoc</a>.
 Note that all these tweaks can be imported with <code>import macroid.FullDsl._</code> or just <code>import macroid.Tweaks._</code>.</p>
+<p>A quick rundown:</p>
+<ul>
+<li>Basic tweaks<ul>
+<li><code>id</code> — set the id</li>
+<li><code>wire</code> — wire to a slot (see <a href="Searching.html#slots-and-wires">Searching</a>)</li>
+</ul>
+</li>
+<li>Visibility<ul>
+<li><code>hide</code></li>
+<li><code>show</code></li>
+</ul>
+</li>
+<li>Enabling/disabling<ul>
+<li><code>enable</code></li>
+<li><code>disable</code></li>
+</ul>
+</li>
+<li>Padding<ul>
+<li><code>padding</code></li>
+</ul>
+</li>
+<li><p>Layout</p>
+<ul>
+<li><p><code>layoutParams</code> / <code>lp</code> — works with any layout. Example:</p>
+<pre><code class="lang-scala">w[Button] &lt;~ lp[LinearLayout](MATCH_PARENT, WRAP_CONTENT, <span class="hljs-number">1.0</span>f)
+</code></pre>
+</li>
+<li><code>vertical</code></li>
+<li><code>horizontal</code></li>
+<li><code>addViews</code></li>
+</ul>
+</li>
+<li>Text/captions<ul>
+<li><code>text</code></li>
+</ul>
+</li>
+<li><p>Handling events</p>
+<ul>
+<li><p><code>On</code> — works with (almost) any events. Expects an <a href="UiActions.html">UI action</a> that takes no arguments and returns the same type as the associated listener. Examples:</p>
+<pre><code class="lang-scala">w[Button] &lt;~ On.click(textView &lt;~ hide)
+
+w[Button] &lt;~ On.longClick((textView &lt;~ show) ~ Ui(<span class="hljs-keyword">true</span>))
+
+l[SwipeRefreshLayout](
+  ...
+) &lt;~ On.refresh[SwipeRefreshLayout](Ui(...))
+</code></pre>
+</li>
+<li><p><code>FuncOn</code> — the same as <code>On</code>, but takes arguments, as specified by the listener. Example:</p>
+<pre><code class="lang-scala">w[StaggeredGridView] &lt;~
+  FuncOn.itemClick[StaggeredGridView] { (_: AdapterView[_], _: View, index: Int, _: Long) ⇒
+    ...
+  }
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
 <h2 id="extra-tweaks">Extra tweaks</h2>
 <p>Some extra tweaks are included in the <code>macroid.contrib</code> package. Please refer to the <a href="../api/macroid/contrib/package.html">scaladoc</a>.</p>
 
