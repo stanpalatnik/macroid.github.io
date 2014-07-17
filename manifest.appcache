@@ -1,13 +1,13 @@
 CACHE MANIFEST
-# Revision 1405634220767
+# Revision 1405635061393
 
 CACHE:
 Differences.html
 Tutorial.html
 Installation.html
+Recipes.html
 Guide.html
 index.html
-Recipes.html
 Related.html
 Samples.html
 ScalaOnAndroid.html
@@ -65,8 +65,8 @@ gitbook\jsrepl\sandbox.js
 gitbook\print.css
 gitbook\style.css
 gitbook\plugins\gitbook-plugin-ga\plugin.js
-gitbook\plugins\gitbook-plugin-mathjax\plugin.js
 gitbook\plugins\gitbook-plugin-disqus\plugin.js
+gitbook\plugins\gitbook-plugin-mathjax\plugin.js
 
 NETWORK:
 *
