@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-github="macroid/macroid" data-level="8.1" data-basepath=".." data-revision="1406845780011">
+    <div class="book" data-github="macroid/macroid" data-level="8.1" data-basepath=".." data-revision="1406846761301">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -727,10 +727,10 @@ List(User(<span class="hljs-string">"John"</span>), User(<span class="hljs-strin
 
 <span class="hljs-keyword">def</span> userListable(implicit ctx: ActivityContext, appCtx: AppContext): Listable[User, TextView] =
   Listable[User] {
-    <span class="hljs-comment">// create layout</span>
+    <span class="hljs-comment">// create the layout</span>
     w[TextView] &lt;~ TextSize.large
   } { view ⇒ user ⇒
-    <span class="hljs-comment">// full it with data</span>
+    <span class="hljs-comment">// fill it with data</span>
     view &lt;~ text(user.name)
   }
 </code></pre>
