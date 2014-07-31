@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-github="macroid/macroid" data-level="8.1" data-basepath=".." data-revision="1406842467459">
+    <div class="book" data-github="macroid/macroid" data-level="8.1" data-basepath=".." data-revision="1406843348646">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -857,6 +857,43 @@ but in true <em>Macroid</em> style. Let’s jump straight to the code:</p>
 }
 </code></pre>
 <h2 id="composing-from-alternatives">Composing from alternatives</h2>
+<p>Both <em>viewables</em> and <em>listables</em> support composition from alternatives — the most
+obvious use-case is joining several layout types in one. Everything below applies to
+both <code>Viewable</code> and <code>Listable</code>, but we’ll proceed with just <code>Viewable</code> for simplicity.</p>
+<p>Consider this toy “Macroid Now” example:</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">sealed</span> <span class="hljs-class"><span class="hljs-keyword">trait</span> <span class="hljs-title">MacroidNowCard</span></span>
+
+<span class="hljs-class"><span class="hljs-keyword">case</span> <span class="hljs-keyword">class</span> <span class="hljs-title">Weather</span><span class="hljs-params">(temp: Float)</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">MacroidNowCard</span></span>
+
+<span class="hljs-class"><span class="hljs-keyword">case</span> <span class="hljs-keyword">class</span> <span class="hljs-title">PhotosNearby</span><span class="hljs-params">(photos: List[URL])</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">MacroidNowCard</span></span>
+</code></pre>
+<p>Now suppose we have defined these:</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">val</span> weatherViewable: Viewable[Weather, CardView] = ...
+<span class="hljs-keyword">val</span> photosNearbyViewable: Viewable[PhotosNearby, CardView] = ...
+</code></pre>
+<p>How do we define this?</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">val</span> macroidNowViewable: Viewable[MacroidNowCard, CardView] = ???
+</code></pre>
+<p>This is where <code>PartialViewable</code> comes into play: it’s a <em>viewable</em>,
+which is defined only for a certain subset of the data. <em>Partial viewables</em>
+can be combined with the <code>orElse</code> operator, much like Scala’s <code>PartialFunction</code>s.</p>
+<p>A <em>partial viewable</em> can be obtained in a few ways:</p>
+<pre><code class="lang-scala"><span class="hljs-comment">// this will give a PartialViewable[Weather, CardView],</span>
+<span class="hljs-comment">// which is only defined for really hot days</span>
+weatherViewable.cond(_.temp &gt; <span class="hljs-number">40</span>)
+
+<span class="hljs-comment">// this will give a PartialViewable[MacroidNowCard, CardView],</span>
+<span class="hljs-comment">// which is only defined for cards that are instanceOf[Weather]</span>
+weatherViewable.toParent[MacroidNowCard]
+</code></pre>
+<p>The solution is thus to convert both our <em>viewables</em> to <em>partial viewables</em>,
+combine them, and go back to the normal (or <em>total</em>) <em>viewable</em>:</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">val</span> macroidNowViewable = {
+  weatherViewable.toParent[MacroidNowCard] orElse
+  photosNearbyViewable.toParent[MacroidNowCard]
+}.toTotal
+</code></pre>
+<p>Finally, keep in mind that <code>Listable</code> provides exactly the same API.</p>
 
                     
                     </section>
