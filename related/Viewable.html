@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-github="macroid/macroid" data-level="8.1" data-basepath=".." data-revision="1406840235399">
+    <div class="book" data-github="macroid/macroid" data-level="8.1" data-basepath=".." data-revision="1406842467459">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -683,10 +683,10 @@
   }
 </code></pre>
 <p>A good idea is to keep <em>viewables</em> in a separate module of your project and reuse them as much as possible.</p>
-<p>Now we can use the above declaration in two ways:</p>
+<p>Now we can play with the above declaration in two ways:</p>
 <h3 id="explicit">Explicit</h3>
 <p>Producing a layout:</p>
-<pre><code class="lang-scala">userViewable.view(User(<span class="hljs-string">"Nick"</span>))
+<pre><code class="lang-scala"><span class="hljs-keyword">val</span> view: Ui[TextView] = userViewable.view(User(<span class="hljs-string">"Nick"</span>))
 </code></pre>
 <p>Producing a <code>PagerAdapter</code>:</p>
 <pre><code class="lang-scala"><span class="hljs-keyword">val</span> adapter = userViewable.pagerAdapter(List(
@@ -717,8 +717,8 @@ List(User(<span class="hljs-string">"John"</span>), User(<span class="hljs-strin
 </code></pre>
 <h2 id="listable">Listable</h2>
 <p>A <em>listable</em> is an instace of <code>trait Listable[A, W &lt;: View]</code> that tells how to display <code>A</code> using <code>W</code> in two steps:</p>
-<p>1) Create an empty layout
-2) Fill it with the data</p>
+<p>1) Create an empty layout</p>
+<p>2) Fill it with the data</p>
 <p>Because of that, <em>listables</em> can be used with <code>ListAdapter</code>s, hence the name. Here is an example:</p>
 <pre><code class="lang-scala"><span class="hljs-keyword">import</span> macroid.viewable.Listable
 
@@ -726,11 +726,11 @@ List(User(<span class="hljs-string">"John"</span>), User(<span class="hljs-strin
 
 <span class="hljs-keyword">def</span> userListable(implicit ctx: ActivityContext, appCtx: AppContext): Listable[User, TextView] =
   Listable[User] {
-    <span class="hljs-comment">// the makeView step</span>
+    <span class="hljs-comment">// create layout</span>
     w[TextView] &lt;~ TextSize.large
-  } { view ⇒ data ⇒
-    <span class="hljs-comment">// the fillView step</span>
-    view &lt;~ text(data.name)
+  } { view ⇒ user ⇒
+    <span class="hljs-comment">// full it with data</span>
+    view &lt;~ text(user.name)
   }
 </code></pre>
 <p>Similarly to <em>viewables</em>, <em>listables</em> can be used both explicitly and implicitly:</p>
@@ -753,8 +753,109 @@ it’s possible to convert a <em>listable</em> to a <em>viewable</em>:</p>
 <pre><code class="lang-scala">userListable.toViewable.view(User(<span class="hljs-string">"Nick"</span>))
 </code></pre>
 <p>Additionally, if there is an implicit <code>Listable[A, W]</code>, it can serve as an implicit <code>Viewable[A, W]</code>.</p>
-<h2 id="slottedlistable">SlottedListable</h2>
 <h2 id="using-combinators">Using combinators</h2>
+<p>To ease the task of defining new <em>viewables</em> and <em>listables</em>, the library provides some factory methods
+and combinators. We have already seen the direct creation of both <code>Viewable</code> and <code>Listable</code>.
+Let’s now look into other means available:</p>
+<h3 id="-text-"><code>text</code></h3>
+<p>Creating a <em>viewable</em> or a <em>listable</em> for strings is easy, just provide the styles:</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">val</span> textViewable: Viewable[String, TextView] = Viewable.text {
+  TextTweaks.large + TextTweaks.color(Color.RED)
+}
+
+<span class="hljs-keyword">val</span> textListable: Listable[String, TextView] = Listable.text {
+  TextTweaks.large + TextTweaks.color(Color.RED)
+}
+</code></pre>
+<h3 id="-contramap-"><code>contraMap</code></h3>
+<p>A <em>viewable</em>/<em>listable</em> for a string does not help much.
+But we can use it to build something more complex through delegation:</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">val</span> userViewable = textViewable.contraMap[User](user ⇒ user.name)
+</code></pre>
+<p>In other words, if we have a <code>Viewable[A, W]</code> and a function <code>B ⇒ A</code>, we can make <code>Viewable[B, W]</code>. The same applies
+to <code>Listable</code>.</p>
+<h3 id="-listable-tw-"><code>Listable.tw</code></h3>
+<p>The “fill view” step in <em>listables</em> can be defined with a tweak:</p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">case</span> <span class="hljs-keyword">class</span> <span class="hljs-title">User</span><span class="hljs-params">(name: String, age: Int)</span></span>
+
+<span class="hljs-keyword">def</span> userListable(implicit ctx: ActivityContext, appCtx: AppContext) =
+  Listable[User].tw {
+    <span class="hljs-comment">// create layout</span>
+    w[TextView]
+  } { user ⇒
+    text(user.name) + TextTweaks.size(user.age + <span class="hljs-number">10</span>)
+  }
+</code></pre>
+<h3 id="-listable-tr-"><code>Listable.tr</code></h3>
+<p>Similarly, the same “fill view” step in <em>listables</em> can be defined with a transformer:</p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">case</span> <span class="hljs-keyword">class</span> <span class="hljs-title">User</span><span class="hljs-params">(name: String, picture: Bitmap)</span></span>
+
+<span class="hljs-keyword">def</span> userListable(implicit ctx: ActivityContext, appCtx: AppContext) =
+  Listable[User].tr {
+    l[HorizontalLinearLayout](
+      w[ImageView],
+      w[TextView] &lt;~ TextTweaks.large
+    )
+  }(user ⇒ Transformer {
+    <span class="hljs-keyword">case</span> img: ImageView ⇒ img &lt;~ ImageTweaks.bitmap(user.picture)
+    <span class="hljs-keyword">case</span> txt: TextView ⇒ txt &lt;~ text(user.name)
+  })
+</code></pre>
+<h3 id="-listable-wrap-"><code>Listable.wrap</code></h3>
+<p>It is often required to have the <em>listable</em> enclosed into some container, for example, <code>CardView</code>.
+Here’s how this can be done:</p>
+<pre><code class="lang-scala"><span class="hljs-keyword">def</span> cardListable[A, W &lt;: View](listable: Listable[A, W])(implicit ctx: ActivityContext, appCtx: AppContext) =
+  Listable.wrap(listable) { w ⇒
+    l[CardView](w) &lt;~ Styles.card
+  }
+</code></pre>
+<h3 id="-listable-combine-"><code>Listable.combine</code></h3>
+<p>Stacking two <em>listables</em> together is another common task. For example, we have a class like this:</p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">case</span> <span class="hljs-keyword">class</span> <span class="hljs-title">TimedPicture</span><span class="hljs-params">(timestamp: Long, picture: Bitmap)</span></span>
+</code></pre>
+<p>and we have already defined <em>listables</em> for <code>Long</code> and <code>Bitmap</code>. To combine them:</p>
+<pre><code class="lang-scala"><span class="hljs-comment">// this will be a Listable[(Long, Bitmap), View]</span>
+<span class="hljs-keyword">def</span> combinedListable(implicit ctx: ActivityContext, appCtx: AppContext) =
+  Listable.combine(timestampListable, pictureListable) { (t, p) ⇒
+    l[VerticalLinearLayout](t, p)
+  }
+
+<span class="hljs-comment">// now convert it to Listable[TimedPicture, View]</span>
+<span class="hljs-keyword">def</span> timedPictureListable =
+  combinedListable.contraMap[TimedPicture] { tp ⇒
+    (tp.timestamp, tp.picture)
+  }
+</code></pre>
+<h2 id="slotted-listable">Slotted listable</h2>
+<p><code>SlottedListable</code> implements the well-known
+<a href="http://developer.android.com/training/improving-layouts/smooth-scrolling.html#ViewHolder" target="_blank">holder pattern</a>,
+but in true <em>Macroid</em> style. Let’s jump straight to the code:</p>
+<pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">case</span> <span class="hljs-keyword">class</span> <span class="hljs-title">User</span><span class="hljs-params">(name: String, picture: Bitmap)</span></span>
+
+<span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">UserListable</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">SlottedListable</span>[<span class="hljs-title">User</span>] {</span>
+  <span class="hljs-comment">// our ViewHolder</span>
+  <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Slots</span> {</span>
+    <span class="hljs-keyword">var</span> name = slot[TextView]
+    <span class="hljs-keyword">var</span> picture = slot[ImageView]
+  }
+
+  <span class="hljs-comment">// make and wire the slots</span>
+  <span class="hljs-keyword">def</span> makeSlots(viewType: Int)(implicit ctx: ActivityContext, appCtx: AppContext) = {
+    <span class="hljs-keyword">val</span> slots = <span class="hljs-keyword">new</span> Slots
+    <span class="hljs-keyword">val</span> view = l[LinearLayout](
+      w[ImageView] &lt;~ wire(slots.picture),
+      w[TextView] &lt;~ wire(slots.name)
+    )
+    (view, slots)
+  }
+
+  <span class="hljs-comment">// fill the slots</span>
+  <span class="hljs-keyword">def</span> fillSlots(slots: Slots, data: User)(implicit ctx: ActivityContext, appCtx: AppContext) = {
+    (slots.name &lt;~ data.name) ~
+    (slots.picture) &lt;~ data.picture)
+  }
+}
+</code></pre>
 <h2 id="composing-from-alternatives">Composing from alternatives</h2>
 
                     
