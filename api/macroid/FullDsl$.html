@@ -413,6 +413,19 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="macroid.SizeQueries#biggerThan" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="biggerThan(v:Int)(implicitctx:macroid.AppContext):macroid.MediaQuery"></a>
+      <a id="biggerThan(Int)(AppContext):MediaQuery"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">biggerThan</span><span class="params">(<span name="v">v: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ctx">ctx: <a href="AppContext.html" class="extype" name="macroid.AppContext">AppContext</a></span>)</span><span class="result">: <a href="MediaQuery.html" class="extype" name="macroid.MediaQuery">MediaQuery</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Both sides are at least <code>v</code> (alias for <code>minSide</code>)</p><div class="fullcomment"><div class="comment cmt"><p>Both sides are at least <code>v</code> (alias for <code>minSide</code>)</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>SizeQueries</dd></dl></div>
     </li><li name="macroid.Bundles#bundle" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="bundle(pairs:(String,Any)*):android.os.Bundle"></a>
       <a id="bundle((String,Any)*):Bundle"></a>
@@ -770,7 +783,7 @@ Without arguments, newInstance() is called, and if that fails, class constructor
         <span class="name">higherThan</span><span class="params">(<span name="v">v: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ctx">ctx: <a href="AppContext.html" class="extype" name="macroid.AppContext">AppContext</a></span>)</span><span class="result">: <a href="MediaQuery.html" class="extype" name="macroid.MediaQuery">MediaQuery</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Same as minHeight(v)</p><div class="fullcomment"><div class="comment cmt"><p>Same as minHeight(v)</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>SizeQueries</dd></dl></div>
+      <p class="shortcomment cmt">Height is at least <code>v</code> (alias for <code>minHeight</code>)</p><div class="fullcomment"><div class="comment cmt"><p>Height is at least <code>v</code> (alias for <code>minHeight</code>)</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>SizeQueries</dd></dl></div>
     </li><li name="macroid.BasicTweaks#hold" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hold[A](value:A):macroid.Tweak[android.view.View]"></a>
       <a id="hold[A](A):Tweak[View]"></a>
@@ -912,7 +925,7 @@ Without arguments, newInstance() is called, and if that fails, class constructor
         <span class="name">lowerThan</span><span class="params">(<span name="v">v: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ctx">ctx: <a href="AppContext.html" class="extype" name="macroid.AppContext">AppContext</a></span>)</span><span class="result">: <a href="MediaQuery.html" class="extype" name="macroid.MediaQuery">MediaQuery</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Same as maxHeight(v)</p><div class="fullcomment"><div class="comment cmt"><p>Same as maxHeight(v)</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>SizeQueries</dd></dl></div>
+      <p class="shortcomment cmt">Height is at most <code>v</code> (alias for <code>maxHeight</code>)</p><div class="fullcomment"><div class="comment cmt"><p>Height is at most <code>v</code> (alias for <code>maxHeight</code>)</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>SizeQueries</dd></dl></div>
     </li><li name="macroid.LayoutTweaks#lp" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="lp[L&lt;:android.view.ViewGroup](params:Any*):macroid.Tweak[android.view.View]"></a>
       <a id="lp[L&lt;:ViewGroup](Any*):Tweak[View]"></a>
@@ -944,7 +957,20 @@ Without arguments, newInstance() is called, and if that fails, class constructor
         <span class="name">maxHeight</span><span class="params">(<span name="v">v: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ctx">ctx: <a href="AppContext.html" class="extype" name="macroid.AppContext">AppContext</a></span>)</span><span class="result">: <a href="MediaQuery.html" class="extype" name="macroid.MediaQuery">MediaQuery</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Height is at most v</p><div class="fullcomment"><div class="comment cmt"><p>Height is at most v</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>SizeQueries</dd></dl></div>
+      <p class="shortcomment cmt">Height is at most <code>v</code></p><div class="fullcomment"><div class="comment cmt"><p>Height is at most <code>v</code></p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>SizeQueries</dd></dl></div>
+    </li><li name="macroid.SizeQueries#maxSide" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="maxSide(v:Int)(implicitctx:macroid.AppContext):macroid.MediaQuery"></a>
+      <a id="maxSide(Int)(AppContext):MediaQuery"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">maxSide</span><span class="params">(<span name="v">v: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ctx">ctx: <a href="AppContext.html" class="extype" name="macroid.AppContext">AppContext</a></span>)</span><span class="result">: <a href="MediaQuery.html" class="extype" name="macroid.MediaQuery">MediaQuery</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Both sides are at most <code>v</code></p><div class="fullcomment"><div class="comment cmt"><p>Both sides are at most <code>v</code></p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>SizeQueries</dd></dl></div>
     </li><li name="macroid.SizeQueries#maxWidth" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="maxWidth(v:Int)(implicitctx:macroid.AppContext):macroid.MediaQuery"></a>
       <a id="maxWidth(Int)(AppContext):MediaQuery"></a>
@@ -957,7 +983,7 @@ Without arguments, newInstance() is called, and if that fails, class constructor
         <span class="name">maxWidth</span><span class="params">(<span name="v">v: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ctx">ctx: <a href="AppContext.html" class="extype" name="macroid.AppContext">AppContext</a></span>)</span><span class="result">: <a href="MediaQuery.html" class="extype" name="macroid.MediaQuery">MediaQuery</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Width is at most v</p><div class="fullcomment"><div class="comment cmt"><p>Width is at most v</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>SizeQueries</dd></dl></div>
+      <p class="shortcomment cmt">Width is at most <code>v</code></p><div class="fullcomment"><div class="comment cmt"><p>Width is at most <code>v</code></p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>SizeQueries</dd></dl></div>
     </li><li name="macroid.DensityQueries#mdpi" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="mdpi(implicitctx:macroid.AppContext):macroid.MediaQuery"></a>
       <a id="mdpi(AppContext):MediaQuery"></a>
@@ -983,7 +1009,20 @@ Without arguments, newInstance() is called, and if that fails, class constructor
         <span class="name">minHeight</span><span class="params">(<span name="v">v: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ctx">ctx: <a href="AppContext.html" class="extype" name="macroid.AppContext">AppContext</a></span>)</span><span class="result">: <a href="MediaQuery.html" class="extype" name="macroid.MediaQuery">MediaQuery</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Height is at least v</p><div class="fullcomment"><div class="comment cmt"><p>Height is at least v</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>SizeQueries</dd></dl></div>
+      <p class="shortcomment cmt">Height is at least <code>v</code></p><div class="fullcomment"><div class="comment cmt"><p>Height is at least <code>v</code></p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>SizeQueries</dd></dl></div>
+    </li><li name="macroid.SizeQueries#minSide" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="minSide(v:Int)(implicitctx:macroid.AppContext):macroid.MediaQuery"></a>
+      <a id="minSide(Int)(AppContext):MediaQuery"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">minSide</span><span class="params">(<span name="v">v: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ctx">ctx: <a href="AppContext.html" class="extype" name="macroid.AppContext">AppContext</a></span>)</span><span class="result">: <a href="MediaQuery.html" class="extype" name="macroid.MediaQuery">MediaQuery</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Both sides are at least <code>v</code></p><div class="fullcomment"><div class="comment cmt"><p>Both sides are at least <code>v</code></p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>SizeQueries</dd></dl></div>
     </li><li name="macroid.SizeQueries#minWidth" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="minWidth(v:Int)(implicitctx:macroid.AppContext):macroid.MediaQuery"></a>
       <a id="minWidth(Int)(AppContext):MediaQuery"></a>
@@ -996,7 +1035,7 @@ Without arguments, newInstance() is called, and if that fails, class constructor
         <span class="name">minWidth</span><span class="params">(<span name="v">v: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ctx">ctx: <a href="AppContext.html" class="extype" name="macroid.AppContext">AppContext</a></span>)</span><span class="result">: <a href="MediaQuery.html" class="extype" name="macroid.MediaQuery">MediaQuery</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Width is at least v</p><div class="fullcomment"><div class="comment cmt"><p>Width is at least v</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>SizeQueries</dd></dl></div>
+      <p class="shortcomment cmt">Width is at least <code>v</code></p><div class="fullcomment"><div class="comment cmt"><p>Width is at least <code>v</code></p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>SizeQueries</dd></dl></div>
     </li><li name="macroid.SizeQueries#narrowerThan" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="narrowerThan(v:Int)(implicitctx:macroid.AppContext):macroid.MediaQuery"></a>
       <a id="narrowerThan(Int)(AppContext):MediaQuery"></a>
@@ -1009,7 +1048,7 @@ Without arguments, newInstance() is called, and if that fails, class constructor
         <span class="name">narrowerThan</span><span class="params">(<span name="v">v: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ctx">ctx: <a href="AppContext.html" class="extype" name="macroid.AppContext">AppContext</a></span>)</span><span class="result">: <a href="MediaQuery.html" class="extype" name="macroid.MediaQuery">MediaQuery</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Same as maxWidth(v)</p><div class="fullcomment"><div class="comment cmt"><p>Same as maxWidth(v)</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>SizeQueries</dd></dl></div>
+      <p class="shortcomment cmt">Width is at most <code>v</code> (alias for <code>maxWidth</code>)</p><div class="fullcomment"><div class="comment cmt"><p>Width is at most <code>v</code> (alias for <code>maxWidth</code>)</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>SizeQueries</dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a>
       <a id="ne(AnyRef):Boolean"></a>
@@ -1231,6 +1270,19 @@ Without arguments, newInstance() is called, and if that fails, class constructor
       </span>
       </h4>
       <p class="shortcomment cmt">Define a slot</p><div class="fullcomment"><div class="comment cmt"><p>Define a slot</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>LayoutBuilding</dd></dl></div>
+    </li><li name="macroid.SizeQueries#smallerThan" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="smallerThan(v:Int)(implicitctx:macroid.AppContext):macroid.MediaQuery"></a>
+      <a id="smallerThan(Int)(AppContext):MediaQuery"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">smallerThan</span><span class="params">(<span name="v">v: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ctx">ctx: <a href="AppContext.html" class="extype" name="macroid.AppContext">AppContext</a></span>)</span><span class="result">: <a href="MediaQuery.html" class="extype" name="macroid.MediaQuery">MediaQuery</a></span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Both sides are at most <code>v</code> (alias for <code>maxSide</code>)</p><div class="fullcomment"><div class="comment cmt"><p>Both sides are at most <code>v</code> (alias for <code>maxSide</code>)</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>SizeQueries</dd></dl></div>
     </li><li name="macroid.Phrases#speak" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="speak:macroid.Phrase"></a>
       <a id="speak:Phrase"></a>
@@ -1520,7 +1572,7 @@ Without arguments, newInstance() is called, and if that fails, class constructor
         <span class="name">widerThan</span><span class="params">(<span name="v">v: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ctx">ctx: <a href="AppContext.html" class="extype" name="macroid.AppContext">AppContext</a></span>)</span><span class="result">: <a href="MediaQuery.html" class="extype" name="macroid.MediaQuery">MediaQuery</a></span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Same as minWidth(v)</p><div class="fullcomment"><div class="comment cmt"><p>Same as minWidth(v)</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>SizeQueries</dd></dl></div>
+      <p class="shortcomment cmt">Width is at least <code>v</code>(alias for <code>minWidth</code>)</p><div class="fullcomment"><div class="comment cmt"><p>Width is at least <code>v</code>(alias for <code>minWidth</code>)</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>SizeQueries</dd></dl></div>
     </li><li name="macroid.BasicTweaks#wire" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wire[W&lt;:android.view.View](v:Option[W]):macroid.Tweak[W]"></a>
       <a id="wire[W&lt;:View](Option[W]):Tweak[W]"></a>
