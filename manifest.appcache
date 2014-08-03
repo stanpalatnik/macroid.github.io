@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# Revision 1406924503755
+# Revision 1407079270795
 
 CACHE:
 Tutorial.html
@@ -13,11 +13,11 @@ Samples.html
 ScalaOnAndroid.html
 Talks.html
 Changelog.html
-differences/Vanilla.html
 differences/Scaloid.html
+differences/Vanilla.html
 guide/Operators.html
-guide/Contexts.html
 guide/Advanced.html
+guide/Contexts.html
 guide/Fragments.html
 guide/Imports.html
 guide/Logging.html
@@ -67,8 +67,8 @@ gitbook\jsrepl\sandbox.js
 gitbook\print.css
 gitbook\style.css
 gitbook\plugins\gitbook-plugin-ga\plugin.js
-gitbook\plugins\gitbook-plugin-disqus\plugin.js
 gitbook\plugins\gitbook-plugin-mathjax\plugin.js
+gitbook\plugins\gitbook-plugin-disqus\plugin.js
 
 NETWORK:
 *

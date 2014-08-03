@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-github="macroid/macroid" data-level="8.1" data-basepath=".." data-revision="1406924503754">
+    <div class="book" data-github="macroid/macroid" data-level="8.1" data-basepath=".." data-revision="1407079270794">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -755,13 +755,13 @@ List(User(<span class="hljs-string">"John"</span>), User(<span class="hljs-strin
 userListable.listAdapter(User(<span class="hljs-string">"Terry"</span>), User(<span class="hljs-string">"Graham"</span>))
 
 <span class="hljs-comment">// or</span>
-User(<span class="hljs-string">"Terry"</span>), User(<span class="hljs-string">"Graham"</span>).listAdapter
+List(User(<span class="hljs-string">"Terry"</span>), User(<span class="hljs-string">"Graham"</span>)).listAdapter
 
 <span class="hljs-comment">// create a tweak for ListAdapter</span>
 userListable.listAdapterTweak(User(<span class="hljs-string">"Terry"</span>), User(<span class="hljs-string">"Graham"</span>))
 
 <span class="hljs-comment">// or</span>
-User(<span class="hljs-string">"Terry"</span>), User(<span class="hljs-string">"Graham"</span>).listAdapter
+List(User(<span class="hljs-string">"Terry"</span>), User(<span class="hljs-string">"Graham"</span>)).listAdapterTweak
 </code></pre>
 <p><code>Listable</code> does not inherit from <code>Viewable</code> directly, because they have different variance in the <code>W</code> parameter, but
 it’s possible to convert a <em>listable</em> to a <em>viewable</em>:</p>
