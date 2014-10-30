@@ -309,6 +309,7 @@
       </h4>
       <p class="shortcomment cmt">Fragment builder.</p><div class="fullcomment"><div class="comment cmt"><p>Fragment builder. <code>newInstanceArgs</code> are passed to newInstance, if any.
 Without arguments, newInstance() is called, and if that fails, class constructor is used.
+(This is an alias for <code>fragment</code>.)
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>FragmentBuilding</dd><dt>Annotations</dt><dd>
                 <span class="name">@macroImpl</span><span class="args">(<span>
       
@@ -329,6 +330,7 @@ Without arguments, newInstance() is called, and if that fails, class constructor
       </span>
       </h4>
       <p class="shortcomment cmt">Fragment builder.</p><div class="fullcomment"><div class="comment cmt"><p>Fragment builder. To create a fragment, newInstance() is called, and if that fails, class constructor is used.
+(This is an alias for <code>fragment</code>.)
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>FragmentBuilding</dd><dt>Annotations</dt><dd>
                 <span class="name">@macroImpl</span><span class="args">(<span>
       
@@ -352,6 +354,47 @@ Without arguments, newInstance() is called, and if that fails, class constructor
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="macroid.FragmentBuilding#fragment" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="fragment[F](newInstanceArgs:Any*)(implicitctx:macroid.ActivityContext,implicitfragment:macroid.support.Fragment[F]):macroid.FragmentBuilder[F]"></a>
+      <a id="fragment[F](Any*)(ActivityContext,Fragment[F]):FragmentBuilder[F]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fragment</span><span class="tparams">[<span name="F">F</span>]</span><span class="params">(<span name="newInstanceArgs">newInstanceArgs: <span class="extype" name="scala.Any">Any</span>*</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ctx">ctx: <a href="ActivityContext.html" class="extype" name="macroid.ActivityContext">ActivityContext</a></span>, <span name="fragment">fragment: <a href="support/Fragment.html" class="extype" name="macroid.support.Fragment">Fragment</a>[<span class="extype" name="macroid.FragmentBuilding.fragment.F">F</span>]</span>)</span><span class="result">: <a href="FragmentBuilder.html" class="extype" name="macroid.FragmentBuilder">FragmentBuilder</a>[<span class="extype" name="macroid.FragmentBuilding.fragment.F">F</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Fragment builder.</p><div class="fullcomment"><div class="comment cmt"><p>Fragment builder. <code>newInstanceArgs</code> are passed to newInstance, if any.
+Without arguments, newInstance() is called, and if that fails, class constructor is used.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>FragmentBuilding</dd><dt>Annotations</dt><dd>
+                <span class="name">@macroImpl</span><span class="args">(<span>
+      
+      <span class="defval" name="`macro`(&quot;versionFormat&quot; = 1, &quot;className&quot; = &quot;macroid.FragmentBuildingMacros&quot;, &quot;methodName&quot; = &quot;fragmentArgImpl&quot;, &quot;signature&quot; = List(-1, -1, -1, -1, 0))[F]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="macroid.FragmentBuilding#fragment" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="fragment[F](implicitctx:macroid.ActivityContext,implicitfragment:macroid.support.Fragment[F]):macroid.FragmentBuilder[F]"></a>
+      <a id="fragment[F](ActivityContext,Fragment[F]):FragmentBuilder[F]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">fragment</span><span class="tparams">[<span name="F">F</span>]</span><span class="params">(<span class="implicit">implicit </span><span name="ctx">ctx: <a href="ActivityContext.html" class="extype" name="macroid.ActivityContext">ActivityContext</a></span>, <span name="fragment">fragment: <a href="support/Fragment.html" class="extype" name="macroid.support.Fragment">Fragment</a>[<span class="extype" name="macroid.FragmentBuilding.fragment.F">F</span>]</span>)</span><span class="result">: <a href="FragmentBuilder.html" class="extype" name="macroid.FragmentBuilder">FragmentBuilder</a>[<span class="extype" name="macroid.FragmentBuilding.fragment.F">F</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Fragment builder.</p><div class="fullcomment"><div class="comment cmt"><p>Fragment builder. To create a fragment, newInstance() is called, and if that fails, class constructor is used.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>FragmentBuilding</dd><dt>Annotations</dt><dd>
+                <span class="name">@macroImpl</span><span class="args">(<span>
+      
+      <span class="defval" name="`macro`(&quot;versionFormat&quot; = 1, &quot;className&quot; = &quot;macroid.FragmentBuildingMacros&quot;, &quot;methodName&quot; = &quot;fragmentImpl&quot;, &quot;signature&quot; = List(-1, -1, -1, 0))[F]">...</span>
     </span>)</span>
               
         </dd></dl></div>
@@ -404,6 +447,25 @@ Without arguments, newInstance() is called, and if that fails, class constructor
       </span>
       <span class="symbol">
         <span class="name">l</span><span class="tparams">[<span name="L">L &lt;: <span class="extype" name="android.view.ViewGroup">ViewGroup</span></span>]</span><span class="params">(<span name="children">children: <a href="Ui.html" class="extype" name="macroid.Ui">Ui</a>[<span class="extype" name="android.view.View">View</span>]*</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ctx">ctx: <a href="ActivityContext.html" class="extype" name="macroid.ActivityContext">ActivityContext</a></span>)</span><span class="result">: <a href="Ui.html" class="extype" name="macroid.Ui">Ui</a>[<span class="extype" name="macroid.LayoutBuilding.l.L">L</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Define a layout (an alias for <code>layout</code>)</p><div class="fullcomment"><div class="comment cmt"><p>Define a layout (an alias for <code>layout</code>)</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>LayoutBuilding</dd><dt>Annotations</dt><dd>
+                <span class="name">@macroImpl</span><span class="args">(<span>
+      
+      <span class="defval" name="`macro`(&quot;versionFormat&quot; = 1, &quot;className&quot; = &quot;macroid.LayoutBuildingMacros&quot;, &quot;methodName&quot; = &quot;layoutUiImpl&quot;, &quot;signature&quot; = List(-1, -1, -1, 0))[L]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="macroid.LayoutBuilding#layout" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="layout[L&lt;:android.view.ViewGroup](children:macroid.Ui[android.view.View]*)(implicitctx:macroid.ActivityContext):macroid.Ui[L]"></a>
+      <a id="layout[L&lt;:ViewGroup](Ui[View]*)(ActivityContext):Ui[L]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">layout</span><span class="tparams">[<span name="L">L &lt;: <span class="extype" name="android.view.ViewGroup">ViewGroup</span></span>]</span><span class="params">(<span name="children">children: <a href="Ui.html" class="extype" name="macroid.Ui">Ui</a>[<span class="extype" name="android.view.View">View</span>]*</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ctx">ctx: <a href="ActivityContext.html" class="extype" name="macroid.ActivityContext">ActivityContext</a></span>)</span><span class="result">: <a href="Ui.html" class="extype" name="macroid.Ui">Ui</a>[<span class="extype" name="macroid.LayoutBuilding.layout.L">L</span>]</span>
       </span>
       </h4>
       <p class="shortcomment cmt">Define a layout</p><div class="fullcomment"><div class="comment cmt"><p>Define a layout</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>LayoutBuilding</dd><dt>Annotations</dt><dd>
@@ -503,7 +565,7 @@ Without arguments, newInstance() is called, and if that fails, class constructor
         <span class="name">w</span><span class="tparams">[<span name="W">W &lt;: <span class="extype" name="android.view.View">View</span></span>]</span><span class="params">(<span name="args">args: <span class="extype" name="scala.Any">Any</span>*</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ctx">ctx: <a href="ActivityContext.html" class="extype" name="macroid.ActivityContext">ActivityContext</a></span>)</span><span class="result">: <a href="Ui.html" class="extype" name="macroid.Ui">Ui</a>[<span class="extype" name="macroid.LayoutBuilding.w.W">W</span>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Define a widget, supplying additional arguments</p><div class="fullcomment"><div class="comment cmt"><p>Define a widget, supplying additional arguments</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>LayoutBuilding</dd><dt>Annotations</dt><dd>
+      <p class="shortcomment cmt">Define a widget, supplying additional arguments (an alias for <code>widget</code>)</p><div class="fullcomment"><div class="comment cmt"><p>Define a widget, supplying additional arguments (an alias for <code>widget</code>)</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>LayoutBuilding</dd><dt>Annotations</dt><dd>
                 <span class="name">@macroImpl</span><span class="args">(<span>
       
       <span class="defval" name="`macro`(&quot;versionFormat&quot; = 1, &quot;className&quot; = &quot;macroid.LayoutBuildingMacros&quot;, &quot;methodName&quot; = &quot;widgetArgImpl&quot;, &quot;signature&quot; = List(-1, -1, -1, 0))[W]">...</span>
@@ -522,7 +584,7 @@ Without arguments, newInstance() is called, and if that fails, class constructor
         <span class="name">w</span><span class="tparams">[<span name="W">W &lt;: <span class="extype" name="android.view.View">View</span></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="ctx">ctx: <a href="ActivityContext.html" class="extype" name="macroid.ActivityContext">ActivityContext</a></span>)</span><span class="result">: <a href="Ui.html" class="extype" name="macroid.Ui">Ui</a>[<span class="extype" name="macroid.LayoutBuilding.w.W">W</span>]</span>
       </span>
       </h4>
-      <p class="shortcomment cmt">Define a widget</p><div class="fullcomment"><div class="comment cmt"><p>Define a widget</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>LayoutBuilding</dd><dt>Annotations</dt><dd>
+      <p class="shortcomment cmt">Define a widget (an alias for <code>widget</code>)</p><div class="fullcomment"><div class="comment cmt"><p>Define a widget (an alias for <code>widget</code>)</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>LayoutBuilding</dd><dt>Annotations</dt><dd>
                 <span class="name">@macroImpl</span><span class="args">(<span>
       
       <span class="defval" name="`macro`(&quot;versionFormat&quot; = 1, &quot;className&quot; = &quot;macroid.LayoutBuildingMacros&quot;, &quot;methodName&quot; = &quot;widgetImpl&quot;, &quot;signature&quot; = List(-1, -1, 0))[W]">...</span>
@@ -583,6 +645,44 @@ Without arguments, newInstance() is called, and if that fails, class constructor
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="macroid.LayoutBuilding#widget" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="widget[W&lt;:android.view.View](args:Any*)(implicitctx:macroid.ActivityContext):macroid.Ui[W]"></a>
+      <a id="widget[W&lt;:View](Any*)(ActivityContext):Ui[W]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">widget</span><span class="tparams">[<span name="W">W &lt;: <span class="extype" name="android.view.View">View</span></span>]</span><span class="params">(<span name="args">args: <span class="extype" name="scala.Any">Any</span>*</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ctx">ctx: <a href="ActivityContext.html" class="extype" name="macroid.ActivityContext">ActivityContext</a></span>)</span><span class="result">: <a href="Ui.html" class="extype" name="macroid.Ui">Ui</a>[<span class="extype" name="macroid.LayoutBuilding.widget.W">W</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Define a widget, supplying additional arguments</p><div class="fullcomment"><div class="comment cmt"><p>Define a widget, supplying additional arguments</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>LayoutBuilding</dd><dt>Annotations</dt><dd>
+                <span class="name">@macroImpl</span><span class="args">(<span>
+      
+      <span class="defval" name="`macro`(&quot;versionFormat&quot; = 1, &quot;className&quot; = &quot;macroid.LayoutBuildingMacros&quot;, &quot;methodName&quot; = &quot;widgetArgImpl&quot;, &quot;signature&quot; = List(-1, -1, -1, 0))[W]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="macroid.LayoutBuilding#widget" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="widget[W&lt;:android.view.View](implicitctx:macroid.ActivityContext):macroid.Ui[W]"></a>
+      <a id="widget[W&lt;:View](ActivityContext):Ui[W]"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">widget</span><span class="tparams">[<span name="W">W &lt;: <span class="extype" name="android.view.View">View</span></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="ctx">ctx: <a href="ActivityContext.html" class="extype" name="macroid.ActivityContext">ActivityContext</a></span>)</span><span class="result">: <a href="Ui.html" class="extype" name="macroid.Ui">Ui</a>[<span class="extype" name="macroid.LayoutBuilding.widget.W">W</span>]</span>
+      </span>
+      </h4>
+      <p class="shortcomment cmt">Define a widget</p><div class="fullcomment"><div class="comment cmt"><p>Define a widget</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>LayoutBuilding</dd><dt>Annotations</dt><dd>
+                <span class="name">@macroImpl</span><span class="args">(<span>
+      
+      <span class="defval" name="`macro`(&quot;versionFormat&quot; = 1, &quot;className&quot; = &quot;macroid.LayoutBuildingMacros&quot;, &quot;methodName&quot; = &quot;widgetImpl&quot;, &quot;signature&quot; = List(-1, -1, 0))[W]">...</span>
     </span>)</span>
               
         </dd></dl></div>
