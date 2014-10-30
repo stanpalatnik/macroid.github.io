@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-github="macroid/macroid" data-level="8.1" data-basepath=".." data-revision="1414682253591">
+    <div class="book" data-github="macroid/macroid" data-level="8.1" data-basepath=".." data-revision="1414682469968">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -844,7 +844,8 @@ Here’s how this can be done:</p>
 <h2 id="slotted-listable">Slotted listable</h2>
 <p><code>SlottedListable</code> implements the well-known
 <a href="http://developer.android.com/training/improving-layouts/smooth-scrolling.html#ViewHolder" target="_blank">holder pattern</a>,
-but in true <em>Macroid</em> style. Let’s jump straight to the code:</p>
+but in true <em>Macroid</em> style. It’s often what you want to use when the list element has two or more widgets.
+Let’s jump straight to the code:</p>
 <pre><code class="lang-scala"><span class="hljs-class"><span class="hljs-keyword">case</span> <span class="hljs-keyword">class</span> <span class="hljs-title">User</span><span class="hljs-params">(name: String, picture: Bitmap)</span></span>
 
 <span class="hljs-class"><span class="hljs-keyword">object</span> <span class="hljs-title">UserListable</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">SlottedListable</span>[<span class="hljs-title">User</span>] {</span>
@@ -853,6 +854,8 @@ but in true <em>Macroid</em> style. Let’s jump straight to the code:</p>
     <span class="hljs-keyword">var</span> name = slot[TextView]
     <span class="hljs-keyword">var</span> picture = slot[ImageView]
   }
+
+  <span class="hljs-comment">// now we just need to implement two abstract methods of SlottedListable:</span>
 
   <span class="hljs-comment">// make and wire the slots</span>
   <span class="hljs-keyword">def</span> makeSlots(viewType: Int)(implicit ctx: ActivityContext, appCtx: AppContext) = {
