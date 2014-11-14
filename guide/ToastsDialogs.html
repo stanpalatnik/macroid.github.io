@@ -34,7 +34,7 @@
 
 
         
-    <div class="book" data-github="macroid/macroid" data-level="3.11" data-basepath=".." data-revision="1415543014632">
+    <div class="book" data-github="macroid/macroid" data-level="3.11" data-basepath=".." data-revision="1416000787898">
     <div class="book-header">
     <!-- Actions Left -->
     <a href="#" class="btn pull-left toggle-summary" aria-label="Toggle summary"><i class="fa fa-align-justify"></i></a>
@@ -673,7 +673,7 @@
 
                 <div class="page-inner">
                 
-                    <section class="normal" id="section-gitbook_24">
+                    <section class="normal" id="section-gitbook_22">
                     
                         <h1 id="toasts-and-dialogs">Toasts and dialogs</h1>
 <p>Being an important part of Android interfaces, these two things are covered in <em>Macroid</em> as well.</p>
@@ -684,14 +684,20 @@
 <li><code>toast(view: Ui[View])</code> produces a toast with some layout</li>
 </ul>
 <p>The loafs are as follows:</p>
-<pre><code class="lang-scala"><span class="hljs-comment">// `fry` shows the toast</span>
-toast(<span class="hljs-string">"Foo"</span>) &lt;~ fry
+<pre><code class="lang-scala">runUi {
+  <span class="hljs-comment">// `fry` shows the toast</span>
+  toast(<span class="hljs-string">"Foo"</span>) &lt;~ fry
+}
 
-<span class="hljs-comment">// `long` makes the toast long</span>
-toast(<span class="hljs-string">"Foooo"</span>) &lt;~ long &lt;~ fry
+runUi {
+  <span class="hljs-comment">// `long` makes the toast long</span>
+  toast(<span class="hljs-string">"Foooo"</span>) &lt;~ long &lt;~ fry
+}
 
-<span class="hljs-comment">// `gravity` should be self-evident</span>
-toast(<span class="hljs-string">"XY"</span>) &lt;~ gravity(Gravity.CENTER, xOffset = <span class="hljs-number">3</span> dp)
+runUi {
+  <span class="hljs-comment">// `gravity` should be self-evident</span>
+  toast(<span class="hljs-string">"XY"</span>) &lt;~ gravity(Gravity.CENTER, xOffset = <span class="hljs-number">3</span> dp)
+}
 </code></pre>
 <p>Note that all the lines above return <a href="UiAction.html">UI actions</a>.</p>
 <h2 id="dialogs">Dialogs</h2>
@@ -703,11 +709,16 @@ toast(<span class="hljs-string">"XY"</span>) &lt;~ gravity(Gravity.CENTER, xOffs
 <li><code>dialog(items: Array[CharSequence])(handler: OnClickListener)</code></li>
 </ul>
 <p>It is also possible to provide a dialog theme:</p>
-<pre><code class="lang-scala">dialog(themeId)(<span class="hljs-string">"I’m a message"</span>)
+<pre><code class="lang-scala">runUi {
+  dialog(themeId)(<span class="hljs-string">"I’m a message"</span>)
+}
 </code></pre>
 <p>The phrases can be discovered via the <a href="../api/macroid/Phrases$.html">scaladoc</a>, here are some examples:</p>
-<pre><code class="lang-scala"><span class="hljs-comment">// `speak` shows the dialog</span>
-dialog(<span class="hljs-string">"Please fasten your seat belts"</span>) &lt;~ title(<span class="hljs-string">"Warning"</span>) &lt;~ speak
+<pre><code class="lang-scala">runUi {
+  dialog(<span class="hljs-string">"Please fasten your seat belts"</span>) &lt;~
+    title(<span class="hljs-string">"Warning"</span>) &lt;~
+    speak <span class="hljs-comment">// this shows the dialog</span>
+}
 </code></pre>
 <p>Finally, two implicit conversions to <code>Dialog.OnClickListener</code> are awailable:</p>
 <ul>
@@ -715,10 +726,12 @@ dialog(<span class="hljs-string">"Please fasten your seat belts"</span>) &lt;~ t
 <li><code>(DialogInterface, Int) ⇒ Ui[Any]</code> is the same, but with arguments</li>
 </ul>
 <p>Example:</p>
-<pre><code class="lang-scala">dialog(<span class="hljs-string">"Are you sure"</span>) &lt;~
-  positiveYes(textView &lt;~ show) &lt;~
-  negativeNo(textView &lt;~ hide) &lt;~
-  speak
+<pre><code class="lang-scala">runUi {
+  dialog(<span class="hljs-string">"Are you sure"</span>) &lt;~
+    positiveYes(textView &lt;~ show) &lt;~
+    negativeNo(textView &lt;~ hide) &lt;~
+    speak
+}
 </code></pre>
 
                     
